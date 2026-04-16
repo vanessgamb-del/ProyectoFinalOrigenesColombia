@@ -21,3 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cards.forEach((card) => observer.observe(card));
 });
+
+const formulario = document.getElementById("contactenos");
+const aviso = document.getElementById("mensajeExito");
+
+formulario.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const datos = new FormData(formulario);
+  const respuesta = await fetch(formulario.action, {
+    method: formulario.method,
+    body: datos,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (respuesta.ok) {
+    formulario.style.display = "none";
+    aviso.style.display = "block";
+  } else {
+    alert("Hubo un error al enviar. Inténtalo de nuevo.");
+  }
+});
