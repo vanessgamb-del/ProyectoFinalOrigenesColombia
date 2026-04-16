@@ -16,7 +16,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
 
-  <link rel="stylesheet" href="contactenos.css" />
+  <link rel="stylesheet" href="../CSS/contactenos.css" />
 </head>
 <body id="top">
 
@@ -58,6 +58,39 @@
   <main class="py-4" id="home">
     <section class="container">
       
+<form
+  action="https://formspree.io/f/mgoranal"
+  method="POST"
+  enctype="multipart/form-data"
+  class="p-4"
+>
+<div class="mb-4">
+  <label class="form-label">Nombre completo</label>
+  <input type="text" class="form-control" placeholder="Ingresa nombre y apellido" name="nombre">
+</div>
+
+<div class="mb-4">
+  <label class="form-label">
+    Correo electróico:
+    <input type="email" class="form-control" name="email" placeholder="Ingresa tu correo">
+  </label>
+  <div id="emailHelp" class="form-text">No compartiremos tu informació personal.</div>
+</div>
+
+<div class="mb-4">
+  <label>
+    Celular: +57
+    <input type="text" name="celular" class="""form-control" placeholder="Ingresa tu celular">
+  </label>
+</div>
+
+<div class="mb-4">
+  <label class="form-label">Mensaje:<label>
+    <textarea name="mensaje" class="form-control" rows="3"><textarea>
+</div>
+<button type="submit">Send</button>
+</form>
+      
 
     </section>
   </main>
@@ -89,6 +122,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="../JS/add.js"></script>
 </body>
 </html>
