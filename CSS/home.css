@@ -9,7 +9,7 @@ body {
     padding: 0;
     background-color: #FAFBF6;
     font-family: 'Montserrat', sans-serif;
-    padding-top: 70px;
+    padding-top: 85px;
 }
 
 /* navbar */
@@ -34,6 +34,18 @@ body {
 }
 .icons i:hover {
   color: var(--colorhover);
+}
+
+/*para que nav sea pisado por el banner*/
+.custom-navbar {
+    background-color: #FAFBF6; /* Usa el mismo color del body o blanco */
+    
+}
+
+/* Asegura que el banner esté por debajo de la navegación */
+#bannerOrigenes {
+    z-index: 1;
+    position: relative; /* Necesario para que el z-index funcione */
 }
 
 /* Estilos para el Banner */
