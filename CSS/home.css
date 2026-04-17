@@ -36,7 +36,29 @@ body {
   color: var(--colorhover);
 }
 
+/* Estilos para el Banner */
+#bannerOrigenes {
+    width: 100%;
+    overflow: hidden;
+    /* Ajusta la altura máxima para que no ocupe toda la pantalla si no lo deseas */
+    max-height: 500px; 
+}
 
+.banner-img {
+    object-fit: cover; /* Esto evita que las imágenes se deformen */
+    height: 500px;    /* Altura fija para mantener uniformidad */
+    width: 100%;
+}
+
+/* Personalización de los controles para que combinen con tu paleta */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(100) brightness(0.5); /* Hace los iconos oscuros si el fondo es claro */
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--colorhover); /* Usa tu color de marca para los indicadores */
+}
 
 
 
