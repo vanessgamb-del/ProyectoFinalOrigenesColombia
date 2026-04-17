@@ -1,0 +1,42 @@
+:root {
+    --colortextos: #484B47;
+    --colorhover: #B46141;
+}
+
+/* reset general */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAFBF6;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 70px;
+}
+
+/* navbar */
+.navbar {
+  padding-top: 5px;
+  padding-bottom: 5px;
+} 
+.logo-navbar {
+  width: 120px;
+  height: auto;
+}
+.nav-link {
+  font-weight: 500; 
+  font-size: 14px;
+  color: var(--colortextos);
+}
+.nav-link:hover {
+  color: var(--colorhover) ;
+}
+.icons i{
+  color: var(--colortextos);
+}
+.icons i:hover {
+  color: var(--colorhover);
+}
+
+
+
+
+
