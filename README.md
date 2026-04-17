@@ -5,7 +5,7 @@ Proyecto Final Generation Colombia
 # Grupo 1
 
 - Jessica Acevedo
-- Angie Gamboa
+- Angie Gamboa   GI
 - Manuel Gómez
 - Luis Salgado
 - Lukas Muñoz
