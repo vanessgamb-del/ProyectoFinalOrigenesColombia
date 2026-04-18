@@ -1,76 +1,82 @@
 :root {
-    --colortextos: #484B47;
-    --colorhover: #B46141;
+  --colortextos: #484B47;
+  --colorhover: #B46141;
+  --backgroundcolor: #FAFBF6;
+  --navbackground: #6E9B77;
+  --textoblanco: #FFFFFF;
 }
 
-/* reset general */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #FAFBF6;
-    font-family: 'Montserrat', sans-serif;
-    padding-top: 85px;
+/* NAV */
+.custom-navbar {
+  background-color: var(--navbackground);
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
-/* navbar */
-.navbar {
-  padding-top: 5px;
-  padding-bottom: 5px;
-} 
 .logo-navbar {
-  width: 120px;
+  width: 140px;
   height: auto;
+  display: block;
 }
-.nav-link {
-  font-weight: 500; 
+
+.custom-navbar .nav-link {
+  font-weight: 500;
   font-size: 14px;
-  color: var(--colortextos);
+  color: var(--textoblanco) !important;
+  transition: color 0.3s ease;
 }
-.nav-link:hover {
-  color: var(--colorhover) ;
+
+.custom-navbar .nav-link:hover {
+  color: var(--colorhover) !important;
 }
-.icons i{
-  color: var(--colortextos);
+
+.icons i {
+  color: var(--textoblanco);
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
+
 .icons i:hover {
   color: var(--colorhover);
 }
 
-/*para que nav sea pisado por el banner*/
-.custom-navbar {
-    background-color: #FAFBF6; /* Usa el mismo color del body o blanco */
-    
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
-/* Asegura que el banner esté por debajo de la navegación */
-#bannerOrigenes {
-    z-index: 1;
-    position: relative; /* Necesario para que el z-index funcione */
+.navbar-toggler:focus {
+  box-shadow: none;
 }
 
-/* Estilos para el Banner */
-#bannerOrigenes {
-    width: 100%;
-    overflow: hidden;
-    /* Ajusta la altura máxima para que no ocupe toda la pantalla si no lo deseas */
-    max-height: 500px; 
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
 }
 
-.banner-img {
-    object-fit: cover; /* Esto evita que las imágenes se deformen */
-    height: 500px;    /* Altura fija para mantener uniformidad */
-    width: 100%;
+/* FOOTER */
+.site-footer {
+  background-color: var(--navbackground);
+  color: var(--textoblanco);
+  padding: 24px 0;
+  margin-top: 40px;
 }
 
-/* Personalización de los controles para que combinen con tu paleta */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(1) grayscale(100) brightness(0.5); /* Hace los iconos oscuros si el fondo es claro */
+.site-footer hr {
+  border-color: rgba(255, 255, 255, 0.25);
+  margin-bottom: 24px;
 }
 
-.carousel-indicators [data-bs-target] {
-    background-color: var(--colorhover); /* Usa tu color de marca para los indicadores */
+.site-footer p,
+.site-footer b,
+.site-footer strong,
+.site-footer a {
+  color: var(--textoblanco);
 }
 
+.site-footer a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
-
+.site-footer a:hover {
+  color: var(--colorhover);
+}

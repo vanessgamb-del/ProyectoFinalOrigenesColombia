@@ -13,60 +13,75 @@
 
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
 
   <link rel="stylesheet" href="../CSS/contactenos.css" />
 </head>
 <body id="top">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="inicio">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Orígenes Colombia</a>
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
+  <div class="container">
+    <a href="home.html">
+      <img
+        src="https://i.postimg.cc/mkgXr9YF/logo-origenes-01.png"
+        alt="Orígenes Colombia"
+        class="logo-navbar d-inline-block align-text-top"
+      />
+    </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarMain"
-        aria-controls="navbarMain"
-        aria-expanded="false"
-        aria-label="Abrir menú"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarMain"
+      aria-controls="navbarMain"
+      aria-expanded="false"
+      aria-label="Abrir menú"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarMain">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contacto">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#carrito">Carrito</a>
-          </li>
-        </ul>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarMain">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="catalogo.html">Catálogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contactenos.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Sobre Orígenes</a>
+        </li>
+      </ul>
+
+      <div class="icons d-flex gap-3 align-items-center">
+        <a href="#" class="text-decoration-none">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <a href="#" class="text-decoration-none">
+          <i class="fa-regular fa-heart"></i>
+        </a>
+        <a href="#" class="text-decoration-none">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <main class="py-4" id="home">
-
-
+  <main class="py-4" style="min-height: 70vh;">
     <section class="container" id="contacto">
 
       <form
-        id="contactenos"
+        id="contactForm"
         action="https://formspree.io/f/mgoranal"
         method="POST"
         enctype="multipart/form-data"
         class="p-4"
-        id="contactForm"
       >
         <div class="mb-4">
           <label for="nombre" class="form-label">Nombre completo</label>
@@ -140,13 +155,16 @@
 
         <button type="submit" class="btn btn-dark w-100">Enviar</button>
       </form>
-      <div id="mensajeExito" style="display: none;" class="alert alert-success mt-3">Gracias! Mensaje recibido.</div>
+
+      <div id="mensajeExito" style="display: none;" class="alert alert-success mt-3">
+        Gracias! Mensaje recibido.
+      </div>
     </section>
   </main>
 
-  <footer class="mt-4">
-    <br><br><hr>
-    <center>
+  <footer class="site-footer">
+    <hr>
+    <div class="container text-center">
       <p><strong>Orígenes Colombia</strong></p>
       <p>&copy; 2026 - Todos los derechos reservados</p>
 
@@ -157,16 +175,16 @@
       </p>
 
       <nav>
-        <a href="#inicio">Inicio</a> |
-        <a href="#contacto">Contacto</a> |
-        <a href="#carrito">Carrito</a>
+        <a href="home.html">Inicio</a> |
+        <a href="catalogo.html">Catálogo</a> |
+        <a href="contactenos.html">Contacto</a> |
+        <a href="index.html">Sobre Orígenes</a>
       </nav>
 
       <br>
 
       <a href="#top">Volver al principio de la página</a>
-    </center>
-    <br>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
