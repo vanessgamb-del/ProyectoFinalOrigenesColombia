@@ -5,6 +5,14 @@
   --navbackground: #6E9B77;
   --textoblanco: #FFFFFF;
 }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--backgroundcolor);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--colortextos);
+}
+
 
 /* NAV */
 .custom-navbar {
