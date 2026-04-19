@@ -80,3 +80,20 @@
 .site-footer a:hover {
   color: var(--colorhover);
 }
+
+/* Formulario */
+.form-control {
+    border: none;
+    border-bottom: 1px solid #484B47;
+    border-radius: 0;
+    background-color: transparent;
+    }
+    /* Botón */
+.btn-dark {
+    background-color: #484B47;
+    border-radius: 50px;
+    padding: 12px;
+    }
+.custom-navbar .nav-link:hover {
+  color: var(--colorhover) !important;
+}
