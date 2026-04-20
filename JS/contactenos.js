@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
+  const formulario = document.getElementById("contactForm");
   const emailInput = document.getElementById("email");
   const celularInput = document.getElementById("celular");
   const indicativoSelect = document.getElementById("indicativo");
@@ -23,14 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     validatePhone();
   });
 
-  form.addEventListener("submit", (event) => {
-    const isEmailValid = validateEmail();
-    const isPhoneValid = validatePhone();
-
-    if (!isEmailValid || !isPhoneValid) {
-      event.preventDefault();
-    }
-  });
 
   function validateEmail() {
     const email = emailInput.value.trim();
@@ -71,4 +63,36 @@ document.addEventListener("DOMContentLoaded", () => {
     errorCelular.textContent = "";
     return true;
   }
+
+
+
+const aviso = document.getElementById("mensajeExito");
+
+  formulario.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    const isEmailValid = validateEmail();
+    const isPhoneValid = validatePhone();
+
+    if (isEmailValid && isPhoneValid) {
+      const datos = new FormData(formulario);
+      
+      try {
+        const respuesta = await fetch(formulario.action, {
+          method: formulario.method,
+          body: datos,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (respuesta.ok) {
+          formulario.style.display = "none"; // Escondemos el formulario
+          aviso.style.display = "block";    // Mostramos el mensaje verde
+        } else {
+          alert("Hubo un error al enviar. Inténtalo de nuevo.");
+        }
+      } catch (error) {
+        alert("No hay conexión con el servidor.");
+      }
+    }
+  });
 });
