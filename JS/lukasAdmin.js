@@ -1,17 +1,16 @@
-// Arreglo donde guardaremos todos los objetos creados
-const listaProductos = [];
+// 1. Al iniciar, intentamos cargar lo que ya esté en LocalStorage
+// Si no hay nada, inicializamos el arreglo vacío
+const listaProductos = JSON.parse(localStorage.getItem('productosAdmin')) || [];
 
 document.getElementById('formPublicacion').addEventListener('submit', function(e) {
-    e.preventDefault(); // Detenemos la recarga de la página
+    e.preventDefault();
 
-    // 1. Capturar valores de los inputs
     const nombre = document.getElementById('nombre').value;
     const precioRaw = document.getElementById('precio').value;
     const categoria = document.getElementById('categoria').value;
     const urlImagen = document.getElementById('urlImagen').value;
     const descripcion = document.getElementById('descripcion').value;
 
-    // 2. Procesar el precio para formato colombiano
     const precioNumerico = parseInt(precioRaw);
     const formatoCOP = new Intl.NumberFormat('es-CO', {
         style: 'currency',
@@ -19,27 +18,29 @@ document.getElementById('formPublicacion').addEventListener('submit', function(e
         minimumFractionDigits: 0
     }).format(precioNumerico);
 
-    // 3. Crear el objeto del modelo
     const nuevoProducto = {
         id: Date.now(),
         nombre: nombre,
         precio: precioNumerico,
-        precioFormateado: formatoCOP, // Para que en consola se vea como $ 85.000
+        precioFormateado: formatoCOP,
         categoria: categoria,
         imagen: urlImagen,
         descripcion: descripcion
     };
 
-    // 4. Agregar a la lista
+    // 2. Agregar a la lista
     listaProductos.push(nuevoProducto);
 
-    // 5. MOSTRAR EN CONSOLA (Requisito Tarea 7)
+    // 3. GUARDAR EN LOCALSTORAGE (Para que no se borre al refrescar)
+    localStorage.setItem('productosAdmin', JSON.stringify(listaProductos));
+
+    // 4. MOSTRAR EN CONSOLA (Entregable cumplido)
     console.log("--- Tarea 7: Listado de Objetos en JSON ---");
     console.log(JSON.stringify(listaProductos, null, 2));
 
-    // Opcional: Feedback visual
-    alert(`Producto "${nombre}" registrado exitosamente en COP.`);
+    alert(`Producto "${nombre}" registrado exitosamente.`);
     
-    // Limpiar el formulario para el siguiente ingreso
     this.reset();
 });
+
+console.log("Carga de la lista desde el localstorage", JSON.stringify(listaProductos, null, 2));
