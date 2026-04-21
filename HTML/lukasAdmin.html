@@ -65,49 +65,59 @@
 
 // Contenido de pruebas
 
-<div class="card shadow-sm">
-    <div class="card-header bg-dark text-white">
-        <h5 class="mb-0">Panel de Control: Nueva Publicación</h5>
-    </div>
-    <div class="card-body">
-        <form id="formPublicacion">
-            <div class="mb-3">
-                <label for="nombre" class="form-label font-weight-bold">Nombre del Producto</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ej: Zapatillas Pro" required>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label for="precio" class="form-label">Precio ($)</label>
-                    <input type="number" class="form-control" id="precio" placeholder="0.00" step="0.01" required>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Administración de Catálogo - Nueva Publicación</h5>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <label for="categoria" class="form-label">Categoría</label>
-                    <select class="form-select" id="categoria" required>
-                        <option value="" disabled selected>Elegir...</option>
-                        <option value="deportes">Deportes</option>
-                        <option value="casual">Casual</option>
-                        <option value="accesorios">Accesorios</option>
-                    </select>
+                <div class="card-body">
+                    <form id="formPublicacion">
+                        
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label font-weight-bold">Nombre del Producto</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ej: Camiseta de Fútbol" required>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="precio" class="form-label">Precio (COP)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" id="precio" placeholder="Ej: 85000" min="0" step="1" required>
+                                    <span class="input-group-text">COP</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="categoria" class="form-label">Categoría</label>
+                                <select class="form-select" id="categoria" required>
+                                    <option value="" disabled selected>Seleccionar...</option>
+                                    <option value="calzado">Calzado</option>
+                                    <option value="ropa">Ropa</option>
+                                    <option value="accesorios">Accesorios</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="urlImagen" class="form-label">Enlace de la imagen (URL)</label>
+                            <input type="url" class="form-control" id="urlImagen" placeholder="https://ejemplo.com/foto.jpg" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="descripcion" rows="3" placeholder="Detalles del producto..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100">Registrar Producto</button>
+                    </form>
                 </div>
             </div>
-
-            <div class="mb-3">
-                <label for="urlImagen" class="form-label">URL de la Imagen</label>
-                <input type="url" class="form-control" id="urlImagen" placeholder="https://ejemplo.com/foto.jpg" required>
-                <small class="text-muted">Pega el enlace directo de la imagen.</small>
-            </div>
-
-            <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripción Detallada</label>
-                <textarea class="form-control" id="descripcion" rows="3" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary w-100">Publicar en Catálogo</button>
-        </form>
+        </div>
     </div>
 </div>
-
 
 
 // Cierre del contenido de pruebas
