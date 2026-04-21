@@ -1,36 +1,11 @@
-
 const productForm = document.getElementById("productForm");
 const productList = document.getElementById("productList");
+const STORAGE_KEY = "origenes_productos";
 
-const products = [
-  {
-    id: 1,
-    name: "Café Premium de Nariño",
-    description: "Café colombiano de altura con notas dulces y aroma intenso.",
-    price: 45000,
-    stock: 10,
-    category: "Café",
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    id: 2,
-    name: "Mochila Artesanal Wayuu",
-    description: "Tejida a mano por artesanas colombianas con diseños tradicionales.",
-    price: 120000,
-    stock: 6,
-    category: "Artesanías",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    id: 3,
-    name: "Chocolate Artesanal Colombiano",
-    description: "Chocolate premium elaborado con cacao colombiano de alta calidad.",
-    price: 28000,
-    stock: 15,
-    category: "Alimentos",
-    image: "https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=900&q=80"
-  }
-];
+let products = loadProducts();
+
+console.log("admin.js nuevo cargado");
+console.log("Productos cargados:", products);
 
 if (productForm && productList) {
   productForm.addEventListener("submit", function (event) {
@@ -62,7 +37,7 @@ if (productForm && productList) {
     }
 
     const product = {
-      id: products.length + 1,
+      id: Date.now(),
       name,
       description,
       price,
@@ -72,13 +47,34 @@ if (productForm && productList) {
     };
 
     products.push(product);
+    saveProducts();
     renderProducts();
-    printProductsJson();
     productForm.reset();
+
+    console.log("Producto guardado:", product);
+    console.log("Productos en localStorage:", localStorage.getItem(STORAGE_KEY));
   });
 
   renderProducts();
-  printProductsJson();
+}
+
+function loadProducts() {
+  const savedProducts = localStorage.getItem(STORAGE_KEY);
+
+  if (!savedProducts) {
+    return [];
+  }
+
+  try {
+    return JSON.parse(savedProducts);
+  } catch (error) {
+    console.error("Error loading products from localStorage:", error);
+    return [];
+  }
+}
+
+function saveProducts() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
 }
 
 function formatPrice(price) {
@@ -98,10 +94,14 @@ function getStockMessage(stock) {
 }
 
 function renderProducts() {
+  if (!productList) {
+    return;
+  }
+
   if (products.length === 0) {
     productList.innerHTML = `
       <div class="col-12">
-        <div class="empty-state">
+        <div class="empty-state text-center p-4">
           No hay productos agregados todavía.
         </div>
       </div>
@@ -110,10 +110,10 @@ function renderProducts() {
   }
 
   productList.innerHTML = products
-    .map((product) => {
+    .map(function (product) {
       return `
         <div class="col-12 col-md-6">
-          <div class="card product-card">
+          <div class="card product-card h-100">
             <img
               src="${product.image}"
               class="product-image"
@@ -135,9 +135,4 @@ function renderProducts() {
       `;
     })
     .join("");
-}
-
-function printProductsJson() {
-  console.log("Lista de productos en formato JSON:");
-  console.log(JSON.stringify(products, null, 2));
 }
