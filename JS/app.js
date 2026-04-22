@@ -1,23 +1,33 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".team-card");
+  const images = document.querySelectorAll("img");
+  const newsletterForm = document.getElementById("newsletterForm");
+  const newsletterEmail = document.getElementById("newsletterEmail");
+  const newsletterMessage = document.getElementById("newsletterMessage");
 
-  if (!cards.length) {
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries, currentObserver) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          currentObserver.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.2
+  images.forEach((image) => {
+    if (!image.hasAttribute("loading")) {
+      image.setAttribute("loading", "lazy");
     }
-  );
 
-  cards.forEach((card) => observer.observe(card));
+    if (!image.hasAttribute("decoding")) {
+      image.setAttribute("decoding", "async");
+    }
+  });
+
+  if (newsletterForm && newsletterEmail && newsletterMessage) {
+    newsletterForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const emailValue = newsletterEmail.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(emailValue)) {
+        newsletterMessage.textContent = "Ingresa un correo válido.";
+        return;
+      }
+
+      newsletterMessage.textContent = "Gracias por suscribirte.";
+      newsletterForm.reset();
+    });
+  }
 });

@@ -6,20 +6,25 @@
   <meta name="description" content="Página Sobre Nosotros de Orígenes Colombia" />
   <title>Sobre Nosotros | Orígenes Colombia</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="../CSS/sobreorigenes.css"/>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="../CSS/sobreorigenes.css" />
 </head>
+<body>
 
-<body id="top">
-
-  <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
-    <div class="container">
-      <a href="../index.html">
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+    <div class="container nav-wrapper">
+      <a href="../index.html" class="navbar-brand">
         <img
           src="https://i.postimg.cc/mkgXr9YF/logo-origenes-01.png"
           alt="Orígenes Colombia"
-          class="logo-navbar d-inline-block align-text-top"
+          class="logo-navbar"
         />
       </a>
 
@@ -35,8 +40,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse justify-content-between" id="navbarMain">
-        <ul class="navbar-nav mx-auto">
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav nav-center mx-auto">
           <li class="nav-item">
             <a class="nav-link" href="../index.html">Inicio</a>
           </li>
@@ -44,18 +49,15 @@
             <a class="nav-link" href="contactenos.html">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sobreorigenes.html">Sobre Orígenes</a>
+            <a class="nav-link active-link" href="sobreorigenes.html">Sobre Orígenes</a>
           </li>
         </ul>
 
-        <div class="icons d-flex gap-3 align-items-center">
-          <a href="#" class="text-decoration-none">
+        <div class="icons">
+          <a href="#" class="text-decoration-none" aria-label="Perfil">
             <i class="fa-regular fa-user"></i>
           </a>
-          <a href="#" class="text-decoration-none">
-            <i class="fa-regular fa-heart"></i>
-          </a>
-          <a href="#" class="text-decoration-none">
+          <a href="#" class="text-decoration-none" aria-label="Carrito">
             <i class="fa-solid fa-bag-shopping"></i>
           </a>
         </div>
@@ -63,326 +65,291 @@
     </div>
   </nav>
 
-  <main class="py-4" id="home">
-    <section class="container">
-      <div class="text-center mb-4">
-        <h1 class="section-title">Sobre Nosotros</h1>
-        <p class="section-subtitle mb-3">
-          Conoce quiénes somos y hacia dónde vamos.
-        </p>
-        <p class="about-intro mx-auto">
-          Somos un equipo de cinco desarrolladores Full Stack apasionados por la tecnología y la innovación.
-          Actualmente, estamos desarrollando Orígenes Colombia, una plataforma de e-commerce enfocada en
-          resaltar y comercializar productos auténticos de nuestro país. Nuestro propósito es conectar a los
-          emprendedores colombianos con más personas, llevando lo mejor de nuestra cultura, tradición y
-          talento a un entorno digital moderno.
-        </p>
+  <main>
+    <section class="about-hero">
+      <div class="about-hero-overlay">
+        <div class="container text-center hero-content">
+          <h1 class="about-hero-title">Sobre Orígenes Colombia</h1>
+          <p class="about-hero-text">
+            Conectamos el mundo con la esencia auténtica de Colombia.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="row g-3 justify-content-center mb-5">
-        <div class="col-12 col-md-4">
-          <div class="about-box h-100">
-            <h2 class="about-box-title">Misión</h2>
-            <p class="about-box-text">
-              Conectar viajeros extranjeros con la esencia más auténtica de Colombia,
-              poniéndoles en las manos productos naturales y artesanales premium,
-              cuidadosamente seleccionados. Para impulsar el comercio y facilitar el
-              camino a los emprendedores a la hora de darse a conocer al público.
-              Somos el puente entre el alma colombiana y el viajero por medio de una
-              aplicación que presenta productos auténticos, naturales y artesanales.
-              Además, brinda una vía segura al adquirir los productos y ayuda a los
-              emprendedores a lograr la digitalización de sus obras.
-            </p>
-          </div>
+    <section class="about-section">
+      <div class="container">
+        <div class="text-center intro-block">
+          <h2 class="section-title">Quiénes Somos</h2>
+          <p class="about-intro">
+            Somos un equipo apasionado por la tecnología, el diseño y la innovación.
+            Creamos Orígenes Colombia, una plataforma ecommerce enfocada en impulsar productos
+            auténticos, artesanales y naturales de nuestro país en una experiencia digital moderna.
+          </p>
         </div>
 
-        <div class="col-12 col-md-4">
-          <div class="about-box h-100">
-            <h2 class="about-box-title">Visión</h2>
+        <div class="about-cards">
+          <article class="about-box">
+            <div class="about-box-header">
+              <div class="about-icon">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <h3 class="about-box-title">Misión</h3>
+            </div>
             <p class="about-box-text">
-              En 2032 Orígenes Colombia será la vitrina digital más reconocida de lo
-              mejor del país, presente en cada hotel, aeropuerto y hostal del país.
-              Será valorada por la confiabilidad en sus transacciones y conexiones B2B,
-              integrando lo mejor de la producción colombiana con los mercados nacionales
-              e internacionales. A futuro evolucionaremos hacia un mercado que permita
-              a los productores del país llegar a compradores de todo el mundo.
+              Conectar viajeros y consumidores con productos auténticos de Colombia,
+              impulsando a los emprendedores y facilitando su presencia en el entorno
+              digital a través de una experiencia confiable, segura y cercana.
             </p>
-          </div>
-        </div>
+          </article>
 
-        <div class="col-12 col-md-4">
-          <div class="about-box h-100">
-            <h2 class="about-box-title">Valores</h2>
+          <article class="about-box">
+            <div class="about-box-header">
+              <div class="about-icon">
+                <i class="fa-regular fa-eye"></i>
+              </div>
+              <h3 class="about-box-title">Visión</h3>
+            </div>
             <p class="about-box-text">
-              Creemos que la mano de obra colombiana merece un pago justo, por eso
-              trabajamos directamente con los fabricantes de nuestros productos para
-              darlos a conocer.
+              Ser la vitrina digital más reconocida de productos colombianos,
+              destacándonos por la confianza, la calidad y la capacidad de conectar
+              lo mejor del país con mercados nacionales e internacionales.
             </p>
+          </article>
+
+          <article class="about-box">
+            <div class="about-box-header">
+              <div class="about-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <h3 class="about-box-title">Valores</h3>
+            </div>
             <ul class="values-list">
-              <li><strong>Responsabilidad social:</strong> damos a conocer nuestros proveedores para que tengan un mayor reconocimiento.</li>
-              <li><strong>Calidad:</strong> ofrecemos productos naturales de la mejor calidad cuidadosamente seleccionados.</li>
-              <li><strong>Pasión:</strong> nos mueve lo que hacemos y por eso queremos mejorar constantemente.</li>
-              <li><strong>Reconocimiento:</strong> valoramos la mano de obra de los emprendedores y fabricantes.</li>
+              <li><strong>Responsabilidad social:</strong> apoyamos y visibilizamos a los emprendedores.</li>
+              <li><strong>Calidad:</strong> seleccionamos productos auténticos y cuidadosamente elegidos.</li>
+              <li><strong>Pasión:</strong> mejoramos constantemente lo que hacemos.</li>
+              <li><strong>Reconocimiento:</strong> valoramos la mano de obra y el talento colombiano.</li>
             </ul>
-          </div>
+          </article>
         </div>
-      </div>
 
-      <div class="text-center mb-4">
-        <h2 class="section-title">Equipo</h2>
-        <p class="section-subtitle">
-          Conoce a las personas que hacen posible este ecommerce.
-        </p>
-      </div>
+        <div class="text-center team-heading">
+          <h2 class="section-title">Nuestro Equipo</h2>
+          <p class="team-subtitle">
+            Conoce a las personas que hacen posible Orígenes Colombia.
+          </p>
+        </div>
 
-      <div class="profile-area row g-4 justify-content-center">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="card shadow overflow-hidden team-card h-100">
+        <div class="team-grid">
+          <article class="team-card">
             <div class="img1">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E16AQG47bDWEz8Dcw/profile-displaybackgroundimage-shrink_350_1400/B4EZ0CrVnhG0AY-/0/1773866409637?e=1777507200&v=beta&t=t0CsYyrv60EMh79xAKlf1F-XuM_0prNIo4rFM7-uJ-8"
-                class="img-fluid w-100"
+                src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop"
                 alt="Fondo Jessica Acevedo"
               />
             </div>
             <div class="img2">
               <img
                 src="https://media.licdn.com/dms/image/v2/D4E03AQGUZqe1O7glmg/profile-displayphoto-scale_400_400/B4EZ0CmKtuHYAg-/0/1773865056173?e=1777507200&v=beta&t=wOKcEmMDzZe4Sr-O72LVrD5B6dz45uAhp-MDwSozCag"
-                class="card-img-top rounded-circle img-fluid"
                 alt="Jessica Acevedo"
               />
             </div>
-            <div class="card-body text-center">
+            <div class="team-card-body">
               <h5 class="card-title">Jessica Acevedo</h5>
-              <p class="card-text">Full Stack Developer | SpringBoot | MYSQL | Python | Java | HTML | CSS</p>
-              <div class="row text-center">
-                <div class="col">
-                  <a href="https://www.linkedin.com/in/jessica-acevedo-desarollo-full-stack-java/" class="btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Jessica Acevedo">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="https://github.com/jvacevedov" class="btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Jessica Acevedo">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </div>
+              <p class="card-role">Full Stack Developer</p>
+              <p class="card-text">Spring Boot, MySQL, Python, Java, HTML y CSS.</p>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/jessica-acevedo-desarollo-full-stack-java/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Jessica Acevedo">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/jvacevedov" target="_blank" rel="noopener noreferrer" aria-label="GitHub Jessica Acevedo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
               </div>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="card shadow overflow-hidden team-card h-100">
+          <article class="team-card">
             <div class="img1">
               <img
-                src="https://wallpapers.com/images/high/technology-linkedin-background-dce01jsbpnn0z2ej.webp"
-                class="img-fluid w-100"
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
                 alt="Fondo Lukas Muñoz"
               />
             </div>
             <div class="img2">
               <img
                 src="https://i.ibb.co/RppsHpg0/lukas-Profile.png"
-                class="card-img-top rounded-circle img-fluid"
                 alt="Lukas Muñoz"
               />
             </div>
-            <div class="card-body text-center">
+            <div class="team-card-body">
               <h5 class="card-title">Lukas Muñoz</h5>
-              <p class="card-text">Full Stack Java Developer Jr. | JavaScript | CSS | SQL | Tecnólogo Mecatrónico</p>
-              <div class="row text-center">
-                <div class="col">
-                  <a href="https://www.linkedin.com/in/lukas-enrique-munoz-ospina-full-stack-java-developer/" class="btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Lukas Muñoz">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="https://github.com/lks5k" class="btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Lukas Muñoz">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </div>
+              <p class="card-role">Full Stack Java Developer Jr.</p>
+              <p class="card-text">JavaScript, CSS, SQL y formación en mecatrónica.</p>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/lukas-enrique-munoz-ospina-full-stack-java-developer/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Lukas Muñoz">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/lks5k" target="_blank" rel="noopener noreferrer" aria-label="GitHub Lukas Muñoz">
+                  <i class="fa-brands fa-github"></i>
+                </a>
               </div>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="card shadow overflow-hidden team-card h-100">
+          <article class="team-card">
             <div class="img1">
               <img
-                src="https://wallpapers.com/images/hd/technology-abstract-circuit-pattern-8qhfi6982qzdonxc.webp"
-                class="img-fluid w-100"
+                src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop"
                 alt="Fondo Vanessa Gamboa"
               />
             </div>
             <div class="img2">
               <img
                 src="https://i.ibb.co/xKPggHWx/b25bc2dc-59b8-4df0-90b2-3d1ff30a7a7a.jpg"
-                class="card-img-top rounded-circle img-fluid"
                 alt="Vanessa Gamboa"
               />
             </div>
-            <div class="card-body text-center">
+            <div class="team-card-body">
               <h5 class="card-title">Vanessa Gamboa</h5>
-              <p class="card-text">Full Stack Java Developer Jr. | Lógica del software | Leyes de física.</p>
-              <div class="row text-center">
-                <div class="col">
-                  <a href="https://www.linkedin.com/in/angie-vanessa-gamboa-rivas-51b7543b8/" class="btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Vanessa Gamboa">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="https://github.com/vanessgamb-del" class="btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Vanessa Gamboa">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </div>
+              <p class="card-role">Full Stack Java Developer Jr.</p>
+              <p class="card-text">Lógica de software y análisis estructurado de soluciones.</p>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/angie-vanessa-gamboa-rivas-51b7543b8/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Vanessa Gamboa">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/vanessgamb-del" target="_blank" rel="noopener noreferrer" aria-label="GitHub Vanessa Gamboa">
+                  <i class="fa-brands fa-github"></i>
+                </a>
               </div>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="card shadow overflow-hidden team-card h-100">
+          <article class="team-card">
             <div class="img1">
               <img
-                src="https://media.licdn.com/dms/image/v2/C4E16AQEQ9b9gf2hcgg/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1609172496070?e=1777507200&v=beta&t=PoZpPWW7W3bxjVgGBwuK84V8CRDbB536cInMbpmQ8Gs"
-                class="img-fluid w-100"
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
                 alt="Fondo Manuel Gómez"
               />
             </div>
             <div class="img2">
               <img
                 src="https://media.licdn.com/dms/image/v2/D4E03AQE74_K2AchjOA/profile-displayphoto-crop_800_800/B4EZ1LNapIIQAI-/0/1775083304137?e=1777507200&v=beta&t=dKsUaqiXLDwd9_l6TZh8e1C_QvzE47c_RBUhsobxpAc"
-                class="card-img-top rounded-circle img-fluid"
                 alt="Manuel Gómez"
               />
             </div>
-            <div class="card-body text-center">
+            <div class="team-card-body">
               <h5 class="card-title">Manuel Gómez</h5>
-              <p class="card-text">Graphic & Brand Designer | 10+ años en identidad visual y branding</p>
-              <div class="row text-center">
-                <div class="col">
-                  <a href="https://www.linkedin.com/in/manuel-alejandro-gomez-piedrahita/" class="btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Manuel Gómez">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="https://github.com/manuelalejandrogp" class="btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Manuel Gómez">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </div>
+              <p class="card-role">Graphic & Brand Designer</p>
+              <p class="card-text">Especialista en identidad visual, branding y comunicación gráfica.</p>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/manuel-alejandro-gomez-piedrahita/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Manuel Gómez">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/manuelalejandrogp" target="_blank" rel="noopener noreferrer" aria-label="GitHub Manuel Gómez">
+                  <i class="fa-brands fa-github"></i>
+                </a>
               </div>
             </div>
-          </div>
-        </div>
+          </article>
 
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="card shadow overflow-hidden team-card h-100">
+          <article class="team-card">
             <div class="img1">
               <img
-                src="https://wallpapers.com/images/high/interactive-1920-x-1080-background-pmo6u7ee0jk17kbs.webp"
-                class="img-fluid w-100"
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
                 alt="Fondo Luis Salgado"
               />
             </div>
             <div class="img2">
               <img
                 src="https://media.licdn.com/dms/image/v2/D4E03AQFbYpKocWWd0g/profile-displayphoto-crop_800_800/B4EZ0my57IJUAI-/0/1774472375445?e=1777507200&v=beta&t=BuGKsMQojHtOsyh1f8FjYSdiLPNwHZmIuMLnlprj-Ow"
-                class="card-img-top rounded-circle img-fluid"
                 alt="Luis Salgado"
               />
             </div>
-            <div class="card-body text-center">
+            <div class="team-card-body">
               <h5 class="card-title">Luis Salgado</h5>
-              <p class="card-text">Junior Full Stack Developer | Java Developer | Java, JavaScript, Python, MySQL</p>
-              <div class="row text-center">
-                <div class="col">
-                  <a href="https://www.linkedin.com/in/luis-salgado-guzman-desarrollo-full-stack-java/" class="btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Luis Salgado">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="https://github.com/luisjaviersalgado" class="btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Luis Salgado">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                </div>
+              <p class="card-role">Junior Full Stack Developer</p>
+              <p class="card-text">Java, JavaScript, Python y MySQL orientados al desarrollo web.</p>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/luis-salgado-guzman-desarrollo-full-stack-java/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Luis Salgado">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/luisjaviersalgado" target="_blank" rel="noopener noreferrer" aria-label="GitHub Luis Salgado">
+                  <i class="fa-brands fa-github"></i>
+                </a>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
-
-      <section class="container text-center py-4">
-        <h2 class="section-title">Contacto</h2>
-        <p class="section-subtitle">
-          Puedes comunicarte con nuestro equipo para conocer más sobre Orígenes Colombia.
-        </p>
-      </section>
-
-      <section class="container text-center pb-4">
-        <h2 class="section-title">Carrito</h2>
-        <p class="section-subtitle">
-          Aquí podrás gestionar tus productos seleccionados dentro de la plataforma.
-        </p>
-      </section>
     </section>
   </main>
 
-    <footer class="site-footer pt-5">
-    <div class="container"> 
-      <div class="row">
-        <div class="col-md-4 mb-4">
-             <ul class="list-unstyled">
-              <li><h6 class="fw-bold">Contacto</h6></li>
-              <li>Calle Ficticia #123, Cali, Colombia</li>
-              <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
-              <li>contactoorigenescolombia@gmail.com</li>
-              <li>+57 312 3456 7890</li>
-            </ul>     
+  <footer class="site-footer">
+  <div class="container">
+    
+    <div class="row footer-content">
 
-          <div class="icons">
-            <a href="#" class="text-decoration-none"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="text-decoration-none"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="text-decoration-none"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" class="text-decoration-none"><i class="fa-brands fa-whatsapp"></i></a>
-          </div>
-        </div>
+      <!-- CONTACTO -->
+      <div class="col-md-4">
+        <h6 class="footer-title">Contacto</h6>
+        <ul class="footer-list">
+          <li>Calle Ficticia #123, Cali, Colombia</li>
+          <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
+          <li>contactoorigenescolombia@gmail.com</li>
+          <li>+57 312 3456 7890</li>
+        </ul>
 
-        <div class="col-md-4 mb-4">
-            <ul class="list-unstyled">
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contactenos.html">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sobreorigenes.html">Sobre Orígenes</a>
-              </li>
-            </ul>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <h6 class="fw-bold">Newsletter</h6>
-          <p>Suscríbete a nuestro boletín recibe novedades, lanzamientos y productos exclusivos directamente en tu correo.</p>
-          <div class="newsletter">
-            <input type="email" class="form-control" placeholder="E-mail">
-              <span>↗</span>
-          </div>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
-      <div class="d-flex justify-content-center">
-        <img src="https://i.postimg.cc/1X3CzFGC/logo-origenes-02.png" alt="logo Orígenes Colombia" class="img-fluid"/>
+
+      <!-- NAVEGACIÓN -->
+      <div class="col-md-4">
+        <h6 class="footer-title">Navegación</h6>
+        <ul class="footer-list">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="contactenos.html">Contacto</a></li>
+          <li><a href="sobreorigenes.html">Sobre Orígenes</a></li>
+        </ul>
       </div>
-      <div class="container d-flex justify-content-between small pb-3">
-        <p>© 2026 Orígenes Colombia · Todos los derechos reservados Política de privacidad · Términos y condiciones</p>
-        <p>Conectando el mundo con el alma de Colombia.</p>
+
+      <!-- NEWSLETTER -->
+      <div class="col-md-4">
+        <h6 class="footer-title">Newsletter</h6>
+        <p class="footer-text">
+          Suscríbete y recibe novedades, lanzamientos y productos exclusivos.
+        </p>
+
+        <div class="newsletter">
+          <input type="email" placeholder="E-mail" />
+          <button>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </button>
+        </div>
       </div>
 
     </div>
-  </footer>
+
+    <!-- LOGO -->
+    <div class="footer-logo-wrapper">
+      <img src="https://i.postimg.cc/1X3CzFGC/logo-origenes-02.png" alt="logo" />
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
+      <p>Política de privacidad · Términos y condiciones</p>
+      <p>Conectando el mundo con el alma de Colombia.</p>
+    </div>
+
+  </div>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../JS/app.js"></script>
 </body>
 </html>

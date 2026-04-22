@@ -1,98 +1,117 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const formulario = document.getElementById("contactForm");
+  const form = document.getElementById("contactForm");
   const emailInput = document.getElementById("email");
-  const celularInput = document.getElementById("celular");
-  const indicativoSelect = document.getElementById("indicativo");
+  const phoneInput = document.getElementById("celular");
+  const countryCodeSelect = document.getElementById("indicativo");
 
-  const errorCorreo = document.getElementById("errorCorreo");
-  const errorCelular = document.getElementById("errorCelular");
+  const emailError = document.getElementById("errorCorreo");
+  const phoneError = document.getElementById("errorCelular");
+  const successMessage = document.getElementById("mensajeExito");
+
+  if (
+    !form ||
+    !emailInput ||
+    !phoneInput ||
+    !countryCodeSelect ||
+    !emailError ||
+    !phoneError ||
+    !successMessage
+  ) {
+    return;
+  }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^\d{1,11}$/;
 
-  celularInput.addEventListener("input", (event) => {
-    let value = event.target.value.replace(/\D/g, "");
-    event.target.value = value.slice(0, 11);
-    validatePhone();
-  });
+  const setError = (element, message) => {
+    element.textContent = message;
+  };
 
-  emailInput.addEventListener("input", () => {
-    validateEmail();
-  });
+  const clearError = (element) => {
+    element.textContent = "";
+  };
 
-  indicativoSelect.addEventListener("change", () => {
-    validatePhone();
-  });
-
-
-  function validateEmail() {
+  const validateEmail = () => {
     const email = emailInput.value.trim();
 
-    if (email === "") {
-      errorCorreo.textContent = "El correo es obligatorio.";
+    if (!email) {
+      setError(emailError, "El correo es obligatorio.");
       return false;
     }
 
     if (!emailRegex.test(email)) {
-      errorCorreo.textContent = "Ingresa un correo válido.";
+      setError(emailError, "Ingresa un correo válido.");
       return false;
     }
 
-    errorCorreo.textContent = "";
+    clearError(emailError);
     return true;
-  }
+  };
 
-  function validatePhone() {
-    const celular = celularInput.value.trim();
-    const indicativo = indicativoSelect.value;
+  const validatePhone = () => {
+    const phone = phoneInput.value.trim();
+    const countryCode = countryCodeSelect.value;
 
-    if (indicativo === "") {
-      errorCelular.textContent = "Selecciona un indicativo.";
+    if (!countryCode) {
+      setError(phoneError, "Selecciona un indicativo.");
       return false;
     }
 
-    if (celular === "") {
-      errorCelular.textContent = "El celular es obligatorio.";
+    if (!phone) {
+      setError(phoneError, "El celular es obligatorio.");
       return false;
     }
 
-    if (!/^\d{1,11}$/.test(celular)) {
-      errorCelular.textContent = "Solo se permiten números y máximo 11 dígitos.";
+    if (!phoneRegex.test(phone)) {
+      setError(phoneError, "Solo se permiten números y máximo 11 dígitos.");
       return false;
     }
 
-    errorCelular.textContent = "";
+    clearError(phoneError);
     return true;
-  }
+  };
 
+  const sanitizePhoneInput = (event) => {
+    const numericValue = event.target.value.replace(/\D/g, "").slice(0, 11);
+    event.target.value = numericValue;
+    validatePhone();
+  };
 
+  emailInput.addEventListener("input", validateEmail);
+  phoneInput.addEventListener("input", sanitizePhoneInput);
+  countryCodeSelect.addEventListener("change", validatePhone);
 
-const aviso = document.getElementById("mensajeExito");
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-  formulario.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    
     const isEmailValid = validateEmail();
     const isPhoneValid = validatePhone();
 
-    if (isEmailValid && isPhoneValid) {
-      const datos = new FormData(formulario);
-      
-      try {
-        const respuesta = await fetch(formulario.action, {
-          method: formulario.method,
-          body: datos,
-          headers: { 'Accept': 'application/json' }
-        });
+    if (!isEmailValid || !isPhoneValid) {
+      return;
+    }
 
-        if (respuesta.ok) {
-          formulario.style.display = "none"; // Escondemos el formulario
-          aviso.style.display = "block";    // Mostramos el mensaje verde
-        } else {
-          alert("Hubo un error al enviar. Inténtalo de nuevo.");
-        }
-      } catch (error) {
-        alert("No hay conexión con el servidor.");
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        alert("Hubo un error al enviar el formulario. Inténtalo de nuevo.");
+        return;
       }
+
+      form.reset();
+      form.style.display = "none";
+      successMessage.style.display = "block";
+    } catch (error) {
+      alert("No hay conexión con el servidor.");
     }
   });
 });
