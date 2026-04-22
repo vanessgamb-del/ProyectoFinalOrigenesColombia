@@ -11,14 +11,18 @@
     rel="stylesheet"
   />
   <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
   <link rel="stylesheet" href="../CSS/sobreorigenes.css" />
 </head>
-<body>
+<body id="top">
 
-  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
     <div class="container nav-wrapper">
       <a href="../index.html" class="navbar-brand">
         <img
@@ -46,10 +50,16 @@
             <a class="nav-link" href="../index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contactenos.html">Contacto</a>
+            <a class="nav-link" href="./catalogo.html">Catálogo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active-link" href="sobreorigenes.html">Sobre Orígenes</a>
+            <a class="nav-link" href="./contactenos.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active-link" href="./sobreorigenes.html">Sobre Orígenes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./admin.html">Administrador</a>
           </li>
         </ul>
 
@@ -57,7 +67,7 @@
           <a href="#" class="text-decoration-none" aria-label="Perfil">
             <i class="fa-regular fa-user"></i>
           </a>
-          <a href="#" class="text-decoration-none" aria-label="Carrito">
+          <a href="./catalogo.html" class="text-decoration-none" aria-label="Carrito">
             <i class="fa-solid fa-bag-shopping"></i>
           </a>
         </div>
@@ -286,70 +296,64 @@
   </main>
 
   <footer class="site-footer">
-  <div class="container">
-    
-    <div class="row footer-content">
+    <div class="container">
+      <div class="row footer-content">
+        <div class="col-md-4">
+          <h6 class="footer-title">Contacto</h6>
+          <ul class="footer-list">
+            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
+            <li>contactoorigenescolombia@gmail.com</li>
+            <li>+57 312 3456 7890</li>
+          </ul>
 
-      <!-- CONTACTO -->
-      <div class="col-md-4">
-        <h6 class="footer-title">Contacto</h6>
-        <ul class="footer-list">
-          <li>Calle Ficticia #123, Cali, Colombia</li>
-          <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
-          <li>contactoorigenescolombia@gmail.com</li>
-          <li>+57 312 3456 7890</li>
-        </ul>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
 
-        <div class="footer-social">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        <div class="col-md-4">
+          <h6 class="footer-title">Navegación</h6>
+          <ul class="footer-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./catalogo.html">Catálogo</a></li>
+            <li><a href="./contactenos.html">Contacto</a></li>
+            <li><a href="./sobreorigenes.html">Sobre Orígenes</a></li>
+            <li><a href="./admin.html">Administrador</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Newsletter</h6>
+          <p class="footer-text">
+            Suscríbete y recibe novedades, lanzamientos y productos exclusivos.
+          </p>
+
+          <div class="newsletter">
+            <input type="email" placeholder="E-mail" />
+            <button type="button" aria-label="Suscribirse">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- NAVEGACIÓN -->
-      <div class="col-md-4">
-        <h6 class="footer-title">Navegación</h6>
-        <ul class="footer-list">
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="contactenos.html">Contacto</a></li>
-          <li><a href="sobreorigenes.html">Sobre Orígenes</a></li>
-        </ul>
+      <div class="footer-logo-wrapper">
+        <img src="https://i.postimg.cc/1X3CzFGC/logo-origenes-02.png" alt="logo" class="footer-logo" />
       </div>
 
-      <!-- NEWSLETTER -->
-      <div class="col-md-4">
-        <h6 class="footer-title">Newsletter</h6>
-        <p class="footer-text">
-          Suscríbete y recibe novedades, lanzamientos y productos exclusivos.
-        </p>
-
-        <div class="newsletter">
-          <input type="email" placeholder="E-mail" />
-          <button>
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </button>
-        </div>
+      <div class="footer-bottom">
+        <p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
+        <p>Política de privacidad · Términos y condiciones</p>
+        <p>Conectando el mundo con el alma de Colombia.</p>
       </div>
-
     </div>
+  </footer>
 
-    <!-- LOGO -->
-    <div class="footer-logo-wrapper">
-      <img src="https://i.postimg.cc/1X3CzFGC/logo-origenes-02.png" alt="logo" />
-    </div>
-
-    <!-- COPYRIGHT -->
-    <div class="footer-bottom">
-      <p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
-      <p>Política de privacidad · Términos y condiciones</p>
-      <p>Conectando el mundo con el alma de Colombia.</p>
-    </div>
-
-  </div>
-</footer>
-
+  <script src="../JS/Untitled-1.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
