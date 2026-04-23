@@ -84,12 +84,9 @@
 
         <div id="catalogHardCodeContainer" class="row g-4 justify-content-center">
 
-// INICIO DEL CONTENEDOR DE LAS TARJETAS HARDCODEADAS
-// Lukas
-
           <div class="col-md-6 col-lg-4">
             <div class="product-card">
-              <img src="https://i.postimg.cc/ZqQ7Bz4x/imagen-19.webp" alt="${product.name}" class="product-image" />
+              <img src="https://i.postimg.cc/ZqQ7Bz4x/imagen-19.webp" alt="Ruana De Orígen" class="product-image" />
               <div class="card-body">
                 <span class="badge-category">Moda</span>
                 <h5 class="card-title">Ruana De Orígen</h5>
@@ -97,7 +94,7 @@
                   y cuello. Elegancia y tradición en una sola pieza.</p>
                 <p class="price-text">285000</p>
                 <p class="stock-text">Disponibles: 7</p>
-                <button class="btn-buy" onclick="addToCart(${product.id})">
+                <button class="btn-buy" onclick="addToCart(101)">
                   Agregar al carrito
                 </button>
               </div>
@@ -106,15 +103,15 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="product-card">
-              <img src="https://i.postimg.cc/W3J90Y1Y/imagen-18.jpg" alt="${product.name}" class="product-image" />
+              <img src="https://i.postimg.cc/W3J90Y1Y/imagen-18.jpg" alt="Poncho Ancestral" class="product-image" />
               <div class="card-body">
                 <span class="badge-category">Moda</span>
                 <h5 class="card-title">Poncho Ancestral</h5>
                 <p class="card-text">Tejido artesanal en telar de pedal con fibras naturales. Diseño bitono en ocre y
                   café con texturas geométricas inspiradas en la tierra.</p>
-                <p class="price-text">$${Number(285000).toLocaleString("es-CO")}</p>
-                <p class="stock-text">Disponibles: ${product.stock}</p>
-                <button class="btn-buy" onclick="addToCart(${product.id})">
+                <p class="price-text">$ 230.000</p>
+                <p class="stock-text">Disponibles: 6</p>
+                <button class="btn-buy" onclick="addToCart(102)">
                   Agregar al carrito
                 </button>
               </div>
@@ -123,14 +120,14 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="product-card">
-              <img src="https://i.postimg.cc/L8H0GVxL/imagen-07.jpg" alt="${product.name}" class="product-image" />
+              <img src="https://i.postimg.cc/L8H0GVxL/imagen-07.jpg" alt="Brazalete 'Ondas de Mimbre'" class="product-image" />
               <div class="card-body">
-                <span class="badge-category">${product.category}</span>
-                <h5 class="card-title">${product.name}</h5>
-                <p class="card-text">${product.description}</p>
-                <p class="price-text">$${Number(product.price).toLocaleString("es-CO")}</p>
-                <p class="stock-text">Disponibles: ${product.stock}</p>
-                <button class="btn-buy" onclick="addToCart(${product.id})">
+                <span class="badge-category">Artesanías</span>
+                <h5 class="card-title">Brazalete "Ondas de Mimbre"</h5>
+                <p class="card-text">Este brazalete rígido está tejido a mano utilizando fibras naturales de mimbre o ratán, destacando por su estructura escultórica y asimétrica.</p>
+                <p class="price-text">$ 240.000</p>
+                <p class="stock-text">Disponibles: 17</p>
+                <button class="btn-buy" onclick="addToCart(103)">
                   Agregar al carrito
                 </button>
               </div>
@@ -139,14 +136,14 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="product-card">
-              <img src="https://i.postimg.cc/cLs5PcFY/imagen-08.jpg" alt="${product.name}" class="product-image" />
+              <img src="https://i.postimg.cc/cLs5PcFY/imagen-08.jpg" alt="Vasijas de Arcilla Esmaltada" class="product-image" />
               <div class="card-body">
-                <span class="badge-category">${product.category}</span>
-                <h5 class="card-title">${product.name}</h5>
-                <p class="card-text">${product.description}</p>
-                <p class="price-text">$${Number(product.price).toLocaleString("es-CO")}</p>
-                <p class="stock-text">Disponibles: ${product.stock}</p>
-                <button class="btn-buy" onclick="addToCart(${product.id})">
+                <span class="badge-category">Artesanías</span>
+                <h5 class="card-title">Vasijas de Arcilla Esmaltada</h5>
+                <p class="card-text">Esta colección presenta una serie de vasijas de cerámica artesanales, cada una de ellas única y elaborada a mano con arcilla de alta calidad.</p>
+                <p class="price-text">$ 350.000</p>
+                <p class="stock-text">Disponibles: 7</p>
+                <button class="btn-buy" onclick="addToCart(104)">
                   Agregar al carrito
                 </button>
               </div>
@@ -157,14 +154,14 @@
             <div class="product-card">
               <img
                 src="https://vitrina-emprendimiento-rural.aureliollano.org.co/wp-content/uploads/2023/03/Producto-tejidos-de-macrame-Vivero-paraiso-del-cartama.jpg"
-                alt="tejido" class="product-image" />
+                alt="Tejido" class="product-image" />
               <div class="card-body">
                 <span class="badge-category">Artesanias</span>
                 <h5 class="card-title">Tejido</h5>
                 <p class="card-text">Tejido para matera</p>
                 <p class="price-text">$20.000</p>
                 <p class="stock-text">Disponibles: 8</p>
-                <button class="btn-buy" onclick="addToCart(${product.id})">
+                <button class="btn-buy" onclick="addToCart(105)">
                   Agregar al carrito
                 </button>
               </div>
@@ -175,76 +172,56 @@
             <div class="product-card">
               <img
                 src="https://plus.unsplash.com/premium_photo-1675435644687-562e8042b9db?q=80&w=749&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Café premiun" class="product-image" />
+                alt="Café Amazonas" class="product-image" />
               <div class="card-body">
                 <span class="badge-category">Café</span>
                 <h5 class="card-title">Café Amazonas</h5>
                 <p class="card-text">Cafe de origen natural</p>
                 <p class="price-text">$50.000</p>
                 <p class="stock-text">Disponibles: 58</p>
-                <button class="btn-buy" onclick="addToCart(${product.id})">
+                <button class="btn-buy" onclick="addToCart(106)">
                   Agregar al carrito
                 </button>
               </div>
             </div>
           </div>
 
-          // Luis - Sombrero, Joyería
-
           <div class="col-md-6 col-lg-4">
             <div class="product-card"> <img
-                src="https://th.bing.com/th/id/R.2990586f37e984639dd089d70b90aa38?rik=T7uMQ%2fRfqVD4MA&riu=http%3a%2f%2ftrocha.com.co%2fwp-content%2fuploads%2f2014%2f03%2fsombrero.jpg&ehk=GieNeYT4VgaImKnZEGeAJECNXQWpimBOFXU3biJ1hro%3d&risl=&pid=ImgRaw&r=0"
+                src="https://colombia.co/sites/default/files/marca-pais/media/images/sombrero-vueltiao-colombiano_0.webp"
                 alt="Sombrero Vueltiao" class="product-image" />
               <div class="card-body"> <span class="badge-category">Moda</span>
                 <h5 class="card-title">Sombrero Vueltiao</h5>
                 <p class="card-text"> Sombrero tradicional colombiano tejido a mano por artesanos, ideal para un estilo
                   auténtico y cultural. </p>
                 <p class="price-text">$70.000</p>
-                <p class="stock-text">Disponibles: 10</p> <button class="btn-buy" onclick="addToCart(1)"> Agregar al
+                <p class="stock-text">Disponibles: 10</p> <button class="btn-buy" onclick="addToCart(107)"> Agregar al
                   carrito </button>
               </div>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-4">
-
             <div class="product-card">
-
-              <img src="https://i.postimg.cc/hf5rdVWt/imagen-07.jpg" alt="Joyería artesanal" class="product-image" />
-
+              <img src="https://i.ebayimg.com/images/g/8okAAeSwYZ9px-3m/s-l1200.webp" alt="Joyería artesanal" class="product-image" />
               <div class="card-body">
-
                 <span class="badge-category">Joyería</span>
-
-                <h5 class="card-title">Joyería artesanal</h5>
-
+                <h5 class="card-title">Set de Joyería "Hojas de Otoño" (Cobre Patinado)</h5>
                 <p class="card-text">
-
                   Accesorio artesanal elaborado con detalles elegantes y un diseño inspirado en la cultura colombiana.
-
                 </p>
-
                 <p class="price-text">$55.000</p>
-
                 <p class="stock-text">Disponibles: 8</p>
-
-                <button class="btn-buy" onclick="addToCart(2)">
-
+                <button class="btn-buy" onclick="addToCart(108)">
                   Agregar al carrito
-
                 </button>
-
               </div>
-
             </div>
-
           </div>
-
-          // Manuel - Vela, Pañoletas
 
           <div class="col-md-6 col-lg-4">
             <div class="product-card">
-              <img src="https://i.postimg.cc/Bvs3tDZH/imagen-30.webp" alt="${product.name}" class="product-image" />
+              <img src="https://i.postimg.cc/Bvs3tDZH/imagen-30.webp" alt="Vela Guava Jelly" class="product-image" />
               <div class="card-body">
                 <span class="badge-category">Accesorios</span>
                 <h5 class="card-title">Vela Guava Jelly</h5>
@@ -252,7 +229,7 @@
                   vidrio rosado con empaque ilustrado. Perfecta para regalar o decorar tu hogar.</p>
                 <p class="price-text">$120.000</p>
                 <p class="stock-text">Disponibles: 10</p>
-                <button class="btn-buy" onclick="addToCart(${product.id})">
+                <button class="btn-buy" onclick="addToCart(109)">
                   Agregar al carrito
                 </button>
               </div>
@@ -261,7 +238,7 @@
 
           <div class="col-md-6 col-lg-4">
             <div class="product-card">
-              <img src="https://i.postimg.cc/J0jH3ZJ4/imagen-27.webp />
+              <img src="https://www.khamalishop.com/cdn/shop/products/Pa_uelo-tropical-cabeza-KHAMALI-258183265_1946x.jpg?v=1741892266" alt="Pañuelo Tropical" class="product-image"  />              
               <div class=" card-body">
               <span class="badge-category">Accesorios</span>
               <h5 class="card-title">Pañuelo Tropical</h5>
@@ -269,25 +246,23 @@
                 seda satinada, combina el rojo vino con ilustraciones en crema. ¡Mil formas de usarlo!</p>
               <p class="price-text">$95.000</p>
               <p class="stock-text">Disponibles: 10</p>
-              <button class="btn-buy" onclick="addToCart(${product.id})">
+              <button class="btn-buy" onclick="addToCart(110)">
                 Agregar al carrito
               </button>
             </div>
           </div>
         </div>
 
-        // Angie - Brazaletes, Bolso de mano
-
         <div class="col-md-6 col-lg-4">
           <div class="product-card">
-            <img src="https://postimg.cc/gallery/J49g8B5" alt="${product.name}" class="product-image" />
+            <img src="https://i.etsystatic.com/34393182/r/il/6a5a86/4100564960/il_570xN.4100564960_8r9r.jpg" alt="Brazalete 'Geometría Ancestral' en Mostacilla" class="product-image"  />              
             <div class="card-body">
               <span class="badge-category">Accesorio</span>
-              <h5 class="card-title">Brazaletes Tejidos</h5>
-              <p class="card-text">Hermosos brazaletes artesanales que pueden resaltar tu estilo</p>
-              <p class="price-text">$120.000</p>
-              <p class="stock-text">Disponibles: </p>
-              <button class="btn-buy" onclick="addToCart(${product.id})">
+              <h5 class="card-title">Brazalete "Geometría Ancestral" en Mostacilla</h5>
+              <p class="card-text">Este brazalete ancho es una obra de arte tejida a mano mediante la técnica de telar de cuentas o puntada peyote, utilizando mostacillas de alta calidad (tipo Miyuki o checas).</p>
+              <p class="price-text">$78.000</p>
+              <p class="stock-text">Disponibles: 5</p>
+              <button class="btn-buy" onclick="addToCart(111)">
                 Agregar al carrito
               </button>
             </div>
@@ -296,33 +271,21 @@
 
         <div class="col-md-6 col-lg-4">
           <div class="product-card">
-            <img src="https://postimg.cc/gallery/J49g8B5" alt="${product.name}" class="product-image" />
+            <img src="https://hilosagrado.org/cdn/shop/collections/Mochila-Wayuu-Tejida-Azul-Oscuro-Pompon_grande.png?v=1695335152" alt="Mochila Patrimonio Solar (Tejido Wayúu de Lujo)" class="product-image" />
             <div class="card-body">
               <span class="badge-category">Moda</span>
-              <h5 class="card-title">Bolso De Mano</h5>
-              <p class="card-text">Realza tu estilo con este hermoso bolso.</p>
-              <p class="price-text">$150.000</p>
+              <h5 class="card-title">Mochila "Patrimonio Solar" (Tejido Wayúu de Lujo)</h5>
+              <p class="card-text">Esta mochila es una pieza de alta gama que reinterpreta el tejido tradicional de la comunidad Wayúu con una paleta de colores minimalista y sofisticada.</p>
+              <p class="price-text">$450.000</p>
               <p class="stock-text">Disponibles: 3</p>
-              <button class="btn-buy" onclick="addToCart(${product.id})">
+              <button class="btn-buy" onclick="addToCart(112)">
                 Agregar al carrito
               </button>
             </div>
           </div>
         </div>
 
-
-      </div>
-
-
-      // FIN DEL CONTENEDOR DE LAS TARJETAS
-
-
-
-      <div id="catalogContainer" class="row g-4 justify-content-center">
-
-
-      </div>
-
+      <div id="catalogContainer" class="row g-4 justify-content-center"></div>
 
       </div>
     </section>
