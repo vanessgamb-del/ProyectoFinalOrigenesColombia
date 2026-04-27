@@ -41,7 +41,7 @@ function renderCatalog() {
     return;
   }
 
-  const products = getProducts().filter(p => p.id < 100);
+  const products = getProducts();
 
   if (products.length === 0) {
     catalogContainer.innerHTML = `
