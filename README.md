@@ -10,7 +10,3 @@ Proyecto Final Generation Colombia
 - Manuel Gómez
 - Luis Salgado
 - Lukas Muñoz
-
-Hola!
-push banner  
-Prueba de cambio en README para probar subir a dev si errores
