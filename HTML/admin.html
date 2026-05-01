@@ -1,46 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Panel de administrador de Orígenes Colombia" />
   <title>Administrador | Orígenes Colombia</title>
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="../CSS/admin.css" />
 </head>
+
 <body id="top">
 
   <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
     <div class="container nav-wrapper">
       <a href="../index.html">
-        <img
-          src="https://i.postimg.cc/mkgXr9YF/logo-origenes-01.png"
-          alt="Orígenes Colombia"
-          class="logo-navbar d-inline-block align-text-top"
-        />
+        <img src="https://i.postimg.cc/mkgXr9YF/logo-origenes-01.png" alt="Orígenes Colombia"
+          class="logo-navbar d-inline-block align-text-top" />
       </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarMain"
-        aria-controls="navbarMain"
-        aria-expanded="false"
-        aria-label="Abrir menú"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+        aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -64,7 +48,7 @@
         </ul>
 
         <div class="icons d-flex gap-3 align-items-center">
-          <a href="#" class="text-decoration-none" aria-label="Perfil">
+          <a href="registro.html" class="text-decoration-none" aria-label="Perfil">
             <i class="fa-regular fa-user"></i>
           </a>
           <a href="catalogo.html" class="text-decoration-none" aria-label="Carrito">
@@ -113,51 +97,26 @@
 
                 <div class="mb-3">
                   <label for="name" class="form-label">Nombre del producto</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="Ej: Café Premium de Nariño"
-                    required
-                  />
+                  <input type="text" class="form-control" id="name" placeholder="Ej: Café Premium de Nariño" required />
                 </div>
 
                 <div class="mb-3">
                   <label for="description" class="form-label">Descripción</label>
-                  <textarea
-                    class="form-control"
-                    id="description"
-                    rows="4"
-                    placeholder="Describe el producto"
-                    required
-                  ></textarea>
+                  <textarea class="form-control" id="description" rows="4" placeholder="Describe el producto"
+                    required></textarea>
                 </div>
 
                 <div class="row g-3 mb-3">
                   <div class="col-md-6">
                     <label for="price" class="form-label">Precio</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="price"
-                      placeholder="Ej: 45000"
-                      min="1"
-                      step="1"
-                      required
-                    />
+                    <input type="number" class="form-control" id="price" placeholder="Ej: 45000" min="1" step="1"
+                      required />
                   </div>
 
                   <div class="col-md-6">
                     <label for="stock" class="form-label">Cantidad disponible</label>
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="stock"
-                      placeholder="Ej: 12"
-                      min="0"
-                      step="1"
-                      required
-                    />
+                    <input type="number" class="form-control" id="stock" placeholder="Ej: 12" min="0" step="1"
+                      required />
                   </div>
                 </div>
 
@@ -175,13 +134,8 @@
 
                 <div class="mb-4">
                   <label for="image" class="form-label">URL o ruta de la imagen</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="image"
-                    placeholder="Ej: ../IMG/categoria-cafe.jpg"
-                    required
-                  />
+                  <input type="text" class="form-control" id="image" placeholder="Ej: ../IMG/categoria-cafe.jpg"
+                    required />
                 </div>
 
                 <div class="admin-actions admin-actions-gap">
@@ -260,11 +214,8 @@
       </div>
 
       <div class="footer-logo-wrapper">
-        <img
-          src="https://i.postimg.cc/1X3CzFGC/logo-origenes-02.png"
-          alt="logo Orígenes Colombia"
-          class="footer-logo"
-        />
+        <img src="https://i.postimg.cc/1X3CzFGC/logo-origenes-02.png" alt="logo Orígenes Colombia"
+          class="footer-logo" />
       </div>
 
       <div class="footer-bottom">
@@ -279,5 +230,5 @@
   <script src="../JS/admin.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
 
+</html>

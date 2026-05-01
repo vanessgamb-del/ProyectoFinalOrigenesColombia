@@ -1,47 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Página principal de Orígenes Colombia" />
   <title>Orígenes Colombia</title>
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <link rel="stylesheet" href="./CSS/index.css" />
 </head>
+
 <body id="top">
 
   <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
     <div class="container nav-wrapper">
       <a href="./index.html">
-        <img
-          src="https://i.postimg.cc/mkgXr9YF/logo-origenes-01.png"
-          alt="Orígenes Colombia"
-          class="logo-navbar d-inline-block align-text-top"
-        />
+        <img src="https://i.postimg.cc/mkgXr9YF/logo-origenes-01.png" alt="Orígenes Colombia"
+          class="logo-navbar d-inline-block align-text-top" />
       </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarMain"
-        aria-controls="navbarMain"
-        aria-expanded="false"
-        aria-label="Abrir menú"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+        aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -65,7 +49,7 @@
         </ul>
 
         <div class="icons d-flex gap-3 align-items-center">
-          <a href="#" class="text-decoration-none" aria-label="Perfil">
+          <a href="HTML/registro.html" class="text-decoration-none" aria-label="Perfil">
             <i class="fa-regular fa-user"></i>
           </a>
           <a href="#" class="text-decoration-none" aria-label="Carrito">
@@ -77,14 +61,10 @@
   </nav>
 
   <main id="home">
-    <section
-      id="bannerOrigenes"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-interval="5000"
-    >
+    <section id="bannerOrigenes" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#bannerOrigenes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#bannerOrigenes" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#bannerOrigenes" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#bannerOrigenes" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
@@ -92,14 +72,8 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="hero-overlay"></div>
-          <img
-            src="./IMG/1-banner.webp"
-            class="d-block w-100 banner-img"
-            alt="Artesanías colombianas"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-          />
+          <img src="./IMG/1-banner.webp" class="d-block w-100 banner-img" alt="Artesanías colombianas" loading="eager"
+            fetchpriority="high" decoding="async" />
           <div class="carousel-caption hero-content">
             <span class="hero-badge">Hecho en Colombia</span>
             <h1>Orígenes Colombia</h1>
@@ -113,13 +87,8 @@
 
         <div class="carousel-item">
           <div class="hero-overlay"></div>
-          <img
-            src="./IMG/2-banner.webp"
-            class="d-block w-100 banner-img"
-            alt="Productos artesanales"
-            loading="lazy"
-            decoding="async"
-          />
+          <img src="./IMG/2-banner.webp" class="d-block w-100 banner-img" alt="Productos artesanales" loading="lazy"
+            decoding="async" />
           <div class="carousel-caption hero-content">
             <span class="hero-badge">Tradición y diseño</span>
             <h1>Artesanía con identidad</h1>
@@ -133,13 +102,8 @@
 
         <div class="carousel-item">
           <div class="hero-overlay"></div>
-          <img
-            src="./IMG/3-banner.webp"
-            class="d-block w-100 banner-img"
-            alt="Cultura colombiana"
-            loading="lazy"
-            decoding="async"
-          />
+          <img src="./IMG/3-banner.webp" class="d-block w-100 banner-img" alt="Cultura colombiana" loading="lazy"
+            decoding="async" />
           <div class="carousel-caption hero-content">
             <span class="hero-badge">Cultura viva</span>
             <h1>Historias que inspiran</h1>
@@ -175,13 +139,8 @@
         <div class="categories-grid">
           <article class="category-card">
             <div class="category-image-wrapper">
-              <img
-                src="./IMG/categoria-cafe.jpg"
-                alt="Categoría café"
-                class="category-image"
-                loading="lazy"
-                decoding="async"
-              />
+              <img src="./IMG/categoria-cafe.jpg" alt="Categoría café" class="category-image" loading="lazy"
+                decoding="async" />
             </div>
             <div class="category-content">
               <h3>Café</h3>
@@ -191,13 +150,8 @@
 
           <article class="category-card">
             <div class="category-image-wrapper">
-              <img
-                src="./IMG/categoria-artesanias.jpg"
-                alt="Categoría artesanías"
-                class="category-image"
-                loading="lazy"
-                decoding="async"
-              />
+              <img src="./IMG/categoria-artesanias.jpg" alt="Categoría artesanías" class="category-image" loading="lazy"
+                decoding="async" />
             </div>
             <div class="category-content">
               <h3>Artesanías</h3>
@@ -207,13 +161,8 @@
 
           <article class="category-card">
             <div class="category-image-wrapper">
-              <img
-                src="./IMG/categoria-decoracion.jpg"
-                alt="Categoría decoración"
-                class="category-image"
-                loading="lazy"
-                decoding="async"
-              />
+              <img src="./IMG/categoria-decoracion.jpg" alt="Categoría decoración" class="category-image" loading="lazy"
+                decoding="async" />
             </div>
             <div class="category-content">
               <h3>Decoración</h3>
@@ -223,13 +172,8 @@
 
           <article class="category-card">
             <div class="category-image-wrapper">
-              <img
-                src="./IMG/categoria-moda.jpg"
-                alt="Categoría moda"
-                class="category-image"
-                loading="lazy"
-                decoding="async"
-              />
+              <img src="./IMG/categoria-moda.jpg" alt="Categoría moda" class="category-image" loading="lazy"
+                decoding="async" />
             </div>
             <div class="category-content">
               <h3>Moda</h3>
@@ -240,27 +184,27 @@
       </div>
     </section>
 
-   <section class="cta-section">
-  <div class="container">
-    <div class="cta-box cta-background">
-      <div class="cta-text-overlay"> 
-        <span class="cta-label">Orígenes Colombia</span>
-        <h2>Descubre productos que cuentan historias</h2>
-        <p>
-          Cada pieza refleja el talento, la tradición y la riqueza cultural de Colombia.
-          Explora nuestro catálogo y encuentra algo auténtico para ti.
-        </p>
-        <div class="cta-action mt-4">
-          <a href="./HTML/catalogo.html" class="btn cta-btn">Ir al catálogo</a>
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box cta-background">
+          <div class="cta-text-overlay">
+            <span class="cta-label">Orígenes Colombia</span>
+            <h2>Descubre productos que cuentan historias</h2>
+            <p>
+              Cada pieza refleja el talento, la tradición y la riqueza cultural de Colombia.
+              Explora nuestro catálogo y encuentra algo auténtico para ti.
+            </p>
+            <div class="cta-action mt-4">
+              <a href="./HTML/catalogo.html" class="btn cta-btn">Ir al catálogo</a>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
     </div>
-  </div>
-</section>
-      </div>
     </div>
-  </div>
-</section>
+    </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -311,13 +255,8 @@
       </div>
 
       <div class="footer-logo-wrapper">
-        <img
-          src="https://i.postimg.cc/1X3CzFGC/logo-origenes-02.png"
-          alt="Logo Orígenes Colombia"
-          class="footer-logo"
-          loading="lazy"
-          decoding="async"
-        />
+        <img src="https://i.postimg.cc/1X3CzFGC/logo-origenes-02.png" alt="Logo Orígenes Colombia" class="footer-logo"
+          loading="lazy" decoding="async" />
       </div>
 
       <div class="footer-bottom">
@@ -331,4 +270,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./JS/app.js"></script>
 </body>
+
 </html>
