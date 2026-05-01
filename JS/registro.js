@@ -1,9 +1,37 @@
-const verificarPass = document.getElementById("verificar-passwordInput");
+const form = document.getElementById("contactForm");
+const nombreInput = document.getElementById("nombre");
+const emailInput = document.getElementById("email");
+const phoneInput = document.getElementById("celular");
+const countryCodeSelect = document.getElementById("indicativo");
 const passInput = document.getElementById("passwordInput");
+const verificarPass = document.getElementById("verificar-passwordInput");
+
+const nombreError = document.getElementById("errorNombreCompleto");
+const emailError = document.getElementById("errorCorreo");
+const phoneError = document.getElementById("errorCelular");
 const errorContrasena = document.getElementById("errorContrasena");
 const errorContrasena2 = document.getElementById("verificar-errorContrasena");
+const successMessage = document.getElementById("mensajeExito");
 
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^\d{1,11}$/;
+
+function setError (element, message) {
+  element.textContent = message;
+};
+
+function clearError (element){
+  element.textContent = "";
+};
+
+// Listener para funciones
 verificarPass.addEventListener("input",sonIguales);
+emailInput.addEventListener("input", validateEmail);
+phoneInput.addEventListener("input", sanitizePhoneInput);
+countryCodeSelect.addEventListener("change", validatePhone);
+form.addEventListener("submit", registrarse );
+
+// funciones para contraseña 
 
 function verContrasena(password,btn){
   const input = document.getElementById(password);
@@ -21,7 +49,7 @@ function verContrasena(password,btn){
 function sonIguales(){
   let verificarPassString = verificarPass.value;
   let passString = passInput.value;
-      if(verificarPass !== passString ){
+      if(verificarPassString !== passString ){
         errorContrasena.textContent="Las contraseñas no son iguales";
         errorContrasena2.textContent="Las contraseñas no son iguales";
         return;
@@ -34,61 +62,37 @@ function sonIguales(){
 
 }
 
+// funciones de validación del formulario
 
+function validacionNombre(){
+  const nombre= nombreInput.value.trim();
 
+  if(!nombre){
+    setError(nombreError,"El nombre es obligatorio");
+    return false;
+  }
+  clearError(nombreError);
+    return true;
+}
 
+function validateEmail (){
+  const email = emailInput.value.trim();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contactForm");
-  const emailInput = document.getElementById("email");
-  const phoneInput = document.getElementById("celular");
-  const countryCodeSelect = document.getElementById("indicativo");
-
-  const emailError = document.getElementById("errorCorreo");
-  const phoneError = document.getElementById("errorCelular");
-  const successMessage = document.getElementById("mensajeExito");
-
-  if (
-    !form ||
-    !emailInput ||
-    !phoneInput ||
-    !countryCodeSelect ||
-    !emailError ||
-    !phoneError ||
-    !successMessage
-  ) {
-    return;
+  if (!email) {
+    setError(emailError, "El correo es obligatorio.");
+    return false;
   }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const phoneRegex = /^\d{1,11}$/;
+  if (!emailRegex.test(email)) {
+    setError(emailError, "Ingresa un correo válido.");
+    return false;
+  }
 
-  const setError = (element, message) => {
-    element.textContent = message;
-  };
+  clearError(emailError);
+  return true;
+};
 
-  const clearError = (element) => {
-    element.textContent = "";
-  };
-
-  const validateEmail = () => {
-    const email = emailInput.value.trim();
-
-    if (!email) {
-      setError(emailError, "El correo es obligatorio.");
-      return false;
-    }
-
-    if (!emailRegex.test(email)) {
-      setError(emailError, "Ingresa un correo válido.");
-      return false;
-    }
-
-    clearError(emailError);
-    return true;
-  };
-
-  const validatePhone = () => {
+function validatePhone(){
     const phone = phoneInput.value.trim();
     const countryCode = countryCodeSelect.value;
 
@@ -110,48 +114,57 @@ document.addEventListener("DOMContentLoaded", () => {
     clearError(phoneError);
     return true;
   };
-
-  const sanitizePhoneInput = (event) => {
+  function sanitizePhoneInput(event){
     const numericValue = event.target.value.replace(/\D/g, "").slice(0, 11);
     event.target.value = numericValue;
     validatePhone();
   };
 
-  emailInput.addEventListener("input", validateEmail);
-  phoneInput.addEventListener("input", sanitizePhoneInput);
-  countryCodeSelect.addEventListener("change", validatePhone);
+  function validacionContrasena(){
+    const contra= passInput.value.trim();
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+    if(!contra){
+      setError(errorContrasena,"La contraseña es obligatoria");
+      return false;
+  }
 
-    const isEmailValid = validateEmail();
-    const isPhoneValid = validatePhone();
+  clearError(errorContrasena);
+  clearError(errorContrasena2);
+  return true;
+}
+function registrarse(e) {
+  // evita que se recargue la página
+  e.preventDefault();
+  //realiza las validaciones antes de continuar
+  const isEmailValid = validateEmail();
+  const isPhoneValid = validatePhone();
+  const isNameValid = validacionNombre();
+  const isPassValid = validacionContrasena();
 
-    if (!isEmailValid || !isPhoneValid) {
-      return;
-    }
+  if (!isEmailValid || !isPhoneValid || !isNameValid || !isPassValid) {
+    return;
+  }
 
-    const formData = new FormData(form);
+  usuariosRegistrados = getUsarios();
+  const emailExiste = usuariosRegistrados.some(
+  user => user.correo === emailInput.value
+);
+  if(emailExiste){
+    alert("Correo registrado previamente");
+    return;
+  }
+  
 
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
+  const usuarioData = {
+    nombre: nombreInput.value,
+    correo : emailInput.value,
+    telefono: phoneInput.value,
+    indicativo:countryCodeSelect.value,
+    contrasena: passInput.value,
+  }
 
-      if (!response.ok) {
-        alert("Hubo un error al enviar el formulario. Inténtalo de nuevo.");
-        return;
-      }
+  console.log(usuarioData);
+  usuariosRegistrados.push(usuarioData);
+  saveUsuario(usuariosRegistrados);
 
-      form.reset();
-      form.style.display = "none";
-      successMessage.style.display = "block";
-    } catch (error) {
-      alert("No hay conexión con el servidor.");
-    }
-  });
-});
+  };
