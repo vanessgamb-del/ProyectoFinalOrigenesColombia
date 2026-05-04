@@ -24,16 +24,6 @@ const HARDCODED_PRODUCTS = [
 
 // --- Lo que ya teníamos sigue exactamente igual abajo ---
 
-
-
-
-
-
-
-
-
-
-
 const catalogContainer = document.getElementById("catalogContainer");
 
 function renderCatalog() {
@@ -84,3 +74,28 @@ window.addEventListener("storage", (event) => {
 });
 
 renderCatalog();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const shouldOpenCart =
+    localStorage.getItem("openCartAfterRegister") === "true" ||
+    new URLSearchParams(window.location.search).get("openCart") === "true";
+
+  if (!shouldOpenCart) {
+    return;
+  }
+
+  localStorage.removeItem("openCartAfterRegister");
+
+  const cartDrawer = document.getElementById("cartDrawer");
+  const cartOverlay = document.getElementById("cartOverlay");
+
+  if (cartDrawer) {
+    cartDrawer.classList.add("open");
+    cartDrawer.classList.add("cart-drawer-open");
+  }
+
+  if (cartOverlay) {
+    cartOverlay.classList.add("show");
+    cartOverlay.classList.add("cart-overlay-show");
+  }
+});

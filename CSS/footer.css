@@ -1,0 +1,148 @@
+.site-footer {
+  background-color: var(--navbackground);
+  color: var(--textoblanco);
+  padding: 50px 0 25px;
+  margin-top: 50px;
+}
+
+.footer-content {
+  margin-bottom: 30px;
+}
+
+.footer-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--textoblanco);
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--textoblanco);
+}
+
+.footer-list a {
+  color: var(--textoblanco);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-list a:hover {
+  color: #F3E9DB;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: var(--textoblanco);
+  line-height: 1.6;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--textoblanco);
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: var(--colorhover);
+  transform: translateY(-2px);
+}
+
+.newsletter {
+  position: relative;
+  max-width: 260px;
+}
+
+.newsletter input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px 10px 12px;
+  outline: none;
+}
+
+.newsletter button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: var(--colorhover);
+  color: var(--textoblanco);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.newsletter-message {
+  display: block;
+  margin-top: 8px;
+  color: var(--textoblanco);
+  font-size: 0.85rem;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.footer-logo-wrapper img,
+.footer-logo {
+  width: 110px;
+  height: auto;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 15px;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+  color: var(--textoblanco);
+}
+
+@media (max-width: 991px) {
+  .footer-content > div {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .newsletter {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,31 @@
+:root {
+  --colortextos: #484B47;
+  --colorhover: #B46141;
+  --backgroundcolor: #FAFBF6;
+  --navbackground: #6E9B77;
+  --textoblanco: #FFFFFF;
+  --cardbg: #FFFFFF;
+  --bordercolor: #E7E1D7;
+  --shadowsoft: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* 🔥 Compatibilidad con CSS antiguos */
+  --titlesgreen: var(--navbackground);
+  --textdark: var(--colortextos);
+  --textwhite: var(--textoblanco);
+  --borderlight: var(--bordercolor);
+  --hoveraccent: var(--colorhover);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 92px;
+  background-color: var(--backgroundcolor);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--colortextos);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

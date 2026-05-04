@@ -167,4 +167,7 @@ function registrarse(e) {
   usuariosRegistrados.push(usuarioData);
   saveUsuario(usuariosRegistrados);
 
+  localStorage.setItem("openCartAfterRegister", "true");
+  window.location.href = "catalogo.html?openCart=true";
+
   };
