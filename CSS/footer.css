@@ -1,0 +1,233 @@
+/*Footer general*/
+.site-footer {
+  background-color: #F0EFE9;
+  color: var(--colortextos);
+  padding-top: 60px;
+  margin-top: 40px;
+}
+
+.site-footer p,
+.site-footer b,
+.site-footer strong,
+.site-footer li,
+.site-footer a {
+  color: var(--colortextos);
+}
+
+.site-footer a {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.site-footer a:hover {
+  opacity: 0.6;
+}
+
+.site-footer h6 {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: var(--colortextos);
+}
+
+/*Listas*/
+.site-footer .footer-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+
+/*Iconos de redes*/
+.site-footer .icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.site-footer .icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.site-footer .icons i {
+  color: var(--colortextos);
+  font-size: 16px;
+}
+
+.site-footer .icons a:hover {
+  opacity: 0.6;
+}
+
+
+/*Columna del "navegación"*/
+.site-footer .footer-content .col-md-4:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-footer .footer-content .col-md-4:nth-child(2) .footer-title {
+  text-align: left;
+  width: 100%;
+  max-width: 140px;
+}
+
+.site-footer .footer-content .col-md-4:nth-child(2) .footer-list {
+  text-align: left;
+  padding-left: 0;
+  width: 100%;
+  max-width: 140px;
+  margin: 0;
+}
+
+.site-footer .nav-link {
+  color: var(--colortextos) !important;
+  padding: 4px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.site-footer .nav-link:hover {
+  opacity: 0.6;
+  color: var(--colortextos) !important;
+}
+
+
+/*Barra de suscríbete*/
+.site-footer .newsletter {
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid var(--colortextos);
+  padding-bottom: 6px;
+}
+
+.site-footer .newsletter .form-control {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--colortextos);
+  font-size: 0.95rem;
+  padding: 4px 0;
+  box-shadow: none;
+}
+
+.site-footer .newsletter .form-control::placeholder {
+  color: var(--colortextos);
+  opacity: 0.6;
+}
+
+.site-footer .newsletter span {
+  margin-left: 10px;
+  cursor: pointer;
+  color: var(--colortextos);
+  transition: opacity 0.2s ease;
+}
+
+.site-footer .newsletter span:hover {
+  opacity: 0.6;
+}
+
+
+/*Logo grande del footer*/
+.site-footer .footer-logo-wrapper {
+  padding: 40px 0 0px;
+}
+
+.site-footer .footer-logo-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/*Barra texto inferior*/
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 32px 0 24px;
+  font-size: 0.8rem;
+  border-top: none;
+  margin-top: 8px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.site-footer li,
+.site-footer p,
+.site-footer a {
+  overflow-wrap: anywhere;
+}
+
+
+
+/*Responsive footer*/
+@media (max-width: 991px) {
+  .site-footer .footer-content > div {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .site-footer .row > div {
+    text-align: center;
+  }
+
+  .site-footer .icons {
+    justify-content: center;
+    margin-top: 24px;
+    padding-bottom: 8px;
+  }
+
+  .site-footer .newsletter {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  /*Columna "Navegación" centrada en responsive*/
+  .site-footer .footer-content .col-md-4:nth-child(2) {
+    align-items: center;
+  }
+
+  .site-footer .footer-content .col-md-4:nth-child(2) .footer-title {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .site-footer .footer-content .col-md-4:nth-child(2) .footer-list {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    text-align: center;
+  }
+
+  .site-footer .footer-icons {
+    justify-content: center;
+  }
+
+  .site-footer .newsletter {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

@@ -19,15 +19,18 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
 
+  <link rel="stylesheet" href="./CSS/header.css" />
   <link rel="stylesheet" href="./CSS/index.css" />
+  <link rel="stylesheet" href="./CSS/footer.css" />
 </head>
+
 <body id="top">
 
   <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
     <div class="container nav-wrapper">
       <a href="./index.html">
         <img
-          src="https://i.postimg.cc/mkgXr9YF/logo-origenes-01.png"
+          src="./IMG/logo-origenes-oscuro.svg"
           alt="Orígenes Colombia"
           class="logo-navbar d-inline-block align-text-top"
         />
@@ -284,11 +287,12 @@
             <li>+57 312 3456 7890</li>
           </ul>
 
-          <div class="footer-social">
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <div class="icons">
+            <a href="#"><img src="IMG/icon-instagram.svg" alt="Instagram" width="38" height="38"/></a>
+            <a href="#"><img src="IMG/icon-facebook.svg" alt="Facebook" width="38" height="38"/></a>
+            <a href="#"><img src="IMG/icon-x.svg" alt="X" width="38" height="38"/></a>
+            <a href="#"><img src="IMG/icon-youtube.svg" alt="YouTube" width="38" height="38"/></a>
+            <a href="#"><img src="IMG/icon-whatsapp.svg" alt="WhatsApp" width="38" height="38"/></a>
           </div>
         </div>
 
@@ -303,37 +307,34 @@
           </ul>
         </div>
 
-        <div class="col-md-4">
-          <h6 class="footer-title">Newsletter</h6>
+        <div class="col-md-4 mb-4">
+          <h6 class="fw-bold">Suscríbete</h6>
+
           <p class="footer-text">
-            Suscríbete y recibe novedades, lanzamientos y productos exclusivos.
+            Suscríbete a nuestro boletín recibe novedades, lanzamientos y productos exclusivos directamente en tu correo.
           </p>
 
-          <form class="newsletter" id="newsletterForm">
-            <input type="email" id="newsletterEmail" placeholder="E-mail" />
-            <button type="submit" aria-label="Suscribirse">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </button>
-          </form>
-          <small id="newsletterMessage" class="newsletter-message"></small>
+          <div class="newsletter">
+            <input type="email" class="form-control" placeholder="E-mail">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#484B47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="19" x2="19" y2="5"/>
+                <polyline points="5 5 19 5 19 19"/>
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
 
       <div class="footer-logo-wrapper">
-        <img
-          src="https://i.postimg.cc/1X3CzFGC/logo-origenes-02.png"
-          alt="Logo Orígenes Colombia"
-          class="footer-logo"
-          loading="lazy"
-          decoding="async"
-        />
+        <img src="./IMG/logo-origenes-oscuro.svg" alt="Orígenes Colombia" />
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
-        <p>Política de privacidad · Términos y condiciones</p>
-        <p>Conectando el mundo con el alma de Colombia.</p>
+        <p>© 2026 Orígenes Colombia · Todos los derechos reservados Política de privacidad · Términos y condiciones</p>
+        <p><strong><em>Conectando el mundo con el alma de Colombia.</em></strong></p>
       </div>
+
     </div>
   </footer>
 
