@@ -27,32 +27,32 @@ document.addEventListener("DOMContentLoaded", () => {
     dirLight.position.set(5, 10, 7);
     scene.add(dirLight);
 
-    // 3. Cargar el Modelo GLTF del Loro Fotorealista
-    let parrotModel;
+    // 3. Cargar el Modelo GLTF del Ave (Flamingo)
+    let birdModel;
     let mixer; // Para la animación del aleteo
     
     const loader = new THREE.GLTFLoader();
-    // Usamos el Loro oficial de los ejemplos de Three.js
-    const modelUrl = 'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/models/gltf/Parrot.glb';
+    // Usamos el Flamingo oficial de los ejemplos de Three.js
+    const modelUrl = 'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/models/gltf/Flamingo.glb';
 
     loader.load(
         modelUrl,
         function (gltf) {
-            parrotModel = gltf.scene;
+            birdModel = gltf.scene;
             
             // Aumentar el tamaño para que sea muy visible y "realista" en la pantalla
-            parrotModel.scale.set(0.12, 0.12, 0.12);
+            birdModel.scale.set(0.12, 0.12, 0.12);
             
-            scene.add(parrotModel);
+            scene.add(birdModel);
 
             // Iniciar la animación que viene dentro del archivo GLTF
-            mixer = new THREE.AnimationMixer(parrotModel);
+            mixer = new THREE.AnimationMixer(birdModel);
             const action = mixer.clipAction(gltf.animations[0]);
             action.play();
         },
         undefined,
         function (error) {
-            console.error('Error al cargar el modelo del loro:', error);
+            console.error('Error al cargar el modelo del ave:', error);
         }
     );
 
@@ -87,22 +87,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Mover el pájaro por la pantalla
-        if (parrotModel) {
+        if (birdModel) {
             const flightSpeed = 0.6; // Velocidad de vuelo
             const currentPos = getPathPosition(t * flightSpeed);
             const nextPos = getPathPosition((t + 0.1) * flightSpeed); // Mirar un poco adelante
 
             // Mover hacia la posición actual
-            parrotModel.position.copy(currentPos);
+            birdModel.position.copy(currentPos);
             
             // Hacer que mire hacia adonde se dirige
-            parrotModel.lookAt(nextPos);
+            birdModel.lookAt(nextPos);
             
             // Inclinación aerodinámica al girar (Bank angle)
             const dx = nextPos.x - currentPos.x;
-            // El modelo del loro puede tener una orientación diferente por defecto, 
+            // El modelo del ave puede tener una orientación diferente por defecto, 
             // ajustamos la rotación en Z para que se incline al dar la vuelta
-            parrotModel.rotation.z -= dx * 0.3;
+            birdModel.rotation.z -= dx * 0.3;
         }
 
         renderer.render(scene, camera);
