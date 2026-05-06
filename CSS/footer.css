@@ -49,19 +49,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  font-size: 1rem;
-  transition: opacity 0.2s ease;
+
+  width: 58px;
+  height: 58px;
+
+  border-radius: 30px;
+
+  background: #f7f5ef;
+
+  box-shadow:
+    6px 6px 14px rgba(0, 0, 0, 0.12),
+    -6px -6px 14px rgb(255, 255, 255);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
 
 .site-footer .icons i {
   color: var(--colortextos);
-  font-size: 16px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
 }
 
 .site-footer .icons a:hover {
-  opacity: 0.6;
+  transform: translateY(-6px) scale(1.05);
+
+  box-shadow:
+    10px 10px 20px rgba(0, 0, 0, 0.12),
+    -6px -6px 14px rgb(255, 255, 255);
 }
 
 
@@ -126,17 +143,21 @@
   margin-left: 10px;
   cursor: pointer;
   color: var(--colortextos);
-  transition: opacity 0.2s ease;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .site-footer .newsletter span:hover {
+  transform: translateY(-4px);
   opacity: 0.6;
 }
 
 
 /*Logo grande del footer*/
 .site-footer .footer-logo-wrapper {
-  padding: 40px 0 0px;
+  padding: 40px 0 0;
 }
 
 .site-footer .footer-logo-wrapper img {
@@ -156,7 +177,6 @@
   gap: 8px;
   padding: 32px 0 24px;
   font-size: 0.8rem;
-  border-top: none;
   margin-top: 8px;
 }
 
@@ -220,10 +240,6 @@
 @media (max-width: 767px) {
   .site-footer {
     text-align: center;
-  }
-
-  .site-footer .footer-icons {
-    justify-content: center;
   }
 
   .site-footer .newsletter {
