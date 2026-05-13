@@ -1,345 +1,259 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Página principal de Orígenes Colombia" />
-  <title>Orígenes Colombia</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Página principal de Orígenes Colombia" name="description"/>
+<title>Orígenes Colombia</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-
-  <link rel="stylesheet" href="./CSS/header.css" />
-  <link rel="stylesheet" href="./CSS/index.css" />
-  <link rel="stylesheet" href="./CSS/footer.css" />
+<link href="./CSS/header.css" rel="stylesheet"/>
+<link href="./CSS/footer.css" rel="stylesheet"/>
+<link href="./CSS/index.css" rel="stylesheet"/>
+<link href="./CSS/carrito-global.css" rel="stylesheet"/>
+<link href="./CSS/estilo-final.css" rel="stylesheet"/>
 </head>
-
 <body id="top">
-
-  <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
-    <div class="container nav-wrapper">
-      <a href="./index.html">
-        <img
-          src="./IMG/logo-origenes-oscuro.svg"
-          alt="Orígenes Colombia"
-          class="logo-navbar d-inline-block align-text-top"
-        />
-      </a>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarMain"
-        aria-controls="navbarMain"
-        aria-expanded="false"
-        aria-label="Abrir menú"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-between" id="navbarMain">
-        <ul class="navbar-nav mx-auto nav-center">
-          <li class="nav-item">
-            <a class="nav-link active-link" href="./index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./HTML/catalogo.html">Catálogo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./HTML/contactenos.html">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./HTML/sobreorigenes.html">Sobre Orígenes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./HTML/admin.html">Administrador</a>
-          </li>
-        </ul>
-
-        <div class="icons d-flex gap-3 align-items-center">
-          <a href="#" class="text-decoration-none" aria-label="Perfil">
-            <i class="fa-regular fa-user"></i>
-          </a>
-          <button id="cartBtn" class="cart-icon-btn text-decoration-none" aria-label="Carrito">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span id="cartCount" class="cart-badge">0</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <main id="home">
-    <section
-      id="bannerOrigenes"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-interval="5000"
-    >
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#bannerOrigenes" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#bannerOrigenes" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#bannerOrigenes" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="hero-overlay"></div>
-          <img
-            src="./IMG/1-banner.webp"
-            class="d-block w-100 banner-img"
-            alt="Artesanías colombianas"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-          />
-          <div class="carousel-caption hero-content">
-            <span class="hero-badge">Hecho en Colombia</span>
-            <h1>Orígenes Colombia</h1>
-            <p>Conectamos el mundo con la esencia auténtica de Colombia.</p>
-            <div class="hero-actions">
-              <a href="./HTML/catalogo.html" class="btn hero-btn-primary">Explorar catálogo</a>
-              <a href="./HTML/sobreorigenes.html" class="btn hero-btn-secondary">Conócenos</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="hero-overlay"></div>
-          <img
-            src="./IMG/2-banner.webp"
-            class="d-block w-100 banner-img"
-            alt="Productos artesanales"
-            loading="lazy"
-            decoding="async"
-          />
-          <div class="carousel-caption hero-content">
-            <span class="hero-badge">Tradición y diseño</span>
-            <h1>Artesanía con identidad</h1>
-            <p>Descubre productos únicos creados por manos colombianas.</p>
-            <div class="hero-actions">
-              <a href="./HTML/catalogo.html" class="btn hero-btn-primary">Ver productos</a>
-              <a href="./HTML/contactenos.html" class="btn hero-btn-secondary">Contáctanos</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="hero-overlay"></div>
-          <img
-            src="./IMG/3-banner.webp"
-            class="d-block w-100 banner-img"
-            alt="Cultura colombiana"
-            loading="lazy"
-            decoding="async"
-          />
-          <div class="carousel-caption hero-content">
-            <span class="hero-badge">Cultura viva</span>
-            <h1>Historias que inspiran</h1>
-            <p>Moda, decoración, café y tradición en una experiencia digital cálida.</p>
-            <div class="hero-actions">
-              <a href="./HTML/catalogo.html" class="btn hero-btn-primary">Comprar ahora</a>
-              <a href="./HTML/contactenos.html" class="btn hero-btn-secondary">Escríbenos</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#bannerOrigenes" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#bannerOrigenes" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Siguiente</span>
-      </button>
-    </section>
-
-    <section class="home-intro-section">
-      <div class="container">
-        <div class="text-center intro-block">
-          <h2 class="section-title">Lo mejor de nuestra esencia</h2>
-          <p class="section-subtitle home-intro">
-            En Orígenes Colombia reunimos productos auténticos, artesanales y llenos de identidad.
-            Nuestro propósito es conectar la cultura colombiana con personas que valoran la calidad,
-            la historia y el trabajo hecho con pasión.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="categories-section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <h2 class="section-title">Categorías destacadas</h2>
-          <p class="section-subtitle">
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
+<div class="container nav-wrapper">
+<a class="navbar-brand" href="./index.html">
+<img alt="Orígenes Colombia" class="logo-navbar" src="./IMG/logo-origenes-oscuro.svg"/>
+</a>
+<button aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#navbarMain" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-between" id="navbarMain">
+<ul class="navbar-nav mx-auto nav-center">
+<li class="nav-item">
+<a class="nav-link active-link" href="./index.html">Inicio</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./HTML/catalogo.html">Catálogo</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./HTML/contactenos.html">Contacto</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./HTML/sobreorigenes.html">Sobre Orígenes</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./HTML/admin.html">Administrador</a>
+</li>
+</ul>
+<div class="icons">
+<a aria-label="Perfil" href="./HTML/registro.html">
+<img alt="Usuario" class="nav-icon" src="./IMG/icon-usuario.svg"/>
+</a>
+<button aria-label="Carrito" class="cart-icon-btn" id="cartBtn" type="button">
+<img alt="Carrito" class="nav-icon" src="./IMG/icon-bolsa.svg"/>
+<span class="cart-badge" id="cartCount">0</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="home">
+<section class="carousel slide" data-bs-interval="5000" data-bs-ride="carousel" id="bannerOrigenes">
+<div class="carousel-indicators">
+<button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#bannerOrigenes" type="button"></button>
+<button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#bannerOrigenes" type="button"></button>
+<button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#bannerOrigenes" type="button"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="hero-overlay"></div>
+<img alt="Artesanías colombianas" class="d-block w-100 banner-img" decoding="async" fetchpriority="high" loading="eager" src="./IMG/1-banner.webp"/>
+<div class="carousel-caption hero-content">
+<h1>Orígenes Colombia</h1>
+<p>Conectamos el mundo con la esencia auténtica de Colombia.</p>
+<div class="hero-actions">
+<a class="btn hero-btn-primary" href="./HTML/catalogo.html">Explorar catálogo</a>
+<a class="btn hero-btn-secondary" href="./HTML/sobreorigenes.html">Conócenos</a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="hero-overlay"></div>
+<img alt="Productos artesanales" class="d-block w-100 banner-img" decoding="async" loading="lazy" src="./IMG/2-banner.webp"/>
+<div class="carousel-caption hero-content">
+<h1>Artesanía con identidad</h1>
+<p>Descubre productos únicos creados por manos colombianas.</p>
+<div class="hero-actions">
+<a class="btn hero-btn-primary" href="./HTML/catalogo.html">Ver productos</a>
+<a class="btn hero-btn-secondary" href="./HTML/contactenos.html">Contáctanos</a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="hero-overlay"></div>
+<img alt="Cultura colombiana" class="d-block w-100 banner-img" decoding="async" loading="lazy" src="./IMG/3-banner.webp"/>
+<div class="carousel-caption hero-content">
+<h1>Historias que inspiran</h1>
+<p>Moda, decoración, café y tradición en una experiencia digital cálida.</p>
+<div class="hero-actions">
+<a class="btn hero-btn-primary" href="./HTML/catalogo.html">Comprar ahora</a>
+<a class="btn hero-btn-secondary" href="./HTML/contactenos.html">Escríbenos</a>
+</div>
+</div>
+</div>
+</div>
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#bannerOrigenes" type="button">
+<span aria-hidden="true" class="carousel-control-prev-icon"></span>
+<span class="visually-hidden">Anterior</span>
+</button>
+<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#bannerOrigenes" type="button">
+<span aria-hidden="true" class="carousel-control-next-icon"></span>
+<span class="visually-hidden">Siguiente</span>
+</button>
+</section>
+<section class="categories-section">
+<div class="container">
+<div class="section-heading text-center">
+<h2 class="section-title">Categorías destacadas</h2>
+<p class="section-subtitle">
             Explora una selección inspirada en tradición, diseño y sabor colombiano.
           </p>
-        </div>
-
-        <div class="categories-grid">
-          <article class="category-card">
-            <div class="category-image-wrapper">
-              <img
-                src="./IMG/categoria-cafe.jpg"
-                alt="Categoría café"
-                class="category-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="category-content">
-              <h3>Café</h3>
-              <p>Sabores auténticos con aroma, origen y tradición.</p>
-            </div>
-          </article>
-
-          <article class="category-card">
-            <div class="category-image-wrapper">
-              <img
-                src="./IMG/categoria-artesanias.jpg"
-                alt="Categoría artesanías"
-                class="category-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="category-content">
-              <h3>Artesanías</h3>
-              <p>Piezas únicas elaboradas con identidad y trabajo local.</p>
-            </div>
-          </article>
-
-          <article class="category-card">
-            <div class="category-image-wrapper">
-              <img
-                src="./IMG/categoria-decoracion.jpg"
-                alt="Categoría decoración"
-                class="category-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="category-content">
-              <h3>Decoración</h3>
-              <p>Detalles que transforman espacios con alma colombiana.</p>
-            </div>
-          </article>
-
-          <article class="category-card">
-            <div class="category-image-wrapper">
-              <img
-                src="./IMG/categoria-moda.jpg"
-                alt="Categoría moda"
-                class="category-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div class="category-content">
-              <h3>Moda</h3>
-              <p>Diseños con carácter, color y esencia artesanal.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-box">
-          <div class="cta-text">
-            <span class="cta-label">Orígenes Colombia</span>
-            <h2>Descubre productos que cuentan historias</h2>
-            <p>
+</div>
+<div class="categories-grid">
+<article class="category-card">
+<div class="category-image-wrapper">
+<img alt="Categoría café" class="category-image" decoding="async" loading="lazy" src="./IMG/categoria-cafe.jpg"/>
+</div>
+<div class="category-content">
+<h3>Café</h3>
+<p>Sabores auténticos con aroma, origen y tradición.</p>
+</div>
+</article>
+<article class="category-card">
+<div class="category-image-wrapper">
+<img alt="Categoría artesanías" class="category-image" decoding="async" loading="lazy" src="./IMG/categoria-artesanias.jpg"/>
+</div>
+<div class="category-content">
+<h3>Artesanías</h3>
+<p>Piezas únicas elaboradas con identidad y trabajo local.</p>
+</div>
+</article>
+<article class="category-card">
+<div class="category-image-wrapper">
+<img alt="Categoría decoración" class="category-image" decoding="async" loading="lazy" src="./IMG/categoria-decoracion.jpg"/>
+</div>
+<div class="category-content">
+<h3>Decoración</h3>
+<p>Detalles que transforman espacios con alma colombiana.</p>
+</div>
+</article>
+<article class="category-card">
+<div class="category-image-wrapper">
+<img alt="Categoría moda" class="category-image" decoding="async" loading="lazy" src="./IMG/categoria-moda.jpg"/>
+</div>
+<div class="category-content">
+<h3>Moda</h3>
+<p>Diseños con carácter, color y esencia artesanal.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<div class="container">
+<div class="cta-box cta-background">
+<div class="cta-text-overlay">
+<span class="cta-label">Orígenes Colombia</span>
+<h2>Descubre productos que cuentan historias</h2>
+<p>
               Cada pieza refleja el talento, la tradición y la riqueza cultural de Colombia.
               Explora nuestro catálogo y encuentra algo auténtico para ti.
             </p>
-          </div>
-          <div class="cta-action">
-            <a href="./HTML/catalogo.html" class="btn cta-btn">Ir al catálogo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row footer-content">
-        <div class="col-md-4">
-          <h6 class="footer-title">Contacto</h6>
-          <ul class="footer-list">
-            <li>Calle Ficticia #123, Cali, Colombia</li>
-            <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
-            <li>contactoorigenescolombia@gmail.com</li>
-            <li>+57 312 3456 7890</li>
-          </ul>
-
-          <div class="icons">
-            <a href="#"><img src="IMG/icon-instagram.svg" alt="Instagram" width="38" height="38"/></a>
-            <a href="#"><img src="IMG/icon-facebook.svg" alt="Facebook" width="38" height="38"/></a>
-            <a href="#"><img src="IMG/icon-x.svg" alt="X" width="38" height="38"/></a>
-            <a href="#"><img src="IMG/icon-youtube.svg" alt="YouTube" width="38" height="38"/></a>
-            <a href="#"><img src="IMG/icon-whatsapp.svg" alt="WhatsApp" width="38" height="38"/></a>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <h6 class="footer-title">Navegación</h6>
-          <ul class="footer-list">
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./HTML/catalogo.html">Catálogo</a></li>
-            <li><a href="./HTML/contactenos.html">Contacto</a></li>
-            <li><a href="./HTML/sobreorigenes.html">Sobre Orígenes</a></li>
-            <li><a href="./HTML/admin.html">Administrador</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <h6 class="fw-bold">Suscríbete</h6>
-
-          <p class="footer-text">
-            Suscríbete a nuestro boletín, recibe novedades, lanzamientos y productos exclusivos directamente en tu correo.
-          </p>
-
-          <div class="newsletter">
-            <input type="email" class="form-control" placeholder="E-mail">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#484B47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="19" x2="19" y2="5"/>
-                <polyline points="5 5 19 5 19 19"/>
-              </svg>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-logo-wrapper">
-        <img src="./IMG/logo-origenes-oscuro.svg" alt="Orígenes Colombia" />
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Orígenes Colombia · Todos los derechos reservados Política de privacidad · Términos y condiciones</p>
-        <p><strong><em>Conectando el mundo con el alma de Colombia.</em></strong></p>
-      </div>
-
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<div class="cta-action mt-4">
+<a class="btn cta-btn" href="./HTML/catalogo.html">Ir al catálogo</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<aside class="cart-drawer" id="cartDrawer">
+<div class="cart-header">
+<h3>Tu carrito</h3>
+<button class="cart-close-btn" id="closeCart" type="button">×</button>
+</div>
+<div class="cart-items" id="cartItems"></div>
+<div class="cart-footer">
+<p class="cart-total">
+        Total: <span id="total">$0</span>
+</p>
+<div class="cart-footer-actions">
+<button class="btn-cart-secondary" id="clearCartBtn" type="button">Vaciar</button>
+<button class="btn-cart-primary" id="buyBtn" type="button">Comprar</button>
+</div>
+</div>
+</aside>
+<div class="cart-overlay" id="cartOverlay"></div>
+<footer class="site-footer">
+<div class="container">
+<div class="row footer-content">
+<div class="col-md-4">
+<h6 class="footer-title">Contacto</h6>
+<ul class="footer-list">
+<li>Calle Ficticia #123, Cali, Colombia</li>
+<li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
+<li>contactoorigenescolombia@gmail.com</li>
+<li>+57 312 3456 7890</li>
+</ul>
+<div class="icons">
+<a aria-label="Facebook" href="#">
+<img alt="Facebook" src="./IMG/icon-facebook.svg"/>
+</a>
+<a aria-label="Instagram" href="#">
+<img alt="Instagram" src="./IMG/icon-instagram.svg"/>
+</a>
+<a aria-label="YouTube" href="#">
+<img alt="YouTube" src="./IMG/icon-youtube.svg"/>
+</a>
+<a aria-label="X" href="#">
+<img alt="X" src="./IMG/icon-x.svg"/>
+</a>
+<a aria-label="WhatsApp" href="#">
+<img alt="WhatsApp" src="./IMG/icon-whatsapp.svg"/>
+</a>
+</div>
+</div>
+<div class="col-md-4">
+<h6 class="footer-title">Navegación</h6>
+<ul class="footer-list">
+<li><a href="./index.html">Inicio</a></li>
+<li><a href="./HTML/catalogo.html">Catálogo</a></li>
+<li><a href="./HTML/contactenos.html">Contacto</a></li>
+<li><a href="./HTML/sobreorigenes.html">Sobre Orígenes</a></li>
+<li><a href="./HTML/admin.html">Administrador</a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<h6 class="footer-title">Newsletter</h6>
+<p class="footer-text">
+          Suscríbete y recibe novedades, lanzamientos y productos exclusivos.
+        </p>
+<form class="newsletter" id="newsletterForm">
+<input id="newsletterEmail" placeholder="E-mail" type="email"/>
+<button aria-label="Suscribirse" type="submit">→</button>
+</form>
+<small class="newsletter-message" id="newsletterMessage"></small>
+</div>
+</div>
+<div class="footer-logo-wrapper">
+<img alt="Orígenes Colombia" class="footer-logo" src="./IMG/logo-origenes-oscuro.svg"/>
+</div>
+<div class="footer-bottom">
+<p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
+<p>Política de privacidad · Términos y condiciones</p>
+<p>Conectando el mundo con el alma de Colombia.</p>
+</div>
+</div>
+</footer>
+  <script src="./JS/storage.js"></script>
+  <script src="./JS/carrito.js"></script>
   <script src="./JS/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
