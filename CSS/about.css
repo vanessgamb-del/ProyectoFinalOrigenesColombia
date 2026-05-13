@@ -1,72 +1,47 @@
-/* =========================
-   SOBRE ORÍGENES
-   ========================= */
-
+/* Sobre Orígenes */
 .about-hero {
   height: 470px;
-  min-height: 470px;
-
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
+    linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)),
     url("../IMG/hero-artesanal-colombia.jpg");
-
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
 }
 
 .about-hero-overlay {
   width: 100%;
 }
 
-.about-hero .hero-content {
-  padding-top: 0;
-}
-
 .about-hero-title {
-  background: none;
-  -webkit-background-clip: initial;
-  -webkit-text-fill-color: #FFFFFF;
-
-  color: #FFFFFF;
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 18px;
+  color: var(--textoblanco);
+  font-size: clamp(2.8rem, 5vw, 4.9rem);
+  font-weight: 700;
+  margin-bottom: 14px;
 }
 
 .about-hero-text {
-  color: #FFFFFF;
-  font-size: 1.15rem;
-  line-height: 1.5;
+  color: var(--textoblanco);
+  font-size: 1.2rem;
   margin: 0;
 }
 
-/* Main */
 .about-section {
-  padding: 38px 0 60px;
+  padding: 30px 0 60px;
 }
 
 .intro-block {
   max-width: 950px;
-  margin: 0 auto 26px;
+  margin: 0 auto 20px;
 }
 
 .section-title {
-  background: linear-gradient(135deg, #2C2A28 0%, #5A4C42 45%, #8A735F 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
-  font-size: clamp(2.2rem, 3vw, 3rem);
-  font-weight: 800;
-  margin-bottom: 10px;
+  color: var(--navbackground);
+  font-size: clamp(2.4rem, 3vw, 3.1rem);
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .about-intro,
@@ -74,31 +49,24 @@
   max-width: 980px;
   margin: 0 auto;
   font-size: 1.02rem;
-  line-height: 1.55;
+  line-height: 1.45;
   color: var(--colortextos);
 }
 
-/* Mission / Vision / Values cards */
 .about-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 26px;
-  margin-top: 30px;
-  margin-bottom: 36px;
+  margin-top: 26px;
+  margin-bottom: 26px;
 }
 
 .about-box {
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid var(--bordercolor);
   border-radius: 22px;
   padding: 26px 24px 24px;
   box-shadow: var(--shadowsoft);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.12);
 }
 
 .about-box-header {
@@ -113,33 +81,22 @@
   min-width: 74px;
   height: 74px;
   border-radius: 50%;
-
-  background: linear-gradient(135deg, #2C2A28 0%, #4B4138 45%, #6B5B4D 100%);
-
+  background: var(--navbackground);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.18),
-    inset 0 1px 1px rgba(255, 255, 255, 0.08);
 }
 
 .about-icon i {
-  color: #FFFFFF;
-  font-size: 1.9rem;
+  color: var(--textoblanco);
+  font-size: 2rem;
 }
 
 .about-box-title {
   margin: 0;
-
-  background: linear-gradient(135deg, #2C2A28 0%, #5A4C42 45%, #8A735F 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
+  color: var(--navbackground);
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .about-box-text {
@@ -154,44 +111,32 @@
   padding-left: 24px;
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--colortextos);
 }
 
 .values-list li + li {
   margin-top: 8px;
 }
 
-.values-list strong {
-  color: #2C2A28;
-}
-
-/* Team */
 .team-heading {
   margin-top: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .team-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(170px, 1fr));
-  gap: 16px;
+  gap: 14px;
   align-items: stretch;
 }
 
 .team-card {
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid var(--bordercolor);
   border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--shadowsoft);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.12);
 }
 
 .img1 {
@@ -217,9 +162,8 @@
   height: 96px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #FFFFFF;
-  background: #FFFFFF;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+  border: 4px solid #ffffff;
+  background: #ffffff;
 }
 
 .team-card-body {
@@ -232,15 +176,15 @@
 
 .card-title {
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #202020;
   margin-bottom: 6px;
 }
 
 .card-role {
   font-size: 0.82rem;
-  font-weight: 800;
-  color: var(--colorhover);
+  font-weight: 700;
+  color: var(--navbackground);
   margin-bottom: 8px;
 }
 
@@ -261,47 +205,16 @@
 }
 
 .social a {
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(107, 91, 77, 0.10);
-  color: #4B4138;
-
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
+  color: var(--navbackground);
+  font-size: 1.7rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social a:hover {
-  background: linear-gradient(135deg, #2C2A28 0%, #4B4138 45%, #6B5B4D 100%);
-  color: #FFFFFF;
+  color: var(--colorhover);
   transform: translateY(-2px);
 }
 
-/* Buttons if any CTA is added later */
-.about-hero .btn,
-.about-section .btn {
-  background-color: #FFFFFF;
-  color: var(--navbackground);
-  border: none;
-  border-radius: 999px;
-  padding: 14px 32px;
-  font-weight: 800;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
-}
-
-.about-hero .btn:hover,
-.about-section .btn:hover {
-  background-color: var(--navbackground);
-  color: #FFFFFF;
-  transform: translateY(-2px);
-}
-
-/* Responsive */
 @media (max-width: 1199px) {
   .about-cards {
     grid-template-columns: 1fr;
@@ -312,21 +225,13 @@
   }
 }
 
-@media (max-width: 991px) {
-  .about-hero {
-    height: 360px;
-    min-height: 360px;
-  }
-}
-
 @media (max-width: 767px) {
   .about-hero {
     height: 300px;
-    min-height: 300px;
   }
 
   .about-hero-title {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .about-hero-text {
@@ -345,9 +250,5 @@
   .about-box-header {
     flex-direction: column;
     text-align: center;
-  }
-
-  .about-box {
-    padding: 24px 18px;
   }
 }

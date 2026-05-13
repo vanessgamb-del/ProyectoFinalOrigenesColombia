@@ -1,0 +1,15 @@
+:root {
+  --backgroundcolor: #FAFBF6;
+  --navbackground: #6E9B77;
+  --textoblanco: #FFFFFF;
+  --colortextos: #484B47;
+  --colorhover: #B46141;
+  --cardbg: #FFFFFF;
+  --bordercolor: #E7E1D7;
+  --dangercolor: #B03A2E;
+
+  --shadowsoft: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  --gradientdark: linear-gradient(135deg, #2C2A28 0%, #5A4C42 45%, #8A735F 100%);
+  --gradientbadge: linear-gradient(135deg, #2C2A28 0%, #4B4138 45%, #6B5B4D 100%);
+}

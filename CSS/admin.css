@@ -1,74 +1,50 @@
-:root {
-  --colortextos: #484B47;
-  --colorhover: #B46141;
-  --cardbg: #FFFFFF;
-  --bordercolor: #E7E1D7;
-  --shadowsoft: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
+/* =========================
+   ADMIN
+   ========================= */
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--backgroundcolor);
-  font-family: 'Montserrat', sans-serif;
-  padding-top: 78px;
-  color: var(--colortextos);
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/*Hero*/
 .admin-hero {
   height: 340px;
+  min-height: 340px;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)),
+    linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
     url("../IMG/hero-artesanal-colombia.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .admin-hero-overlay {
   width: 100%;
 }
 
-.hero-content {
-  padding-top: 24px;
+.admin-hero .hero-content {
+  padding-top: 0;
 }
 
 .admin-hero-title {
-  color: var(--textoblanco);
-  font-size: clamp(2.5rem, 5vw, 4.3rem);
-  font-weight: 700;
-  margin-bottom: 14px;
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 18px;
 }
 
 .admin-hero-text {
-  color: var(--textoblanco);
-  font-size: 1.1rem;
+  color: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1.5;
   margin: 0;
 }
 
-/*Main*/
 .admin-section {
   padding: 38px 0 60px;
-}
-
-.intro-block {
-  max-width: 920px;
-  margin: 0 auto 30px;
-}
-
-.section-title {
-  color: var(--navbackground);
-  font-size: clamp(2.2rem, 3vw, 3rem);
-  font-weight: 700;
-  margin-bottom: 10px;
 }
 
 .admin-intro {
@@ -79,11 +55,10 @@ img {
   color: var(--colortextos);
 }
 
-/*Layout*/
 .admin-layout {
   display: grid;
-  grid-template-columns: 0.95fr 1.25fr;
-  gap: 28px;
+  grid-template-columns: 0.9fr 1.35fr;
+  gap: 30px;
   align-items: start;
 }
 
@@ -102,19 +77,22 @@ img {
 
 .mini-label {
   display: inline-block;
-  color: var(--navbackground);
-  background: rgba(110, 155, 119, 0.12);
+  background: linear-gradient(135deg, #2C2A28 0%, #4B4138 45%, #6B5B4D 100%);
+  color: #ffffff;
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 7px 14px;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 12px;
 }
 
 .admin-card-title {
+  background: linear-gradient(135deg, #2C2A28 0%, #5A4C42 45%, #8A735F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-size: 1.8rem;
   font-weight: 800;
-  color: var(--navbackground);
   margin-bottom: 8px;
 }
 
@@ -125,15 +103,11 @@ img {
   margin-bottom: 0;
 }
 
-.admin-form-body {
-  padding: 20px 24px 24px;
-}
-
+.admin-form-body,
 .admin-products-body {
   padding: 20px 24px 24px;
 }
 
-/*Form*/
 .form-label {
   font-weight: 600;
   color: var(--colortextos);
@@ -144,7 +118,7 @@ img {
 .form-select {
   border: 1px solid #D9D2C7;
   border-radius: 14px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   min-height: 52px;
   padding: 12px 14px;
   box-shadow: none;
@@ -163,8 +137,8 @@ textarea.form-control {
 
 .form-control:focus,
 .form-select:focus {
-  border-color: var(--navbackground);
-  box-shadow: 0 0 0 0.16rem rgba(110, 155, 119, 0.18);
+  border-color: #6B5B4D;
+  box-shadow: 0 0 0 0.16rem rgba(107, 91, 77, 0.18);
 }
 
 .admin-actions {
@@ -179,24 +153,22 @@ textarea.form-control {
 }
 
 .btn-admin {
-  background-color: var(--navbackground);
-  color: var(--textoblanco);
+  background-color: #ffffff;
+  color: var(--navbackground);
   border: none;
   border-radius: 999px;
-  padding: 12px 28px;
+  padding: 14px 32px;
   min-width: 220px;
-  font-weight: 700;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-admin:hover {
-  background-color: var(--colorhover);
-  color: var(--textoblanco);
+  background-color: var(--navbackground);
+  color: #ffffff;
   transform: translateY(-2px);
-}
-
-.btn-admin:focus {
-  box-shadow: 0 0 0 0.18rem rgba(180, 97, 65, 0.22);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
 }
 
 .btn-admin-outline {
@@ -204,9 +176,9 @@ textarea.form-control {
   color: var(--navbackground);
   border: 1px solid var(--navbackground);
   border-radius: 999px;
-  padding: 12px 28px;
+  padding: 14px 32px;
   min-width: 220px;
-  font-weight: 700;
+  font-weight: 800;
   transition: all 0.3s ease;
 }
 
@@ -214,15 +186,39 @@ textarea.form-control {
   background-color: rgba(110, 155, 119, 0.08);
 }
 
-/*Product card*/
+/* =========================
+   PRODUCTOS ADMIN
+   ========================= */
+
+#productList {
+  align-items: stretch;
+}
+
+#productList > div {
+  display: flex;
+  width: 50%;
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+
+#productList .product-card {
+  width: 100%;
+}
+
 .product-card {
   background: #ffffff;
   border: 1px solid var(--bordercolor);
-  border-radius: 20px;
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadowsoft);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-height: 610px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
@@ -232,71 +228,100 @@ textarea.form-control {
 
 .product-image {
   width: 100%;
-  height: 220px;
+  height: 260px;
   object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
 }
 
 .product-card .card-body {
-  padding: 18px;
-}
-
-.product-card .card-title {
-  font-size: 1.08rem;
-  font-weight: 700;
-  color: #202020;
-}
-
-.product-card .card-text {
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: #666666;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .badge-category {
-  background: rgba(110, 155, 119, 0.14);
-  color: var(--navbackground);
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  white-space: nowrap;
   display: inline-block;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2C2A28 0%, #4B4138 45%, #6B5B4D 100%);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.product-card .card-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #202020;
+  line-height: 1.3;
+  min-height: 58px;
   margin-bottom: 10px;
+  overflow: visible;
+}
+
+.product-card .card-text {
+  font-size: 0.94rem;
+  line-height: 1.5;
+  color: #666666;
+  min-height: 82px;
+  margin-bottom: 14px;
+  overflow: visible;
 }
 
 .price-text {
-  color: var(--navbackground);
-  font-size: 1.15rem;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.3;
   font-weight: 800;
+  margin-bottom: 10px;
+  overflow: visible;
+  white-space: normal;
 }
 
 .stock-text {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--colorhover);
+  font-size: 0.95rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 16px;
+  overflow: visible;
+  white-space: normal;
 }
 
 .product-actions-inline {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 14px;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 .btn-card-edit,
 .btn-card-delete {
   border: none;
   border-radius: 999px;
-  padding: 10px 16px;
-  font-size: 0.86rem;
-  font-weight: 700;
+  padding: 9px 14px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  font-weight: 800;
   cursor: pointer;
   transition: all 0.3s ease;
+  min-width: 78px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .btn-card-edit {
   background: rgba(110, 155, 119, 0.12);
-  color: var(--navbackground);
+  color: #000000;
 }
 
 .btn-card-edit:hover {
@@ -305,56 +330,57 @@ textarea.form-control {
 
 .btn-card-delete {
   background: rgba(176, 58, 46, 0.12);
-  color: var(--dangercolor);
+  color: #000000;
 }
 
 .btn-card-delete:hover {
   background: rgba(176, 58, 46, 0.22);
 }
 
-/*Empty state*/
 .empty-state {
   background: rgba(110, 155, 119, 0.08);
   border: 1px dashed rgba(110, 155, 119, 0.28);
   border-radius: 18px;
   color: var(--colortextos);
   font-weight: 500;
+  padding: 24px;
+  text-align: center;
 }
 
+/* =========================
+   RESPONSIVE
+   ========================= */
 
+@media (max-width: 1399px) {
+  .product-card {
+    min-height: 590px;
+  }
 
-/*Responsive*/
+  .product-image {
+    height: 245px;
+  }
+}
+
 @media (max-width: 1199px) {
   .admin-layout {
     grid-template-columns: 1fr;
   }
+
+  #productList > div {
+    width: 50%;
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  .product-card {
+    min-height: 570px;
+  }
 }
 
 @media (max-width: 991px) {
-  body {
-    padding-top: 82px;
-  }
-
-  .custom-navbar .nav-link {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .custom-navbar .active-link::after {
-    bottom: -6px;
-  }
-
-  .icons {
-    justify-content: center;
-    margin-top: 14px;
-  }
-
   .admin-hero {
     height: 300px;
-  }
-
-  .footer-content > div {
-    margin-bottom: 24px;
+    min-height: 300px;
   }
 
   .btn-admin,
@@ -362,28 +388,35 @@ textarea.form-control {
     width: 100%;
     min-width: unset;
   }
+
+  #productList > div {
+    width: 50%;
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  .product-card {
+    min-height: 560px;
+  }
+
+  .product-image {
+    height: 240px;
+  }
 }
 
 @media (max-width: 767px) {
-  body {
-    padding-top: 76px;
-  }
-
   .admin-hero {
     height: 250px;
+    min-height: 250px;
   }
 
   .admin-hero-title {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .admin-hero-text {
     font-size: 1rem;
     padding: 0 10px;
-  }
-
-  .section-title {
-    font-size: 2rem;
   }
 
   .admin-card-header,
@@ -393,16 +426,26 @@ textarea.form-control {
     padding-right: 18px;
   }
 
-  .site-footer {
-    text-align: center;
-  }
-
-  .footer-social {
-    justify-content: center;
-  }
-
-  .newsletter {
+  #productList > div {
+    width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    flex: 0 0 100%;
+  }
+
+  .product-card {
+    min-height: auto;
+  }
+
+  .product-image {
+    height: 240px;
+  }
+
+  .product-card .card-title,
+  .product-card .card-text {
+    min-height: unset;
+  }
+
+  .product-actions-inline {
+    flex-wrap: nowrap;
   }
 }
