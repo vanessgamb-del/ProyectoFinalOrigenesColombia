@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 :root {
   --colortextos: #484B47;
   --colorhover: #B46141;
@@ -23,9 +21,8 @@ img {
 }
 
 /*Hero*/
->>>>>>> recuperar-stash
 .admin-hero {
-  height: 300px;
+  height: 340px;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)),
     url("../IMG/hero-artesanal-colombia.jpg");
@@ -46,23 +43,32 @@ img {
 
 .admin-hero-title {
   color: var(--textoblanco);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4.3rem);
   font-weight: 700;
   margin-bottom: 14px;
 }
 
 .admin-hero-text {
   color: var(--textoblanco);
-  font-size: 1.08rem;
+  font-size: 1.1rem;
   margin: 0;
 }
 
-<<<<<<< HEAD
-=======
 /*Main*/
->>>>>>> recuperar-stash
 .admin-section {
   padding: 38px 0 60px;
+}
+
+.intro-block {
+  max-width: 920px;
+  margin: 0 auto 30px;
+}
+
+.section-title {
+  color: var(--navbackground);
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .admin-intro {
@@ -73,13 +79,10 @@ img {
   color: var(--colortextos);
 }
 
-<<<<<<< HEAD
-=======
 /*Layout*/
->>>>>>> recuperar-stash
 .admin-layout {
   display: grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: 0.95fr 1.25fr;
   gap: 28px;
   align-items: start;
 }
@@ -88,41 +91,48 @@ img {
 .admin-products-card {
   background: var(--cardbg);
   border: 1px solid var(--bordercolor);
-  border-radius: 22px;
-  box-shadow: var(--shadowsoft);
+  border-radius: 24px;
   overflow: hidden;
+  box-shadow: var(--shadowsoft);
 }
 
 .admin-card-header {
-  padding: 24px 24px 10px;
+  padding: 24px 24px 8px;
+}
+
+.mini-label {
+  display: inline-block;
+  color: var(--navbackground);
+  background: rgba(110, 155, 119, 0.12);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .admin-card-title {
-  color: #202020;
-  font-size: 1.45rem;
+  font-size: 1.8rem;
   font-weight: 800;
+  color: var(--navbackground);
   margin-bottom: 8px;
 }
 
 .admin-card-description {
-  color: #666666;
   font-size: 0.95rem;
-  line-height: 1.5;
-  margin: 0;
+  line-height: 1.6;
+  color: var(--colortextos);
+  margin-bottom: 0;
 }
 
-.admin-form-body,
+.admin-form-body {
+  padding: 20px 24px 24px;
+}
+
 .admin-products-body {
   padding: 20px 24px 24px;
 }
 
-<<<<<<< HEAD
-.admin-products-body .col-md-4,
-#productList .col-md-4 {
-  flex: 0 0 auto;
-  width: 31.5%;
-  min-width: 270px;
-=======
 /*Form*/
 .form-label {
   font-weight: 600;
@@ -155,56 +165,64 @@ textarea.form-control {
 .form-select:focus {
   border-color: var(--navbackground);
   box-shadow: 0 0 0 0.16rem rgba(110, 155, 119, 0.18);
->>>>>>> recuperar-stash
 }
 
 .admin-actions {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
 }
 
-.btn-admin,
-.btn-admin-outline {
-  border-radius: 999px;
-  padding: 11px 20px;
-  font-weight: 700;
+.admin-actions-gap {
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .btn-admin {
   background-color: var(--navbackground);
   color: var(--textoblanco);
   border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  min-width: 220px;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-admin:hover {
   background-color: var(--colorhover);
   color: var(--textoblanco);
+  transform: translateY(-2px);
+}
+
+.btn-admin:focus {
+  box-shadow: 0 0 0 0.18rem rgba(180, 97, 65, 0.22);
 }
 
 .btn-admin-outline {
-  background-color: rgba(110, 155, 119, 0.12);
+  background-color: transparent;
   color: var(--navbackground);
-  border: none;
+  border: 1px solid var(--navbackground);
+  border-radius: 999px;
+  padding: 12px 28px;
+  min-width: 220px;
+  font-weight: 700;
+  transition: all 0.3s ease;
 }
 
 .btn-admin-outline:hover {
-  background-color: var(--colorhover);
-  color: var(--textoblanco);
+  background-color: rgba(110, 155, 119, 0.08);
 }
 
-<<<<<<< HEAD
-=======
 /*Product card*/
->>>>>>> recuperar-stash
 .product-card {
-  background: var(--cardbg);
+  background: #ffffff;
   border: 1px solid var(--bordercolor);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: var(--shadowsoft);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
+  position: relative;
 }
 
 .product-card:hover {
@@ -219,7 +237,19 @@ textarea.form-control {
 }
 
 .product-card .card-body {
-  padding: 20px;
+  padding: 18px;
+}
+
+.product-card .card-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #202020;
+}
+
+.product-card .card-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #666666;
 }
 
 .badge-category {
@@ -229,88 +259,56 @@ textarea.form-control {
   padding: 6px 10px;
   font-size: 0.75rem;
   font-weight: 700;
+  white-space: nowrap;
   display: inline-block;
-  margin-bottom: 12px;
-}
-
-.product-card .card-title {
-  font-size: 1.08rem;
-  font-weight: 700;
-  color: #202020;
   margin-bottom: 10px;
-  overflow-wrap: break-word;
-}
-
-.product-card .card-text {
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: #666666;
-  margin-bottom: 14px;
-  overflow-wrap: break-word;
 }
 
 .price-text {
   color: var(--navbackground);
   font-size: 1.15rem;
   font-weight: 800;
-  margin-bottom: 6px;
-  overflow-wrap: break-word;
 }
 
 .stock-text {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--colorhover);
-  margin-bottom: 14px;
-  overflow-wrap: break-word;
 }
 
 .product-actions-inline {
   display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
 }
 
 .btn-card-edit,
 .btn-card-delete {
   border: none;
   border-radius: 999px;
-  padding: 9px 11px;
-  font-size: 0.82rem;
+  padding: 10px 16px;
+  font-size: 0.86rem;
   font-weight: 700;
   cursor: pointer;
-  text-align: center;
-  white-space: nowrap;
-  flex: 1 1 0;
-  min-width: 0;
+  transition: all 0.3s ease;
 }
 
 .btn-card-edit {
-  background-color: rgba(110, 155, 119, 0.12);
+  background: rgba(110, 155, 119, 0.12);
   color: var(--navbackground);
 }
 
 .btn-card-edit:hover {
-  background-color: var(--navbackground);
-  color: var(--textoblanco);
+  background: rgba(110, 155, 119, 0.22);
 }
 
 .btn-card-delete {
-  background-color: rgba(180, 97, 65, 0.12);
-  color: var(--colorhover);
+  background: rgba(176, 58, 46, 0.12);
+  color: var(--dangercolor);
 }
 
 .btn-card-delete:hover {
-<<<<<<< HEAD
-  background-color: var(--colorhover);
-  color: var(--textoblanco);
-}
-
-@media (max-width: 991px) {
-=======
   background: rgba(176, 58, 46, 0.22);
 }
 
@@ -351,32 +349,28 @@ textarea.form-control {
     margin-top: 14px;
   }
 
->>>>>>> recuperar-stash
   .admin-hero {
-    height: 260px;
+    height: 300px;
   }
 
-  .admin-layout {
-    grid-template-columns: 1fr;
+  .footer-content > div {
+    margin-bottom: 24px;
   }
 
-  .admin-products-body .col-md-4,
-  #productList .col-md-4 {
-    width: 48%;
-    min-width: 260px;
+  .btn-admin,
+  .btn-admin-outline {
+    width: 100%;
+    min-width: unset;
   }
 }
 
 @media (max-width: 767px) {
-<<<<<<< HEAD
-=======
   body {
     padding-top: 76px;
   }
 
->>>>>>> recuperar-stash
   .admin-hero {
-    height: 220px;
+    height: 250px;
   }
 
   .admin-hero-title {
@@ -388,23 +382,27 @@ textarea.form-control {
     padding: 0 10px;
   }
 
-  .admin-products-body .col-md-4,
-  #productList .col-md-4 {
-    width: 100%;
-    min-width: 100%;
+  .section-title {
+    font-size: 2rem;
   }
 
-  .product-card .card-body {
-    padding: 18px;
+  .admin-card-header,
+  .admin-form-body,
+  .admin-products-body {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
-  .product-actions-inline {
-    flex-wrap: nowrap;
+  .site-footer {
+    text-align: center;
   }
 
-  .btn-card-edit,
-  .btn-card-delete {
-    font-size: 0.82rem;
-    padding: 9px 10px;
+  .footer-social {
+    justify-content: center;
+  }
+
+  .newsletter {
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
