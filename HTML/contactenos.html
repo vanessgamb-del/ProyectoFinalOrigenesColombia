@@ -1,87 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Página de contacto de Orígenes Colombia" />
   <title>Contáctenos | Orígenes Colombia</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="../CSS/contactenos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="../CSS/base.css">
-  <link rel="stylesheet" href="../CSS/navbar.css">
-  <link rel="stylesheet" href="../CSS/carrito.css">
-  <link rel="stylesheet" href="../CSS/footer.css">
-  <link rel="stylesheet" href="../CSS/contactenos.css">
+
+  <link href="../CSS/base.css" rel="stylesheet" />
+  <link href="../CSS/navbar.css" rel="stylesheet" />
+  <link href="../CSS/carrito.css" rel="stylesheet" />
+
+<link href="../CSS/header.css" rel="stylesheet"/>
+<link href="../CSS/footer.css" rel="stylesheet"/>
+<link href="../CSS/contactenos.css" rel="stylesheet"/>
+<link href="../CSS/carrito-global.css" rel="stylesheet"/>
+<link href="../CSS/estilo-final.css" rel="stylesheet"/>
 </head>
 
 <body id="top">
   <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
     <div class="container nav-wrapper">
-      <a href="../index.html">
-        <img
-          src="https://i.postimg.cc/mkgXr9YF/logo-origenes-01.png"
-          alt="Orígenes Colombia"
-          class="logo-navbar d-inline-block align-text-top"
-        />
+      <a class="navbar-brand" href="../index.html">
+        <img alt="Orígenes Colombia" class="logo-navbar" src="../IMG/logo-origenes-oscuro.svg" />
       </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarMain"
-        aria-controls="navbarMain"
-        aria-expanded="false"
-        aria-label="Abrir menú"
-      >
+      <button aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#navbarMain" data-bs-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse justify-content-between" id="navbarMain">
         <ul class="navbar-nav mx-auto nav-center">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalogo.html">Catálogo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active-link" href="contactenos.html">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sobreorigenes.html">Sobre Orígenes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="admin.html">Administrador</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="./catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link active-link" href="./contactenos.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./sobreorigenes.html">Sobre Orígenes</a></li>
+          <li class="nav-item"><a class="nav-link" href="./admin.html">Administrador</a></li>
         </ul>
 
-        <div class="icons d-flex gap-3 align-items-center">
-          <a href="registro.html" class="text-decoration-none" aria-label="Perfil">
-            <i class="fa-regular fa-user"></i>
+        <div class="icons">
+          <a aria-label="Perfil" href="./registro.html">
+            <img alt="Usuario" class="nav-icon" src="../IMG/icon-usuario.svg" />
           </a>
-
-          <button id="cartBtn" class="cart-icon-btn text-decoration-none" type="button" aria-label="Carrito">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span id="cartCount" class="cart-badge">0</span>
+          <button aria-label="Carrito" class="cart-icon-btn" id="cartBtn" type="button">
+            <img alt="Carrito" class="nav-icon" src="../IMG/icon-bolsa.svg" />
+            <span class="cart-badge" id="cartCount">0</span>
           </button>
         </div>
       </div>
     </div>
   </nav>
 
+
   <main>
     <section class="contact-hero">
       <div class="contact-hero-overlay">
         <div class="container text-center hero-content">
           <h1 class="contact-hero-title">Contáctanos</h1>
-          <p class="contact-hero-text">
-            Queremos escucharte y acompañarte en tu experiencia con Orígenes Colombia.
-          </p>
+          <p class="contact-hero-text">Queremos escucharte y acompañarte en tu experiencia con Orígenes Colombia.</p>
         </div>
       </div>
     </section>
@@ -90,106 +68,53 @@
       <div class="container">
         <div class="text-center intro-block">
           <h2 class="section-title">Hablemos</h2>
-          <p class="contact-intro">
-            Si tienes preguntas sobre nuestros productos, envíos o pedidos, escríbenos.
-            Nuestro equipo está listo para ayudarte con una atención cercana y personalizada.
-          </p>
+          <p class="contact-intro">Si tienes preguntas sobre nuestros productos, envíos o pedidos, escríbenos.</p>
         </div>
 
         <div class="contact-layout">
           <div class="contact-info-card">
             <div class="contact-image-wrapper">
-              <img
-                src="../IMG/contacto-artesanal-opcion-2.png"
-                alt="Espacio artesanal y cálido para contacto"
-                class="contact-side-image"
-              />
-              <div class="contact-image-badge">
-                <i class="fa-regular fa-message"></i>
-                <span>Atención cercana</span>
-              </div>
+              <img alt="Espacio artesanal y cálido para contacto" class="contact-side-image" src="../IMG/contacto-artesanal-opcion-2.png" />
+              <div class="contact-image-badge"><span>Atención cercana</span></div>
             </div>
 
             <div class="contact-info-content">
               <h3>Estamos para ayudarte</h3>
-              <p>
-                En Orígenes Colombia creemos en una comunicación cercana, clara y humana.
-                Escríbenos y resolveremos tus dudas sobre productos, pagos, entregas o compras.
-              </p>
-
+              <p>En Orígenes Colombia creemos en una comunicación cercana, clara y humana.</p>
               <div class="contact-info-list">
-                <div class="info-item">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <span>Calle Ficticia #123, Cali, Colombia</span>
-                </div>
-                <div class="info-item">
-                  <i class="fa-regular fa-envelope"></i>
-                  <span>contactoorigenescolombia@gmail.com</span>
-                </div>
-                <div class="info-item">
-                  <i class="fa-solid fa-phone"></i>
-                  <span>+57 312 3456 7890</span>
-                </div>
-                <div class="info-item">
-                  <i class="fa-brands fa-whatsapp"></i>
-                  <span>Canal directo de atención y seguimiento</span>
-                </div>
-                <div class="info-item">
-                  <i class="fa-regular fa-clock"></i>
-                  <span>Lunes a Viernes 8:00 AM - 6:00 PM</span>
-                </div>
+                <div class="info-item"><span>Calle Ficticia #123, Cali, Colombia</span></div>
+                <div class="info-item"><span>contactoorigenescolombia@gmail.com</span></div>
+                <div class="info-item"><span>+57 312 3456 7890</span></div>
+                <div class="info-item"><span>Lunes a Viernes 8:00 AM - 6:00 PM</span></div>
               </div>
             </div>
           </div>
 
           <div class="contact-form-card">
-            <form
-              id="contactForm"
-              action="https://formspree.io/f/mgoranal"
-              method="POST"
-              enctype="multipart/form-data"
-              class="contact-form"
-            >
+            <form action="https://formspree.io/f/mgoranal" class="contact-form" id="contactForm" method="POST">
               <div class="form-top">
                 <span class="mini-label">Formulario de contacto</span>
                 <h3 class="form-title">Envíanos un mensaje</h3>
-                <p class="form-description">
-                  Completa tus datos y te responderemos en menos de 24 horas.
-                </p>
+                <p class="form-description">Completa tus datos y te responderemos en menos de 24 horas.</p>
               </div>
 
               <div class="mb-4">
-                <label for="nombre" class="form-label">Nombre completo</label>
-                <input
-                  id="nombre"
-                  type="text"
-                  class="form-control"
-                  name="nombre"
-                  placeholder="Ingresa nombre y apellido"
-                />
-                <span id="errorNombreCompleto" class="text-danger"></span>
+                <label class="form-label" for="nombre">Nombre completo</label>
+                <input class="form-control" id="nombre" name="nombre" placeholder="Ingresa nombre y apellido" type="text" />
+                <span class="text-danger" id="errorNombreCompleto"></span>
               </div>
 
               <div class="mb-4">
-                <label for="email" class="form-label">Correo electrónico</label>
-                <input
-                  id="email"
-                  type="email"
-                  class="form-control"
-                  name="email"
-                  placeholder="Ingresa tu correo"
-                />
-                <div id="emailHelp" class="form-text">
-                  No compartiremos tu información personal.
-                </div>
-                <span id="errorCorreo" class="text-danger"></span>
+                <label class="form-label" for="email">Correo electrónico</label>
+                <input class="form-control" id="email" name="email" placeholder="Ingresa tu correo" type="email" />
+                <span class="text-danger" id="errorCorreo"></span>
               </div>
 
               <div class="mb-4">
-                <label for="celular" class="form-label">Celular</label>
+                <label class="form-label" for="celular">Celular</label>
                 <div class="row g-2">
                   <div class="col-md-4">
-                    <select id="indicativo" name="indicativo" class="form-select">
+                    <select class="form-select" id="indicativo" name="indicativo">
                       <option value="">Indicativo</option>
                       <option value="+57">+57 Colombia</option>
                       <option value="+1">+1 USA / Canadá</option>
@@ -198,44 +123,25 @@
                       <option value="+34">+34 España</option>
                     </select>
                   </div>
-
                   <div class="col-md-8">
-                    <input
-                      id="celular"
-                      type="text"
-                      name="celular"
-                      class="form-control"
-                      placeholder="Ingresa tu celular"
-                      maxlength="11"
-                      inputmode="numeric"
-                    />
+                    <input class="form-control" id="celular" maxlength="11" name="celular" placeholder="Ingresa tu celular" type="text" />
                   </div>
                 </div>
-
-                <span id="errorCelular" class="text-danger"></span>
+                <span class="text-danger" id="errorCelular"></span>
               </div>
 
               <div class="mb-4">
-                <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea
-                  id="mensaje"
-                  name="mensaje"
-                  class="form-control"
-                  rows="5"
-                  placeholder="Cuéntanos cómo podemos ayudarte"
-                ></textarea>
-                <span id="errorMensaje" class="text-danger"></span>
+                <label class="form-label" for="mensaje">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Cuéntanos cómo podemos ayudarte" rows="5"></textarea>
+                <span class="text-danger" id="errorMensaje"></span>
               </div>
 
               <div class="contact-actions">
-                <button type="submit" class="btn submit-btn">Enviar mensaje</button>
-                <div class="quick-contact">
-                  <span><i class="fa-regular fa-envelope"></i> Respuesta rápida</span>
-                </div>
+                <button class="btn submit-btn" type="submit">Enviar mensaje</button>
               </div>
             </form>
 
-            <div id="mensajeExito" style="display: none;" class="alert alert-success mt-3 success-box">
+            <div class="alert alert-success mt-3 success-box" id="mensajeExito" style="display: none;">
               Gracias. Tu mensaje fue recibido correctamente.
             </div>
           </div>
@@ -244,27 +150,23 @@
     </section>
   </main>
 
-  <aside id="cartDrawer" class="cart-drawer">
+
+  <aside class="cart-drawer" id="cartDrawer">
     <div class="cart-header">
       <h3>Tu carrito</h3>
-      <button id="closeCart" class="cart-close-btn" type="button">&times;</button>
+      <button class="cart-close-btn" id="closeCart" type="button">×</button>
     </div>
-
-    <div id="cartItems" class="cart-items"></div>
-
+    <div class="cart-items" id="cartItems"></div>
     <div class="cart-footer">
-      <p class="cart-total">
-        Total: <span id="total">$0</span>
-      </p>
-
+      <p class="cart-total">Total: <span id="total">$0</span></p>
       <div class="cart-footer-actions">
-        <button id="clearCartBtn" class="btn-cart-secondary" type="button">Vaciar</button>
-        <button id="buyBtn" class="btn-cart-primary" type="button">Comprar</button>
+        <button class="btn-cart-secondary" id="clearCartBtn" type="button">Vaciar</button>
+        <button class="btn-cart-primary" id="buyBtn" type="button">Comprar</button>
       </div>
     </div>
   </aside>
 
-  <div id="cartOverlay" class="cart-overlay"></div>
+  <div class="cart-overlay" id="cartOverlay"></div>
 
   <footer class="site-footer">
     <div class="container">
@@ -277,12 +179,12 @@
             <li>contactoorigenescolombia@gmail.com</li>
             <li>+57 312 3456 7890</li>
           </ul>
-
-          <div class="footer-social">
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <div class="icons">
+            <a aria-label="Facebook" href="#"><img alt="Facebook" src="../IMG/icon-facebook.svg" /></a>
+            <a aria-label="Instagram" href="#"><img alt="Instagram" src="../IMG/icon-instagram.svg" /></a>
+            <a aria-label="YouTube" href="#"><img alt="YouTube" src="../IMG/icon-youtube.svg" /></a>
+            <a aria-label="X" href="#"><img alt="X" src="../IMG/icon-x.svg" /></a>
+            <a aria-label="WhatsApp" href="#"><img alt="WhatsApp" src="../IMG/icon-whatsapp.svg" /></a>
           </div>
         </div>
 
@@ -290,34 +192,27 @@
           <h6 class="footer-title">Navegación</h6>
           <ul class="footer-list">
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="catalogo.html">Catálogo</a></li>
-            <li><a href="contactenos.html">Contacto</a></li>
-            <li><a href="sobreorigenes.html">Sobre Orígenes</a></li>
-            <li><a href="admin.html">Administrador</a></li>
+            <li><a href="./catalogo.html">Catálogo</a></li>
+            <li><a href="./contactenos.html">Contacto</a></li>
+            <li><a href="./sobreorigenes.html">Sobre Orígenes</a></li>
+            <li><a href="./admin.html">Administrador</a></li>
+            <li><a href="./registro.html">Registro</a></li>
           </ul>
         </div>
 
         <div class="col-md-4">
           <h6 class="footer-title">Newsletter</h6>
-          <p class="footer-text">
-            Suscríbete y recibe novedades, lanzamientos y productos exclusivos.
-          </p>
-
-          <div class="newsletter">
-            <input type="email" placeholder="E-mail" />
-            <button type="button" aria-label="Suscribirse">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </button>
-          </div>
+          <p class="footer-text">Suscríbete y recibe novedades, lanzamientos y productos exclusivos.</p>
+          <form class="newsletter" id="newsletterForm">
+            <input id="newsletterEmail" placeholder="E-mail" type="email" />
+            <button aria-label="Suscribirse" type="submit">→</button>
+          </form>
+          <small class="newsletter-message" id="newsletterMessage"></small>
         </div>
       </div>
 
       <div class="footer-logo-wrapper">
-        <img
-          src="https://i.postimg.cc/1X3CzFGC/logo-origenes-02.png"
-          alt="logo Orígenes Colombia"
-          class="footer-logo"
-        />
+        <img alt="Orígenes Colombia" class="footer-logo" src="../IMG/logo-origenes-oscuro.svg" />
       </div>
 
       <div class="footer-bottom">
@@ -327,10 +222,10 @@
       </div>
     </div>
   </footer>
-
-  <script src="../JS/storage.js"></script>
-  <script src="../JS/carrito.js"></script>
+    <script src="../JS/storage.js"></script>
   <script src="../JS/contactenos.js"></script>
+  <script src="../JS/carrito.js"></script>
+  <script src="../JS/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
