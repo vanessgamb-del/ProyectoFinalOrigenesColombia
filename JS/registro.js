@@ -156,6 +156,7 @@ function registrarse(e) {
   
 
   const usuarioData = {
+    id: Date.now(),
     nombre: nombreInput.value,
     correo : emailInput.value,
     telefono: phoneInput.value,
