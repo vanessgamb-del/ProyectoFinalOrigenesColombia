@@ -1,3 +1,26 @@
+:root {
+  --colortextos: #484B47;
+  --colorhover: #B46141;
+  --cardbg: #FFFFFF;
+  --bordercolor: #E7E1D7;
+  --shadowsoft: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--backgroundcolor);
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 78px;
+  color: var(--colortextos);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/*Hero*/
 .about-hero {
   height: 470px;
   background-image:
@@ -14,25 +37,34 @@
   width: 100%;
 }
 
-.hero-content {
-  padding-top: 40px;
-}
-
 .about-hero-title {
-  color: var(--textoblanco);
+  color: var(--textwhite);
   font-size: clamp(2.8rem, 5vw, 4.9rem);
   font-weight: 700;
   margin-bottom: 14px;
 }
 
 .about-hero-text {
-  color: var(--textoblanco);
+  color: var(--textwhite);
   font-size: 1.2rem;
   margin: 0;
 }
 
+/*Main selection*/
 .about-section {
   padding: 30px 0 60px;
+}
+
+.intro-block {
+  max-width: 950px;
+  margin: 0 auto 20px;
+}
+
+.section-title {
+  color: var(--titlesgreen);
+  font-size: clamp(2.4rem, 3vw, 3.1rem);
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .about-intro,
@@ -41,9 +73,10 @@
   margin: 0 auto;
   font-size: 1.02rem;
   line-height: 1.45;
-  color: var(--colortextos);
+  color: var(--textdark);
 }
 
+/* ABOUT CARDS */
 .about-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -53,11 +86,11 @@
 }
 
 .about-box {
-  background: var(--cardbg);
-  border: 1px solid var(--bordercolor);
+  background: #ffffff;
+  border: 1px solid #ece7de;
   border-radius: 22px;
   padding: 26px 24px 24px;
-  box-shadow: var(--shadowsoft);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .about-box-header {
@@ -72,20 +105,20 @@
   min-width: 74px;
   height: 74px;
   border-radius: 50%;
-  background: var(--navbackground);
+  background: var(--titlesgreen);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .about-icon i {
-  color: var(--textoblanco);
+  color: var(--textwhite);
   font-size: 2rem;
 }
 
 .about-box-title {
   margin: 0;
-  color: var(--navbackground);
+  color: var(--titlesgreen);
   font-size: 2rem;
   font-weight: 700;
 }
@@ -94,7 +127,7 @@
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--colortextos);
+  color: var(--textdark);
 }
 
 .values-list {
@@ -108,6 +141,7 @@
   margin-top: 8px;
 }
 
+/*Team*/
 .team-heading {
   margin-top: 8px;
   margin-bottom: 18px;
@@ -121,11 +155,11 @@
 }
 
 .team-card {
-  background: var(--cardbg);
-  border: 1px solid var(--bordercolor);
+  background: #ffffff;
+  border: 1px solid #ece7de;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: var(--shadowsoft);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
 }
@@ -175,7 +209,7 @@
 .card-role {
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--navbackground);
+  color: var(--titlesgreen);
   margin-bottom: 8px;
 }
 
@@ -183,7 +217,7 @@
   font-size: 0.82rem;
   line-height: 1.35;
   margin-bottom: 10px;
-  color: var(--colortextos);
+  color: var(--textdark);
   min-height: 58px;
 }
 
@@ -196,16 +230,19 @@
 }
 
 .social a {
-  color: var(--navbackground);
+  color: var(--titlesgreen);
   font-size: 1.7rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social a:hover {
-  color: var(--colorhover);
+  color: var(--hoveraccent);
   transform: translateY(-2px);
 }
 
+
+
+/*Responsive*/
 @media (max-width: 1199px) {
   .about-cards {
     grid-template-columns: 1fr;
@@ -216,17 +253,12 @@
   }
 }
 
-@media (max-width: 991px) {
-  .about-hero {
-    height: 380px;
-  }
-
-  .team-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 
 @media (max-width: 767px) {
+  body {
+    padding-top: 76px;
+  }
+
   .about-hero {
     height: 300px;
   }
@@ -238,6 +270,10 @@
   .about-hero-text {
     font-size: 1rem;
     padding: 0 10px;
+  }
+
+  .section-title {
+    font-size: 2rem;
   }
 
   .team-grid {

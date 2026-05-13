@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+=======
+:root {
+  --colortextos: #484B47;
+  --colorhover: #B46141;
+  --cardbg: #FFFFFF;
+  --bordercolor: #E7E1D7;
+  --shadowsoft: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--backgroundcolor);
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 78px;
+  color: var(--colortextos);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*Hero*/
+>>>>>>> recuperar-stash
 .contact-hero {
   height: 390px;
   background-image:
@@ -31,6 +57,10 @@
   margin: 0;
 }
 
+<<<<<<< HEAD
+=======
+/*Main*/
+>>>>>>> recuperar-stash
 .contact-section {
   padding: 38px 0 60px;
 }
@@ -43,6 +73,10 @@
   color: var(--colortextos);
 }
 
+<<<<<<< HEAD
+=======
+/*Layout*/
+>>>>>>> recuperar-stash
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1.08fr;
@@ -59,6 +93,10 @@
   box-shadow: var(--shadowsoft);
 }
 
+<<<<<<< HEAD
+=======
+/*Left card*/
+>>>>>>> recuperar-stash
 .contact-image-wrapper {
   position: relative;
   height: 300px;
@@ -125,6 +163,10 @@
   font-size: 1rem;
 }
 
+<<<<<<< HEAD
+=======
+/*Form*/
+>>>>>>> recuperar-stash
 .contact-form {
   padding: 28px 28px 24px;
 }
@@ -148,12 +190,58 @@
   color: var(--colortextos);
 }
 
+<<<<<<< HEAD
+=======
+.form-label {
+  font-weight: 600;
+  color: var(--colortextos);
+  margin-bottom: 8px;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  border: 1px solid #D9D2C7;
+  border-radius: 14px;
+  background-color: #FFFFFF;
+  min-height: 52px;
+  padding: 12px 14px;
+  box-shadow: none;
+  color: var(--colortextos);
+}
+
+.contact-form .form-control::placeholder,
+.contact-form .form-select {
+  color: #7D7D7D;
+}
+
+textarea.form-control {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: var(--navbackground);
+  box-shadow: 0 0 0 0.16rem rgba(110, 155, 119, 0.18);
+}
+
+>>>>>>> recuperar-stash
 .form-text {
   font-size: 0.85rem;
   margin-top: 6px;
   color: #6F6F6F;
 }
 
+<<<<<<< HEAD
+=======
+.text-danger {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.84rem;
+}
+
+/*Actions*/
+>>>>>>> recuperar-stash
 .contact-actions {
   display: flex;
   align-items: center;
@@ -199,6 +287,12 @@
   box-shadow: var(--shadowsoft);
 }
 
+<<<<<<< HEAD
+=======
+
+
+/*Responsive*/
+>>>>>>> recuperar-stash
 @media (max-width: 1199px) {
   .contact-layout {
     grid-template-columns: 1fr;
@@ -209,6 +303,7 @@
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 991px) {
   .contact-hero {
     height: 330px;
@@ -216,6 +311,13 @@
 }
 
 @media (max-width: 767px) {
+=======
+@media (max-width: 767px) {
+  body {
+    padding-top: 76px;
+  }
+
+>>>>>>> recuperar-stash
   .contact-hero {
     height: 270px;
   }

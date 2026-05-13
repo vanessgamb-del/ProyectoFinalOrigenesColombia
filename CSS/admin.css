@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+=======
+:root {
+  --colortextos: #484B47;
+  --colorhover: #B46141;
+  --cardbg: #FFFFFF;
+  --bordercolor: #E7E1D7;
+  --shadowsoft: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--backgroundcolor);
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 78px;
+  color: var(--colortextos);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*Hero*/
+>>>>>>> recuperar-stash
 .admin-hero {
   height: 300px;
   background-image:
@@ -31,6 +57,10 @@
   margin: 0;
 }
 
+<<<<<<< HEAD
+=======
+/*Main*/
+>>>>>>> recuperar-stash
 .admin-section {
   padding: 38px 0 60px;
 }
@@ -43,6 +73,10 @@
   color: var(--colortextos);
 }
 
+<<<<<<< HEAD
+=======
+/*Layout*/
+>>>>>>> recuperar-stash
 .admin-layout {
   display: grid;
   grid-template-columns: 420px 1fr;
@@ -82,11 +116,46 @@
   padding: 20px 24px 24px;
 }
 
+<<<<<<< HEAD
 .admin-products-body .col-md-4,
 #productList .col-md-4 {
   flex: 0 0 auto;
   width: 31.5%;
   min-width: 270px;
+=======
+/*Form*/
+.form-label {
+  font-weight: 600;
+  color: var(--colortextos);
+  margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+  border: 1px solid #D9D2C7;
+  border-radius: 14px;
+  background-color: #FFFFFF;
+  min-height: 52px;
+  padding: 12px 14px;
+  box-shadow: none;
+  color: var(--colortextos);
+}
+
+.form-control::placeholder,
+.form-select {
+  color: #7D7D7D;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--navbackground);
+  box-shadow: 0 0 0 0.16rem rgba(110, 155, 119, 0.18);
+>>>>>>> recuperar-stash
 }
 
 .admin-actions {
@@ -124,6 +193,10 @@
   color: var(--textoblanco);
 }
 
+<<<<<<< HEAD
+=======
+/*Product card*/
+>>>>>>> recuperar-stash
 .product-card {
   background: var(--cardbg);
   border: 1px solid var(--bordercolor);
@@ -231,11 +304,54 @@
 }
 
 .btn-card-delete:hover {
+<<<<<<< HEAD
   background-color: var(--colorhover);
   color: var(--textoblanco);
 }
 
 @media (max-width: 991px) {
+=======
+  background: rgba(176, 58, 46, 0.22);
+}
+
+/*Empty state*/
+.empty-state {
+  background: rgba(110, 155, 119, 0.08);
+  border: 1px dashed rgba(110, 155, 119, 0.28);
+  border-radius: 18px;
+  color: var(--colortextos);
+  font-weight: 500;
+}
+
+
+
+/*Responsive*/
+@media (max-width: 1199px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-top: 82px;
+  }
+
+  .custom-navbar .nav-link {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .custom-navbar .active-link::after {
+    bottom: -6px;
+  }
+
+  .icons {
+    justify-content: center;
+    margin-top: 14px;
+  }
+
+>>>>>>> recuperar-stash
   .admin-hero {
     height: 260px;
   }
@@ -252,6 +368,13 @@
 }
 
 @media (max-width: 767px) {
+<<<<<<< HEAD
+=======
+  body {
+    padding-top: 76px;
+  }
+
+>>>>>>> recuperar-stash
   .admin-hero {
     height: 220px;
   }
