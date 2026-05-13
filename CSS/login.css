@@ -1,10 +1,10 @@
-/* Registro */
-.registro-main {
+/* Login */
+.login-main {
   padding: 70px 0;
   min-height: 70vh;
 }
 
-.registro-card {
+.login-card {
   background: #FFFFFF;
   border: 1px solid var(--bordercolor);
   border-radius: 24px;
@@ -12,7 +12,7 @@
   box-shadow: var(--shadowsoft);
 }
 
-.registro-title {
+.login-title {
   background: var(--gradientdark);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -23,18 +23,18 @@
   margin-bottom: 10px;
 }
 
-.registro-text {
+.login-text {
   text-align: center;
   color: var(--colortextos);
   margin-bottom: 26px;
 }
 
-.registro-card .form-label {
+.login-card .form-label {
   font-weight: 600;
   color: var(--colortextos);
 }
 
-.registro-card .form-control {
+.login-card .form-control {
   border: 1px solid #D9D2C7;
   border-radius: 14px;
   min-height: 52px;
@@ -42,12 +42,12 @@
   box-shadow: none;
 }
 
-.registro-card .form-control:focus {
+.login-card .form-control:focus {
   border-color: #6B5B4D;
   box-shadow: 0 0 0 0.16rem rgba(107, 91, 77, 0.18);
 }
 
-.registro-btn {
+.login-btn {
   background-color: #FFFFFF;
   color: var(--navbackground);
   border: none;
@@ -58,24 +58,41 @@
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.registro-btn:hover {
+.login-btn:hover {
   background-color: var(--navbackground);
   color: #FFFFFF;
   transform: translateY(-2px);
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
 }
 
-.registro-message {
+.login-message {
   text-align: center;
   margin-top: 16px;
   font-weight: 600;
   min-height: 1.2em;
 }
 
-.registro-message.is-error {
+.login-message.is-error {
   color: var(--dangercolor);
 }
 
-.registro-message.is-success {
+.login-message.is-success {
   color: var(--navbackground);
+}
+
+.login-footer-link {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  color: var(--colortextos);
+  font-size: 0.95rem;
+}
+
+.login-footer-link a {
+  color: var(--colorhover);
+  font-weight: 700;
+}
+
+.login-footer-link a:hover {
+  text-decoration: underline;
 }
