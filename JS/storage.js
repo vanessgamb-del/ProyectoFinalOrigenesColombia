@@ -50,3 +50,22 @@ function capitalizarNombre(nombre) {
     .map((parte) => parte.charAt(0).toLocaleUpperCase("es-CO") + parte.slice(1))
     .join(" ");
 }
+
+const ADMIN_HARDCODED = {
+  nombre: "Administrador",
+  correo: "admin@mail.com",
+  contrasena: "123456",
+};
+
+// Sembramos el admin al cargar storage.js en cualquier página. Es idempotente:
+// si el correo ya existe no duplica. Esto cumple la rúbrica de "usuario admin
+// hardcodeado pre-almacenado en LocalStorage" sin meter lógica especial en login.
+(function garantizarAdminPorDefecto() {
+  const usuarios = getUsuarios();
+  const existe = usuarios.some(
+    (usuario) => usuario.correo.toLowerCase() === ADMIN_HARDCODED.correo
+  );
+  if (!existe) {
+    saveUsuarios([ADMIN_HARDCODED, ...usuarios]);
+  }
+})();

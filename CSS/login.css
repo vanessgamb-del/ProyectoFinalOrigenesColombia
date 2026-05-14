@@ -96,3 +96,12 @@
 .login-footer-link a:hover {
   text-decoration: underline;
 }
+
+.login-field-error {
+  display: block;
+  margin-top: 6px;
+  min-height: 1.1em;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--dangercolor);
+}

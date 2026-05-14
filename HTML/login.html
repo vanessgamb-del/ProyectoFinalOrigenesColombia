@@ -67,12 +67,14 @@
             <form id="loginForm" novalidate>
               <div class="mb-3">
                 <label class="form-label" for="loginEmail">Correo electrónico</label>
-                <input class="form-control" id="loginEmail" placeholder="Ingresa tu correo" required type="email" />
+                <input class="form-control" id="loginEmail" placeholder="Ingresa tu correo" type="email" />
+                <span class="login-field-error" id="errorLoginEmail"></span>
               </div>
 
               <div class="mb-4">
                 <label class="form-label" for="loginPassword">Contraseña</label>
-                <input class="form-control" id="loginPassword" placeholder="Ingresa tu contraseña" required type="password" />
+                <input class="form-control" id="loginPassword" placeholder="Ingresa tu contraseña" type="password" />
+                <span class="login-field-error" id="errorLoginPassword"></span>
               </div>
 
               <button class="btn login-btn w-100" type="submit">Iniciar sesión</button>
