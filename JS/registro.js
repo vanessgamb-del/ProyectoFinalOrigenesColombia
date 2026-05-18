@@ -1,74 +1,173 @@
-const registerForm = document.getElementById("registerForm");
-const fullNameInput = document.getElementById("fullName");
-const registerEmailInput = document.getElementById("registerEmail");
-const registerPasswordInput = document.getElementById("registerPassword");
-const confirmPasswordInput = document.getElementById("confirmPassword");
-const registerMessage = document.getElementById("registerMessage");
+const form = document.getElementById("contactForm");
+const nombreInput = document.getElementById("nombre");
+const emailInput = document.getElementById("email");
+const phoneInput = document.getElementById("celular");
+const countryCodeSelect = document.getElementById("indicativo");
+const passInput = document.getElementById("passwordInput");
+const verificarPass = document.getElementById("verificar-passwordInput");
+
+const nombreError = document.getElementById("errorNombreCompleto");
+const emailError = document.getElementById("errorCorreo");
+const phoneError = document.getElementById("errorCelular");
+const errorContrasena = document.getElementById("errorContrasena");
+const errorContrasena2 = document.getElementById("verificar-errorContrasena");
+const successMessage = document.getElementById("mensajeExito");
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const MIN_PASSWORD_LENGTH = 6;
+const phoneRegex = /^\d{1,11}$/;
 
-function mostrarMensajeRegistro(texto, tipo) {
-  if (!registerMessage) return;
-  registerMessage.textContent = texto;
-  registerMessage.classList.remove("is-error", "is-success");
-  registerMessage.classList.add(tipo === "ok" ? "is-success" : "is-error");
+function setError (element, message) {
+  element.textContent = message;
+};
+
+function clearError (element){
+  element.textContent = "";
+};
+
+// Listener para funciones
+verificarPass.addEventListener("input",sonIguales);
+emailInput.addEventListener("input", validateEmail);
+phoneInput.addEventListener("input", sanitizePhoneInput);
+countryCodeSelect.addEventListener("change", validatePhone);
+form.addEventListener("submit", registrarse );
+
+// funciones para contraseña 
+
+function verContrasena(password,btn){
+  const input = document.getElementById(password);
+  const icon = btn.querySelector("i");
+
+  if(input.type === "password"){
+    input.type = "text";
+    icon.className = "fa-solid fa-eye-slash";
+  }else{
+    input.type = "password";
+    icon.className = "fa-solid fa-eye";
+  }
 }
 
-function validarFormularioRegistro(nombre, correo, contrasena, confirmacion) {
-  if (!nombre) {
-    mostrarMensajeRegistro("El nombre es obligatorio.", "err");
+function sonIguales(){
+  let verificarPassString = verificarPass.value;
+  let passString = passInput.value;
+      if(verificarPassString !== passString ){
+        errorContrasena.textContent="Las contraseñas no son iguales";
+        errorContrasena2.textContent="Las contraseñas no son iguales";
+        return;
+    }
+    else{
+       errorContrasena.textContent="";
+       errorContrasena2.textContent="";
+       return;
+    }
+
+}
+
+// funciones de validación del formulario
+
+function validacionNombre(){
+  const nombre= nombreInput.value.trim();
+
+  if(!nombre){
+    setError(nombreError,"El nombre es obligatorio");
     return false;
   }
-  if (!emailRegex.test(correo)) {
-    mostrarMensajeRegistro("Ingresa un correo válido.", "err");
+  clearError(nombreError);
+    return true;
+}
+
+function validateEmail (){
+  const email = emailInput.value.trim();
+
+  if (!email) {
+    setError(emailError, "El correo es obligatorio.");
     return false;
   }
-  if (contrasena.length < MIN_PASSWORD_LENGTH) {
-    mostrarMensajeRegistro(
-      `La contraseña debe tener al menos ${MIN_PASSWORD_LENGTH} caracteres.`,
-      "err"
-    );
+
+  if (!emailRegex.test(email)) {
+    setError(emailError, "Ingresa un correo válido.");
     return false;
   }
-  if (contrasena !== confirmacion) {
-    mostrarMensajeRegistro("Las contraseñas no coinciden.", "err");
-    return false;
+
+  clearError(emailError);
+  return true;
+};
+
+function validatePhone(){
+    const phone = phoneInput.value.trim();
+    const countryCode = countryCodeSelect.value;
+
+    if (!countryCode) {
+      setError(phoneError, "Selecciona un indicativo.");
+      return false;
+    }
+
+    if (!phone) {
+      setError(phoneError, "El celular es obligatorio.");
+      return false;
+    }
+
+    if (!phoneRegex.test(phone)) {
+      setError(phoneError, "Solo se permiten números y máximo 11 dígitos.");
+      return false;
+    }
+
+    clearError(phoneError);
+    return true;
+  };
+  function sanitizePhoneInput(event){
+    const numericValue = event.target.value.replace(/\D/g, "").slice(0, 11);
+    event.target.value = numericValue;
+    validatePhone();
+  };
+
+  function validacionContrasena(){
+    const contra= passInput.value.trim();
+
+    if(!contra){
+      setError(errorContrasena,"La contraseña es obligatoria");
+      return false;
   }
+
+  clearError(errorContrasena);
+  clearError(errorContrasena2);
   return true;
 }
+function registrarse(e) {
+  // evita que se recargue la página
+  e.preventDefault();
+  //realiza las validaciones antes de continuar
+  const isEmailValid = validateEmail();
+  const isPhoneValid = validatePhone();
+  const isNameValid = validacionNombre();
+  const isPassValid = validacionContrasena();
 
-function manejarRegistro(event) {
-  event.preventDefault();
-
-  const nombre = fullNameInput.value.trim();
-  // Normalizamos el correo a minúsculas para que el login pueda buscar
-  // sin importar cómo lo escriba el usuario al iniciar sesión.
-  const correo = registerEmailInput.value.trim().toLowerCase();
-  const contrasena = registerPasswordInput.value;
-  const confirmacion = confirmPasswordInput.value;
-
-  if (!validarFormularioRegistro(nombre, correo, contrasena, confirmacion)) {
+  if (!isEmailValid || !isPhoneValid || !isNameValid || !isPassValid) {
     return;
   }
 
-  const usuarios = getUsuarios();
-  const correoExiste = usuarios.some((usuario) => usuario.correo === correo);
-  if (correoExiste) {
-    mostrarMensajeRegistro("Correo ya registrado.", "err");
+  usuariosRegistrados = getUsarios();
+  const emailExiste = usuariosRegistrados.some(
+  user => user.correo === emailInput.value
+);
+  if(emailExiste){
+    alert("Correo registrado previamente");
     return;
   }
+  
 
-  const nuevoUsuario = { nombre, correo, contrasena };
-  saveUsuarios([...usuarios, nuevoUsuario]);
+  const usuarioData = {
+    nombre: nombreInput.value,
+    correo : emailInput.value,
+    telefono: phoneInput.value,
+    indicativo:countryCodeSelect.value,
+    contrasena: passInput.value,
+  }
 
-  mostrarMensajeRegistro("Cuenta creada correctamente. Redirigiendo…", "ok");
-  registerForm.reset();
-  setTimeout(() => {
-    window.location.href = "login.html";
-  }, 800);
-}
+  console.log(usuarioData);
+  usuariosRegistrados.push(usuarioData);
+  saveUsuario(usuariosRegistrados);
 
-if (registerForm) {
-  registerForm.addEventListener("submit", manejarRegistro);
-}
+  localStorage.setItem("openCartAfterRegister", "true");
+  window.location.href = "catalogo.html?openCart=true";
+
+  };

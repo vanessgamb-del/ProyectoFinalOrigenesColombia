@@ -1,177 +1,120 @@
-/* =========================
-   INDEX / HOME
-   ========================= */
+:root {
+  --colortextos: #484B47;
+  --colorhover: #B46141;
+  --navbackground: #6E9B77;
+  --textoblanco: #FFFFFF;
+  --cardbg: #FFFFFF;
+  --bordercolor: #E7E1D7;
+  --shadowsoft: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
 
-.carousel-item {
-  position: relative;
-  overflow: hidden;
+#bannerOrigenes {
+  margin-top: -92px;
 }
 
 .banner-img {
-  display: block;
-  width: 100%;
-  height: 640px;
+  height: 100vh;
+  min-height: 560px;
   object-fit: cover;
-  object-position: center;
+}
+
+.carousel-item {
+  position: relative;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.44),
-    rgba(0, 0, 0, 0.30)
-  );
+  background: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38));
   z-index: 1;
 }
 
-.carousel-caption.hero-content {
+.hero-content {
   z-index: 2;
-  bottom: 24%;
+  bottom: 22%;
 }
 
 .hero-content h1 {
-  color: #ffffff;
-  font-size: clamp(2.7rem, 6vw, 5rem);
+  color: var(--textoblanco);
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
   font-weight: 800;
   margin-bottom: 14px;
 }
 
 .hero-content p {
-  color: #ffffff;
-  font-size: 1.15rem;
-  max-width: 760px;
-  margin: 0 auto 22px;
+  color: var(--textoblanco);
+  font-size: 1.2rem;
+  margin-bottom: 22px;
 }
-
-/* =========================
-   BOTONES HERO
-   ========================= */
 
 .hero-actions {
   display: flex;
-  justify-content: center;
   gap: 14px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-.hero-btn-primary {
-  background-color: #ffffff;
-  color: #6E9B77 !important;
-  border: none;
+.hero-btn-primary,
+.hero-btn-secondary,
+.cta-btn {
   border-radius: 999px;
-  padding: 14px 32px;
-  min-width: 210px;
-  font-weight: 800;
-  font-size: 1rem;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  padding: 12px 28px;
+  font-weight: 700;
+  transition: all 0.3s ease;
 }
 
-.hero-btn-primary:hover {
-  background-color: #6E9B77;
-  color: #ffffff !important;
+.hero-btn-primary,
+.cta-btn {
+  background-color: var(--navbackground);
+  color: var(--textoblanco);
+}
+
+.hero-btn-primary:hover,
+.cta-btn:hover {
+  background-color: var(--colorhover);
+  color: var(--textoblanco);
   transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
 }
 
 .hero-btn-secondary {
-  background-color: rgba(255, 255, 255, 0.14);
-  color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 999px;
-  padding: 14px 32px;
-  min-width: 170px;
-  font-weight: 800;
-  font-size: 1rem;
-  text-align: center;
-  backdrop-filter: blur(4px);
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    border-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  color: var(--textoblanco);
 }
 
 .hero-btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.24);
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.75);
-  transform: translateY(-2px);
+  background: var(--textoblanco);
+  color: var(--colortextos);
 }
 
-/* =========================
-   CARRUSEL
-   ========================= */
-
-.carousel,
-.carousel-inner,
-.carousel-item {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  z-index: 3;
-}
-
-.carousel-indicators {
-  z-index: 3;
-}
-
-.carousel-indicators [data-bs-target] {
-  width: 34px;
-  height: 3px;
-  border-radius: 999px;
-}
-
-/* =========================
-   CATEGORÍAS
-   ========================= */
-
-.categories-section {
-  padding: 44px 0 60px;
-  background-color: var(--backgroundcolor);
+.categories-section,
+.cta-section {
+  padding: 60px 0;
 }
 
 .section-heading {
-  margin-bottom: 26px;
+  max-width: 920px;
+  margin: 0 auto 34px;
+  text-align: center;
 }
 
 .section-title {
-  background: linear-gradient(
-    135deg,
-    #2C2A28 0%,
-    #5A4C42 45%,
-    #8A735F 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
-  font-size: clamp(2.2rem, 3vw, 3rem);
+  color: var(--navbackground);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .section-subtitle {
-  max-width: 820px;
+  max-width: 760px;
   margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.65;
   color: var(--colortextos);
 }
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
 .category-card {
@@ -180,214 +123,116 @@
   border-radius: 22px;
   overflow: hidden;
   box-shadow: var(--shadowsoft);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .category-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
-}
-
-.category-image-wrapper {
-  height: 220px;
-  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
 }
 
 .category-image {
   width: 100%;
-  height: 100%;
+  height: 230px;
   object-fit: cover;
-  object-position: center;
 }
 
 .category-content {
-  padding: 18px 18px 20px;
-  text-align: center;
+  padding: 20px;
 }
 
 .category-content h3 {
   color: var(--navbackground);
-  font-size: 1.3rem;
   font-weight: 800;
   margin-bottom: 8px;
 }
 
 .category-content p {
-  font-size: 0.95rem;
-  line-height: 1.55;
-  margin-bottom: 0;
-  color: var(--colortextos);
-}
-
-/* =========================
-   CTA
-   ========================= */
-
-.cta-section {
-  padding: 0 0 60px;
-  background-color: var(--backgroundcolor);
+  color: #666666;
+  margin: 0;
 }
 
 .cta-box {
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.32),
-      rgba(0, 0, 0, 0.32)
-    ),
-    url("../IMG/hero-artesanal-colombia.jpg");
-
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  border: 1px solid var(--bordercolor);
   border-radius: 28px;
-  padding: 44px 36px;
+  overflow: hidden;
+  min-height: 380px;
   box-shadow: var(--shadowsoft);
+}
 
-  min-height: 310px;
-
-  display: flex;
-  align-items: center;
+.cta-background {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)),
+    url("../IMG/hero-artesanal-colombia.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .cta-text-overlay {
-  max-width: 760px;
+  max-width: 680px;
+  padding: 60px;
 }
 
 .cta-label {
   display: inline-block;
-  margin-bottom: 12px;
-  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--textoblanco);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 999px;
+  padding: 6px 14px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
 
-  background: linear-gradient(
-    135deg,
-    #2C2A28 0%,
-    #4B4138 45%,
-    #6B5B4D 100%
-  );
-
-  color: #ffffff;
-  font-size: 0.85rem;
+.cta-text-overlay h2 {
+  color: var(--textoblanco);
+  font-size: clamp(2rem, 4vw, 3.4rem);
   font-weight: 800;
-  letter-spacing: 0.3px;
 }
 
-.cta-text-overlay h2,
-.cta-text h2 {
-  color: #ffffff;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 800;
-  margin-bottom: 12px;
+.cta-text-overlay p {
+  color: var(--textoblanco);
 }
 
-.cta-text-overlay p,
-.cta-text p {
-  color: #ffffff;
-  margin: 0;
-  line-height: 1.65;
-  max-width: 720px;
+@media (max-width: 1199px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
-.cta-action {
-  margin-top: 24px;
-}
-
-.cta-btn {
-  background-color: #ffffff;
-  color: #6E9B77 !important;
-  border: none;
-  border-radius: 999px;
-  padding: 14px 32px;
-  min-width: 180px;
-  font-weight: 800;
-  font-size: 1rem;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: #6E9B77;
-  color: #ffffff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
-}
-
-/* =========================
-   RESPONSIVE
-   ========================= */
 
 @media (max-width: 991px) {
+  #bannerOrigenes {
+    margin-top: -82px;
+  }
+
   .banner-img {
-    height: 540px;
-  }
-
-  .carousel-caption.hero-content {
-    bottom: 18%;
-  }
-
-  .categories-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .cta-box {
-    min-height: 280px;
-    padding: 36px 28px;
+    height: 620px;
+    min-height: 620px;
   }
 }
 
 @media (max-width: 767px) {
-  .banner-img {
-    height: 430px;
+  #bannerOrigenes {
+    margin-top: -76px;
   }
 
-  .carousel-caption.hero-content {
-    bottom: 12%;
+  .banner-img {
+    height: 560px;
+    min-height: 560px;
+  }
+
+  .hero-content {
+    bottom: 14%;
   }
 
   .hero-content h1 {
     font-size: 2.4rem;
   }
 
-  .hero-content p {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-
-  .hero-actions {
-    gap: 10px;
-  }
-
-  .hero-btn-primary,
-  .hero-btn-secondary,
-  .cta-btn {
-    width: 100%;
-    min-width: unset;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
   .categories-grid {
     grid-template-columns: 1fr;
   }
 
-  .cta-box {
-    min-height: 260px;
-    padding: 28px 20px;
-    text-align: center;
-  }
-
   .cta-text-overlay {
-    margin: 0 auto;
+    padding: 34px 22px;
   }
 }

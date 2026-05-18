@@ -1,0 +1,17 @@
+CAMBIOS REALIZADOS
+
+Se corrigieron solo los imports CSS en:
+- admin.html
+- contactenos.html
+- registro.html
+- sobreorigenes.html
+
+Se eliminaron estos imports porque estaban causando conflicto:
+- navbar.css
+- carrito.css
+- estilo-final.css
+
+Se agregó variables.css para que las variables CSS funcionen correctamente.
+
+Copia cada HTML en tu carpeta HTML.
+Copia variables.css en tu carpeta CSS.
