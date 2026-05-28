@@ -24,6 +24,50 @@ a {
   text-decoration: none;
 }
 
+.section-title {
+  background: var(--gradientdark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.intro-block {
+  max-width: 920px;
+  margin: 0 auto 30px;
+}
+
+.btn-main {
+  background-color: #FFFFFF;
+  color: var(--navbackground);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-main:hover {
+  background-color: var(--navbackground);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.badge-dark {
+  background: var(--gradientbadge);
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-weight: 800;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
 @media (max-width: 991px) {
   body {
     padding-top: 82px;

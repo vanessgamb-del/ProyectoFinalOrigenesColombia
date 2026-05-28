@@ -1,1 +1,81 @@
-/* Archivo intencionalmente limpio para evitar pisar estilos. */
+/* Registro */
+.registro-main {
+  padding: 70px 0;
+  min-height: 70vh;
+}
+
+.registro-card {
+  background: #FFFFFF;
+  border: 1px solid var(--bordercolor);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--shadowsoft);
+}
+
+.registro-title {
+  background: var(--gradientdark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.registro-text {
+  text-align: center;
+  color: var(--colortextos);
+  margin-bottom: 26px;
+}
+
+.registro-card .form-label {
+  font-weight: 600;
+  color: var(--colortextos);
+}
+
+.registro-card .form-control {
+  border: 1px solid #D9D2C7;
+  border-radius: 14px;
+  min-height: 52px;
+  padding: 12px 14px;
+  box-shadow: none;
+}
+
+.registro-card .form-control:focus {
+  border-color: #6B5B4D;
+  box-shadow: 0 0 0 0.16rem rgba(107, 91, 77, 0.18);
+}
+
+.registro-btn {
+  background-color: #FFFFFF;
+  color: var(--navbackground);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registro-btn:hover {
+  background-color: var(--navbackground);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.registro-message {
+  text-align: center;
+  margin-top: 16px;
+  font-weight: 600;
+  min-height: 1.2em;
+}
+
+.registro-message.is-error {
+  color: var(--dangercolor);
+}
+
+.registro-message.is-success {
+  color: var(--navbackground);
+}

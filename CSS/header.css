@@ -1,7 +1,4 @@
-/* =========================
-   HEADER / NAVBAR CORREGIDO
-   ========================= */
-
+/* Header / Navbar */
 .custom-navbar {
   background-color: #FAFBF6;
   padding: 14px 0;
@@ -17,7 +14,6 @@
 .logo-navbar {
   width: 220px;
   height: auto;
-  display: block;
 }
 
 .custom-navbar .navbar-collapse {
@@ -43,41 +39,32 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 8px 0 12px;
   margin: 0;
-
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2;
-
-  color: #484B47 !important;
+  color: var(--colortextos) !important;
   white-space: nowrap;
-
   transition: color 0.3s ease;
 }
 
 .custom-navbar .nav-link:hover {
-  color: #B46141 !important;
+  color: var(--colorhover) !important;
 }
 
 .custom-navbar .nav-link::after {
   content: "";
   position: absolute;
-
   left: 0;
   right: 0;
   bottom: 0;
-
   width: 100%;
   height: 3px;
-
   background-color: #D9CFAB;
   border-radius: 999px;
-
   transform: scaleX(0);
   transform-origin: center;
-
   transition: transform 0.3s ease;
 }
 
@@ -86,17 +73,69 @@
   transform: scaleX(1);
 }
 
-/* =========================
-   ICONOS
-   ========================= */
-
 .icons {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 22px;
+  gap: 18px;
   flex-shrink: 0;
   min-width: 100px;
+}
+
+.nav-session-link {
+  background: #FFFFFF;
+  color: var(--colortextos);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.nav-session-link:hover {
+  color: var(--colorhover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.nav-user-greeting {
+  color: var(--colortextos);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+/* Neumorfismo en línea con .site-footer .icons a (footer.css) */
+.nav-logout-btn {
+  background: #F7F5EF;
+  color: var(--colortextos);
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow:
+    6px 6px 14px rgba(0, 0, 0, 0.12),
+    -6px -6px 14px rgb(255, 255, 255);
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-logout-btn:hover {
+  color: var(--colorhover);
+  transform: translateY(-2px);
+  box-shadow:
+    10px 10px 20px rgba(0, 0, 0, 0.12),
+    -6px -6px 14px rgb(255, 255, 255);
+}
+
+.nav-logout-btn:focus {
+  outline: none;
 }
 
 .nav-icon {
@@ -111,20 +150,13 @@
   opacity: 0.7;
 }
 
-/* =========================
-   CARRITO
-   ========================= */
-
 .cart-icon-btn {
   position: relative;
-
   width: 34px;
   height: 34px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   background: transparent;
   border: none;
   padding: 0;
@@ -137,32 +169,21 @@
 
 .cart-badge {
   position: absolute;
-
   left: 50%;
   top: 58%;
-
   transform: translate(-50%, -50%);
-
   background: transparent;
-  color: #484B47;
-
+  color: var(--colortextos);
   font-size: 0.72rem;
   font-weight: 800;
   line-height: 1;
-
   min-width: 12px;
   height: 12px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   pointer-events: none;
 }
-
-/* =========================
-   BOTÓN RESPONSIVE
-   ========================= */
 
 .cart-icon-btn:focus,
 .cart-icon-btn:active,
@@ -182,10 +203,6 @@
   height: 2rem;
   filter: brightness(0);
 }
-
-/* =========================
-   RESPONSIVE
-   ========================= */
 
 @media (max-width: 1200px) {
   .logo-navbar {
@@ -221,5 +238,7 @@
     justify-content: center;
     min-width: unset;
     margin-top: 16px;
+    flex-wrap: wrap;
+    row-gap: 12px;
   }
 }
