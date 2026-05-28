@@ -1,3 +1,7 @@
+/**
+ * Anima las tarjetas del equipo cuando entran en el viewport.
+ * Agrega la clase "show" para activar las transiciones CSS.
+ */
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".team-card");
 
@@ -15,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.2
+      threshold: 0.2,
     }
   );
 

@@ -3,6 +3,23 @@ const productList = document.getElementById("productList");
 const cancelEditBtn = document.getElementById("cancelEditBtn");
 const submitBtn = document.getElementById("submitBtn");
 
+/**
+ * Verifica sesión de administrador y redirige si no tiene acceso.
+ */
+(function verificarAccesoAdmin() {
+  if (typeof getUsuarioActivo !== "function" || typeof esUsuarioAdmin !== "function") {
+    return;
+  }
+
+  if (!esUsuarioAdmin(getUsuarioActivo())) {
+    alert("Acceso restringido. Inicia sesión con una cuenta de administrador.");
+    window.location.replace("./login.html");
+  }
+})();
+
+/**
+ * Restablece el formulario de producto a su estado inicial.
+ */
 function resetForm() {
   document.getElementById("productId").value = "";
   form.reset();
@@ -12,6 +29,10 @@ function resetForm() {
   }
 }
 
+/**
+ * Carga los datos de un producto en el formulario para editarlo.
+ * @param {number} id - Identificador del producto.
+ */
 function editProduct(id) {
   const products = getProducts();
   const product = products.find((item) => item.id === id);
@@ -34,6 +55,10 @@ function editProduct(id) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+/**
+ * Elimina un producto del catálogo y del carrito si existe.
+ * @param {number} id - Identificador del producto.
+ */
 function deleteProduct(id) {
   const products = getProducts().filter((item) => item.id !== id);
   saveProducts(products);
@@ -44,6 +69,9 @@ function deleteProduct(id) {
   renderProducts();
 }
 
+/**
+ * Renderiza la lista de productos en el panel de administración.
+ */
 function renderProducts() {
   const products = getProducts();
 
@@ -89,7 +117,7 @@ function renderProducts() {
     .join("");
 }
 
-if (form) {
+if (form && esUsuarioAdmin(getUsuarioActivo())) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -101,8 +129,10 @@ if (form) {
       price: Number(document.getElementById("price").value),
       stock: Number(document.getElementById("stock").value),
       category: document.getElementById("category").value,
-      image: document.getElementById("image").value.trim()
+      image: document.getElementById("image").value.trim(),
     };
+
+    console.log("Producto guardado:", JSON.stringify(productData, null, 2));
 
     const products = getProducts();
 
@@ -125,5 +155,7 @@ if (cancelEditBtn) {
   cancelEditBtn.addEventListener("click", resetForm);
 }
 
-resetForm();
-renderProducts();
+if (esUsuarioAdmin(getUsuarioActivo())) {
+  resetForm();
+  renderProducts();
+}

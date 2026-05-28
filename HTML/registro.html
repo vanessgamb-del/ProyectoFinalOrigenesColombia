@@ -10,14 +10,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link href="../CSS/base.css" rel="stylesheet" />
-  <link href="../CSS/navbar.css" rel="stylesheet" />
   <link href="../CSS/carrito.css" rel="stylesheet" />
 
 <link href="../CSS/header.css" rel="stylesheet"/>
 <link href="../CSS/footer.css" rel="stylesheet"/>
 <link href="../CSS/registro.css" rel="stylesheet"/>
 <link href="../CSS/carrito-global.css" rel="stylesheet"/>
-<link href="../CSS/estilo-final.css" rel="stylesheet"/>
 </head>
 
 <body id="top">
@@ -37,7 +35,7 @@
           <li class="nav-item"><a class="nav-link" href="./catalogo.html">Catálogo</a></li>
           <li class="nav-item"><a class="nav-link" href="./contactenos.html">Contacto</a></li>
           <li class="nav-item"><a class="nav-link" href="./sobreorigenes.html">Sobre Orígenes</a></li>
-          <li class="nav-item"><a class="nav-link" href="./admin.html">Administrador</a></li>
+          <li class="nav-item nav-admin-only" hidden><a class="nav-link" href="./admin.html">Administrador</a></li>
         </ul>
 
         <div class="icons">
@@ -77,6 +75,11 @@
               <div class="mb-3">
                 <label class="form-label" for="registerEmail">Correo electrónico</label>
                 <input class="form-control" id="registerEmail" placeholder="Ingresa tu correo" required type="email" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="registerPhone">Número de teléfono</label>
+                <input class="form-control" id="registerPhone" placeholder="Ej: 3001234567" required type="tel" maxlength="11" />
               </div>
 
               <div class="mb-3">
@@ -144,7 +147,7 @@
             <li><a href="./catalogo.html">Catálogo</a></li>
             <li><a href="./contactenos.html">Contacto</a></li>
             <li><a href="./sobreorigenes.html">Sobre Orígenes</a></li>
-            <li><a href="./admin.html">Administrador</a></li>
+            <li class="nav-admin-only" hidden><a href="./admin.html">Administrador</a></li>
             <li><a href="./registro.html">Registro</a></li>
           </ul>
         </div>

@@ -10,9 +10,12 @@ const HARDCODED_PRODUCTS = [
   { id: 109, name: "Vela Guava Jelly", price: 120000, stock: 10, image: "https://i.postimg.cc/Bvs3tDZH/imagen-30.webp", category: "Accesorios", description: "Vela aromática de 12 oz con fragancia tropical." },
   { id: 110, name: "Pañuelo Tropical", price: 95000, stock: 10, image: "https://www.khamaliShop.com/cdn/shop/products/Pa_uelo-tropical-cabeza-KHAMALI-258183265_1946x.jpg?v=1741892266", category: "Accesorios", description: "Estampado floral en seda satinada." },
   { id: 111, name: "Brazalete Geometría Ancestral", price: 78000, stock: 5, image: "https://i.etsystatic.com/34393182/r/il/6a5a86/4100564960/il_570xN.4100564960_8r9r.jpg", category: "Accesorios", description: "Tejido a mano con técnica peyote." },
-  { id: 112, name: "Mochila Patrimonio Solar", price: 450000, stock: 3, image: "https://hilosagrado.org/cdn/shop/collections/Mochila-Wayuu-Tejida-Azul-Oscuro-Pompon_grande.png?v=1695335152", category: "Moda", description: "Tejido Wayúu de lujo con paleta minimalista." }
+  { id: 112, name: "Mochila Patrimonio Solar", price: 450000, stock: 3, image: "https://hilosagrado.org/cdn/shop/collections/Mochila-Wayuu-Tejida-Azul-Oscuro-Pompon_grande.png?v=1695335152", category: "Moda", description: "Tejido Wayúu de lujo con paleta minimalista." },
 ];
 
+/**
+ * Registra los productos iniciales en localStorage si aún no existen.
+ */
 function registerHardcodedProducts() {
   if (typeof getProducts !== "function" || typeof saveProducts !== "function") {
     return;
@@ -27,6 +30,9 @@ function registerHardcodedProducts() {
   }
 }
 
+/**
+ * Renderiza dinámicamente las tarjetas del catálogo desde localStorage.
+ */
 function renderCatalog() {
   const catalogContainer = document.getElementById("catalogContainer");
 

@@ -1,0 +1,5903 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+CSS/about.css
+CSS/admin.css
+CSS/base.css
+CSS/carrito-global.css
+CSS/carrito.css
+CSS/catalogo.css
+CSS/contactenos.css
+CSS/footer.css
+CSS/header.css
+CSS/index.css
+CSS/login.css
+CSS/registro.css
+CSS/sobreorigenes.css
+CSS/variables.css
+database/diagramaER.jpg
+database/origenesColombia.sql
+FETCH_HEAD
+HTML/admin.html
+HTML/catalogo.html
+HTML/contactenos.html
+HTML/login.html
+HTML/registro.html
+HTML/sobreorigenes.html
+HTML/Untitled-1.js
+IMG/1-banner.webp
+IMG/2-banner.webp
+IMG/3-banner.webp
+IMG/admin-hero-panel-clean.png
+IMG/background1.png
+IMG/background2.png
+IMG/banner.webp
+IMG/categoria-artesanias.jpg
+IMG/categoria-cafe.jpg
+IMG/categoria-decoracion.jpg
+IMG/categoria-moda.jpg
+IMG/contacto-artesanal-opcion-2.png
+IMG/contacto-artesanal-premium.png
+IMG/hero-artesanal-colombia.jpg
+IMG/icon-bolsa.svg
+IMG/icon-facebook.svg
+IMG/icon-instagram.svg
+IMG/icon-usuario.svg
+IMG/icon-whatsapp.svg
+IMG/icon-x.svg
+IMG/icon-youtube.svg
+IMG/logo-origenes-oscuro.svg
+IMG/logo.png
+index.html
+JS/admin.js
+JS/app.js
+JS/carrito.js
+JS/catalogo.js
+JS/contactenos.js
+JS/login.js
+JS/navbar.js
+JS/registro.js
+JS/storage.js
+README.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="CSS/about.css">
+/* Sobre Orígenes */
+.about-hero {
+  height: 470px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)),
+    url("../IMG/hero-artesanal-colombia.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.about-hero-overlay {
+  width: 100%;
+}
+
+.about-hero-title {
+  color: var(--textoblanco);
+  font-size: clamp(2.8rem, 5vw, 4.9rem);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.about-hero-text {
+  color: var(--textoblanco);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.about-section {
+  padding: 30px 0 60px;
+}
+
+.intro-block {
+  max-width: 950px;
+  margin: 0 auto 20px;
+}
+
+.section-title {
+  color: var(--navbackground);
+  font-size: clamp(2.4rem, 3vw, 3.1rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.about-intro,
+.team-subtitle {
+  max-width: 980px;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  line-height: 1.45;
+  color: var(--colortextos);
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+
+.about-box {
+  background: #ffffff;
+  border: 1px solid var(--bordercolor);
+  border-radius: 22px;
+  padding: 26px 24px 24px;
+  box-shadow: var(--shadowsoft);
+}
+
+.about-box-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.about-icon {
+  width: 74px;
+  min-width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: var(--navbackground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-icon i {
+  color: var(--textoblanco);
+  font-size: 2rem;
+}
+
+.about-box-title {
+  margin: 0;
+  color: var(--navbackground);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about-box-text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--colortextos);
+}
+
+.values-list {
+  margin: 0;
+  padding-left: 24px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.values-list li + li {
+  margin-top: 8px;
+}
+
+.team-heading {
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(170px, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+
+.team-card {
+  background: #ffffff;
+  border: 1px solid var(--bordercolor);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadowsoft);
+  display: flex;
+  flex-direction: column;
+}
+
+.img1 {
+  height: 78px;
+  overflow: hidden;
+}
+
+.img1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img2 {
+  display: flex;
+  justify-content: center;
+  margin-top: -32px;
+  margin-bottom: 6px;
+}
+
+.img2 img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  background: #ffffff;
+}
+
+.team-card-body {
+  padding: 10px 12px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #202020;
+  margin-bottom: 6px;
+}
+
+.card-role {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navbackground);
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 0.82rem;
+  line-height: 1.35;
+  margin-bottom: 10px;
+  color: var(--colortextos);
+  min-height: 58px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.social a {
+  color: var(--navbackground);
+  font-size: 1.7rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social a:hover {
+  color: var(--colorhover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1199px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .about-hero {
+    height: 300px;
+  }
+
+  .about-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .about-hero-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-box-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</file>
+
+<file path="database/origenesColombia.sql">
+CREATE TABLE roles (
+	id_rol SERIAL PRIMARY KEY,
+	nombre VARCHAR(50) NOT NULL,
+	descripcion TEXT NOT NULL
+);
+
+CREATE TABLE usuarios (
+	id_usuario SERIAL PRIMARY KEY,
+	nombre VARCHAR(50) NOT NULL,
+	apellido VARCHAR(50) NOT NULL,
+	correo VARCHAR(100) UNIQUE,
+	direccion VARCHAR(100),
+	telefono VARCHAR(20),
+	fecha_registro DATE DEFAULT CURRENT_DATE,
+	contrasena VARCHAR(255) NOT NULL,
+	id_rol INTEGER NOT NULL,
+	CONSTRAINT usuario_rol_id_fkey
+	FOREIGN KEY (id_rol)
+	REFERENCES roles(id_rol)
+);
+
+CREATE TABLE pedidos (
+    id_pedido SERIAL PRIMARY KEY,
+    fecha_pedido TIMESTAMP NOT NULL,
+    estado VARCHAR(20),
+    total NUMERIC(10,2),
+    direccion_envio VARCHAR(100),
+    id_usuario INTEGER NOT NULL,
+    CONSTRAINT pedido_usuario_id_fkey
+    FOREIGN KEY (id_usuario)
+    REFERENCES usuarios(id_usuario)
+);
+
+CREATE TABLE categorias (
+    id_categoria SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion TEXT 
+);
+
+CREATE TABLE productos (
+    id_producto SERIAL PRIMARY KEY,
+    nombre_producto VARCHAR(50) NOT NULL,
+	precio NUMERIC(10,2) NOT NULL,
+    estado VARCHAR(30),
+    marca VARCHAR(20),
+    id_categoria INTEGER NOT NULL,
+    CONSTRAINT producto_categoria_id_fkey
+    FOREIGN KEY (id_categoria)
+    REFERENCES categorias(id_categoria)
+);
+
+CREATE TABLE detalle_pedidos (
+	id_detalle SERIAL PRIMARY KEY,
+	id_pedido INTEGER NOT NULL,
+	id_producto INTEGER NOT NULL,
+	cantidad INTEGER,
+	CONSTRAINT detalle_pedido_id_fkey
+	FOREIGN KEY (id_pedido)
+	REFERENCES pedidos(id_pedido),
+	CONSTRAINT detalle_producto_id_fkey
+	FOREIGN KEY (id_producto)
+	REFERENCES productos(id_producto)
+);
+
+INSERT INTO roles (nombre, descripcion) VALUES 
+('Admin', 'Acceso total a todas las funciones del sistema'),
+('Moderador', 'Puede gestionar contenido y usuarios, pero con restricciones'),
+('Usuario', 'Cliente estándar con acceso a compras y perfil'),
+('Editor', 'Encargado de gestionar el catálogo de productos y descripciones'),
+('Invitado', 'Solo lectura, puede navegar pero no realizar acciones');
+
+INSERT INTO usuarios (nombre, apellido, correo, direccion, telefono, contrasena, id_rol) VALUES 
+('Angie', 'Gamboa', 'admin@correo.com', 'Calle 5, Cali', '3001234567', '123456', 1),
+('Vanessa', 'Rivas', 'vanessa@correo.com', 'Av. Pasoancho, Cali', '3007654321', 'root456', 2),
+('Carlos', 'Pérez', 'carlos@correo.com', 'Barrio San Antonio, Cali', '3151112233', 'user789', 3),
+('Elena', 'Martínez', 'elena@correo.com', 'Ciudad Jardín, Cali', '3104445566', 'pass321', 4),
+('Miguel', 'Rodríguez', 'miguel@correo.com', 'El Peñón, Cali', '3207778899', 'mike999', 5);
+
+INSERT INTO pedidos (fecha_pedido, estado, total, direccion_envio, id_usuario) VALUES 
+('2026-05-10', 'Entregado', 450500.00, 'Barrio San Antonio, Cali', 3),
+('2026-05-12', 'Enviado', 850000.00, 'Ciudad Jardín, Cali', 4),
+('2026-05-14', 'Pendiente', 210999.00, 'El Peñón, Cali', 5),
+('2026-05-14', 'Procesando', 445200.00, 'Barrio San Antonio, Cali', 3),
+('2026-05-14', 'Cancelado', 120000.00, 'Calle 5, Cali', 1);
+
+INSERT INTO categorias (nombre, descripcion) VALUES 
+('Café', 'Granos de especialidad y molidos de origen'),
+('Artesanías', 'Productos hechos a mano por comunidades locales'),
+('Alimentos', 'Dulces, panela y productos orgánicos frescos'),
+('Moda', 'Productos hechos a manos por comunidades locales'),
+('Decoración', 'Decoración y utensilios con diseño tradicional');
+
+INSERT INTO productos (nombre_producto, precio, estado, marca, id_categoria) VALUES 
+('Café Especial de Huila', 45000.00, 'Disponible', 'Orígenes H', 3),
+('Mochila Wayuu Grande', 180000.00, 'Disponible', 'Artesanías W', 1),
+('Panela Orgánica 1kg', 12000.00, 'Disponible', 'DulceCampo', 2),
+('Sombrero Vueltiao 21', 350000.00, 'Bajo Stock', 'Artesanías C', 1),
+('Achiote en Grano', 8500.00, 'Disponible', 'SaborCol', 2);
+
+INSERT INTO detalle_pedidos (id_pedido, id_producto, cantidad) VALUES 
+(1, 4, 2),
+(1, 2, 1),
+(2, 5, 5),
+(3, 4, 1),
+(4, 3, 10);
+</file>
+
+<file path="FETCH_HEAD">
+
+</file>
+
+<file path="HTML/Untitled-1.js">
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".team-card");
+
+  if (!cards.length) {
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, currentObserver) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          currentObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  cards.forEach((card) => observer.observe(card));
+});
+</file>
+
+<file path="IMG/icon-bolsa.svg">
+<?xml version="1.0" encoding="UTF-8"?><svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.05 117.4"><defs><style>.cls-1{fill:#484b47;}</style></defs><g id="Texto"><path class="cls-1" d="M85.4,53.39c0-1.42-.56-2.78-1.57-3.78-1-1-2.36-1.57-3.78-1.57H16c-1.42,0-2.78.56-3.78,1.57-1,1-1.57,2.36-1.57,3.78v37.34c0,4.25,1.69,8.32,4.69,11.32,3,3,7.08,4.69,11.33,4.69h42.7c4.25,0,8.32-1.69,11.33-4.69,3-3,4.69-7.08,4.69-11.32v-37.34ZM96.05,90.73c0,7.07-2.81,13.86-7.82,18.86-5,5-11.79,7.81-18.86,7.81H26.68c-7.07,0-13.86-2.81-18.86-7.81-5-5-7.82-11.79-7.82-18.86v-37.34c0-4.24,1.69-8.32,4.69-11.32,3-3,7.07-4.68,11.31-4.68h64.05c4.24,0,8.32,1.68,11.32,4.68,3,3,4.69,7.07,4.69,11.32v37.34Z"/><path class="cls-1" d="M69.38,42.72v-10.68c0-2.8-.54-5.59-1.61-8.18-1.07-2.59-2.64-4.95-4.62-6.94-1.98-1.99-4.34-3.57-6.94-4.64-2.59-1.08-5.38-1.63-8.18-1.63-2.81,0-5.6.55-8.19,1.63-2.59,1.08-4.95,2.65-6.94,4.64-1.98,1.99-3.55,4.34-4.62,6.94-1.07,2.59-1.62,5.37-1.61,8.18v10.68c0,2.94-2.39,5.33-5.33,5.33s-5.33-2.39-5.33-5.33v-10.67c0-4.2.82-8.37,2.42-12.25,1.6-3.89,3.96-7.42,6.93-10.4,2.97-2.98,6.51-5.34,10.4-6.96,3.89-1.61,8.06-2.45,12.27-2.45,4.21,0,8.38.83,12.27,2.45,3.89,1.61,7.42,3.98,10.4,6.96,2.97,2.98,5.32,6.51,6.93,10.4,1.6,3.89,2.43,8.05,2.42,12.25v10.67c0,2.94-2.39,5.33-5.33,5.33-2.94,0-5.33-2.39-5.33-5.33Z"/></g></svg>
+</file>
+
+<file path="IMG/icon-facebook.svg">
+<?xml version="1.0" encoding="UTF-8"?><svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.74 39.74"><defs><style>.cls-1{fill:#484b47;}</style></defs><g id="Texto"><path class="cls-1" d="M33.92,5.82C30.32,2.23,25.35,0,19.87,0S9.42,2.23,5.82,5.82C2.23,9.42,0,14.39,0,19.87s2.23,10.45,5.82,14.05c3.6,3.59,8.57,5.82,14.05,5.82,10.97,0,19.87-8.9,19.87-19.87,0-5.48-2.23-10.45-5.82-14.05ZM25.76,10.68c0,.31-.25.56-.55.56h-2.76c-1.22,0-2.21.99-2.21,2.21v3.88h4.64c.53,0,.94.47.88,1l-.33,2.66c-.06.44-.44.78-.88.78h-4.31v11.11c-.45.04-.91.06-1.38.06-1.03,0-2.05-.1-3.03-.3v-10.87h-3.31c-.31,0-.55-.25-.55-.56v-3.32c0-.31.24-.56.55-.56h3.31v-4.99c0-3.06,2.47-5.54,5.52-5.54h3.86c.3,0,.55.25.55.56v3.32Z"/></g></svg>
+</file>
+
+<file path="IMG/icon-instagram.svg">
+<?xml version="1.0" encoding="UTF-8"?><svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.73 39.74"><defs><style>.cls-1{fill:#484b47;}</style></defs><g id="Texto"><path class="cls-1" d="M19.87,16.28c-1.98,0-3.59,1.61-3.59,3.59s1.61,3.59,3.59,3.59,3.6-1.61,3.6-3.59-1.62-3.59-3.6-3.59ZM19.87,16.28c-1.98,0-3.59,1.61-3.59,3.59s1.61,3.59,3.59,3.59,3.6-1.61,3.6-3.59-1.62-3.59-3.6-3.59ZM24.89,11.25h-10.06c-1.98,0-3.59,1.61-3.59,3.59v10.06c0,1.99,1.61,3.6,3.59,3.6h10.06c1.99,0,3.6-1.61,3.6-3.6v-10.06c0-1.98-1.61-3.59-3.6-3.59ZM19.87,25.26c-2.97,0-5.39-2.41-5.39-5.39s2.42-5.39,5.39-5.39,5.39,2.42,5.39,5.39-2.41,5.39-5.39,5.39ZM25.62,15.2c-.59,0-1.07-.48-1.07-1.08s.48-1.08,1.07-1.08,1.08.49,1.08,1.08-.48,1.08-1.08,1.08ZM19.87,16.28c-1.98,0-3.59,1.61-3.59,3.59s1.61,3.59,3.59,3.59,3.6-1.61,3.6-3.59-1.62-3.59-3.6-3.59ZM24.89,11.25h-10.06c-1.98,0-3.59,1.61-3.59,3.59v10.06c0,1.99,1.61,3.6,3.59,3.6h10.06c1.99,0,3.6-1.61,3.6-3.6v-10.06c0-1.98-1.61-3.59-3.6-3.59ZM19.87,25.26c-2.97,0-5.39-2.41-5.39-5.39s2.42-5.39,5.39-5.39,5.39,2.42,5.39,5.39-2.41,5.39-5.39,5.39ZM25.62,15.2c-.59,0-1.07-.48-1.07-1.08s.48-1.08,1.07-1.08,1.08.49,1.08,1.08-.48,1.08-1.08,1.08ZM19.87,16.28c-1.98,0-3.59,1.61-3.59,3.59s1.61,3.59,3.59,3.59,3.6-1.61,3.6-3.59-1.62-3.59-3.6-3.59ZM33.91,5.82C30.32,2.22,25.35,0,19.86,0S9.41,2.22,5.82,5.82C2.22,9.42,0,14.38,0,19.87s2.22,10.45,5.82,14.05c3.59,3.6,8.55,5.82,14.04,5.82,10.98,0,19.87-8.9,19.87-19.87,0-5.49-2.22-10.45-5.82-14.05ZM30.28,25.26c0,2.78-2.25,5.03-5.03,5.03h-10.78c-2.77,0-5.03-2.25-5.03-5.03v-10.78c0-2.78,2.26-5.03,5.03-5.03h10.78c2.78,0,5.03,2.25,5.03,5.03v10.78ZM24.89,11.25h-10.06c-1.98,0-3.59,1.61-3.59,3.59v10.06c0,1.99,1.61,3.6,3.59,3.6h10.06c1.99,0,3.6-1.61,3.6-3.6v-10.06c0-1.98-1.61-3.59-3.6-3.59ZM19.87,25.26c-2.97,0-5.39-2.41-5.39-5.39s2.42-5.39,5.39-5.39,5.39,2.42,5.39,5.39-2.41,5.39-5.39,5.39ZM25.62,15.2c-.59,0-1.07-.48-1.07-1.08s.48-1.08,1.07-1.08,1.08.49,1.08,1.08-.48,1.08-1.08,1.08ZM19.87,16.28c-1.98,0-3.59,1.61-3.59,3.59s1.61,3.59,3.59,3.59,3.6-1.61,3.6-3.59-1.62-3.59-3.6-3.59ZM19.87,16.28c-1.98,0-3.59,1.61-3.59,3.59s1.61,3.59,3.59,3.59,3.6-1.61,3.6-3.59-1.62-3.59-3.6-3.59ZM19.87,16.28c-1.98,0-3.59,1.61-3.59,3.59s1.61,3.59,3.59,3.59,3.6-1.61,3.6-3.59-1.62-3.59-3.6-3.59ZM24.89,11.25h-10.06c-1.98,0-3.59,1.61-3.59,3.59v10.06c0,1.99,1.61,3.6,3.59,3.6h10.06c1.99,0,3.6-1.61,3.6-3.6v-10.06c0-1.98-1.61-3.59-3.6-3.59ZM19.87,25.26c-2.97,0-5.39-2.41-5.39-5.39s2.42-5.39,5.39-5.39,5.39,2.42,5.39,5.39-2.41,5.39-5.39,5.39ZM25.62,15.2c-.59,0-1.07-.48-1.07-1.08s.48-1.08,1.07-1.08,1.08.49,1.08,1.08-.48,1.08-1.08,1.08ZM19.87,16.28c-1.98,0-3.59,1.61-3.59,3.59s1.61,3.59,3.59,3.59,3.6-1.61,3.6-3.59-1.62-3.59-3.6-3.59ZM19.87,16.28c-1.98,0-3.59,1.61-3.59,3.59s1.61,3.59,3.59,3.59,3.6-1.61,3.6-3.59-1.62-3.59-3.6-3.59ZM19.87,16.28c-1.98,0-3.59,1.61-3.59,3.59s1.61,3.59,3.59,3.59,3.6-1.61,3.6-3.59-1.62-3.59-3.6-3.59ZM24.89,11.25h-10.06c-1.98,0-3.59,1.61-3.59,3.59v10.06c0,1.99,1.61,3.6,3.59,3.6h10.06c1.99,0,3.6-1.61,3.6-3.6v-10.06c0-1.98-1.61-3.59-3.6-3.59ZM19.87,25.26c-2.97,0-5.39-2.41-5.39-5.39s2.42-5.39,5.39-5.39,5.39,2.42,5.39,5.39-2.41,5.39-5.39,5.39ZM25.62,15.2c-.59,0-1.07-.48-1.07-1.08s.48-1.08,1.07-1.08,1.08.49,1.08,1.08-.48,1.08-1.08,1.08ZM19.87,16.28c-1.98,0-3.59,1.61-3.59,3.59s1.61,3.59,3.59,3.59,3.6-1.61,3.6-3.59-1.62-3.59-3.6-3.59Z"/></g></svg>
+</file>
+
+<file path="IMG/icon-usuario.svg">
+<?xml version="1.0" encoding="UTF-8"?><svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.15 112.04"><defs><style>.cls-1{fill:#484b47;}</style></defs><g id="Texto"><path class="cls-1" d="M83.49,106.72c0-7.81-4.37-15.37-11.5-21.16-7.12-5.79-16.4-9.29-24.92-9.29-8.52,0-17.79,3.5-24.91,9.29-7.13,5.79-11.5,13.35-11.5,21.16,0,2.94-2.39,5.33-5.33,5.33S0,109.66,0,106.72c0-11.93,6.63-22.27,15.44-29.43,8.82-7.17,20.42-11.68,31.64-11.68,11.22,0,22.82,4.52,31.64,11.68,8.81,7.16,15.44,17.5,15.44,29.43,0,2.94-2.39,5.33-5.33,5.33-2.94,0-5.33-2.39-5.33-5.33Z"/><path class="cls-1" d="M65.6,29.19c0-10.23-8.29-18.53-18.52-18.53-10.23,0-18.53,8.3-18.53,18.53,0,10.23,8.3,18.52,18.53,18.52,10.23,0,18.52-8.29,18.52-18.52ZM76.26,29.19c0,16.12-13.06,29.18-29.18,29.18-16.12,0-29.18-13.06-29.19-29.18C17.89,13.07,30.96,0,47.08,0c16.12,0,29.18,13.07,29.18,29.19Z"/></g></svg>
+</file>
+
+<file path="IMG/icon-whatsapp.svg">
+<?xml version="1.0" encoding="UTF-8"?><svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.73 39.74"><defs><style>.cls-1{fill:#484b47;}</style></defs><g id="Texto"><path class="cls-1" d="M20.19,9.6c-5.22,0-9.46,4.25-9.46,9.46,0,1.9.56,3.67,1.52,5.15l-1.02,3.81,3.82-1.02c.12.09.25.16.38.24,1.4.82,3.02,1.29,4.76,1.29,5.22,0,9.46-4.25,9.46-9.47s-4.24-9.46-9.46-9.46ZM25.8,23.23c-.16.25-.34.48-.61.75-.61.61-1.45.92-2.3.83-1.53-.16-3.71-1-5.58-2.87s-2.71-4.04-2.86-5.57c-.09-.86.21-1.7.82-2.3.28-.28.51-.45.76-.62.45-.31,1.08-.1,1.25.41l.63,1.89c.17.51.09.84-.13,1.06l-.5.5c-.25.25-.29.63-.1.93.28.43.8,1.12,1.75,2.08.96.96,1.65,1.48,2.09,1.75.29.19.68.15.93-.09l.5-.5c.22-.23.54-.31,1.06-.13l1.88.62c.52.18.73.8.41,1.26ZM20.19,9.6c-5.22,0-9.46,4.25-9.46,9.46,0,1.9.56,3.67,1.52,5.15l-1.02,3.81,3.82-1.02c.12.09.25.16.38.24,1.4.82,3.02,1.29,4.76,1.29,5.22,0,9.46-4.25,9.46-9.47s-4.24-9.46-9.46-9.46ZM25.8,23.23c-.16.25-.34.48-.61.75-.61.61-1.45.92-2.3.83-1.53-.16-3.71-1-5.58-2.87s-2.71-4.04-2.86-5.57c-.09-.86.21-1.7.82-2.3.28-.28.51-.45.76-.62.45-.31,1.08-.1,1.25.41l.63,1.89c.17.51.09.84-.13,1.06l-.5.5c-.25.25-.29.63-.1.93.28.43.8,1.12,1.75,2.08.96.96,1.65,1.48,2.09,1.75.29.19.68.15.93-.09l.5-.5c.22-.23.54-.31,1.06-.13l1.88.62c.52.18.73.8.41,1.26ZM33.91,5.82C30.32,2.22,25.35,0,19.86,0S9.41,2.22,5.82,5.82C2.22,9.42,0,14.38,0,19.87s2.22,10.45,5.82,14.05c3.59,3.6,8.56,5.82,14.04,5.82,10.98,0,19.87-8.9,19.87-19.87,0-5.49-2.22-10.45-5.82-14.05ZM20.76,30.98c-.19.01-.38.01-.57.01-1.98,0-3.85-.47-5.5-1.34l-5.97,1.34c-.27.05-.51-.19-.45-.46l1.33-5.97c-.95-1.81-1.44-3.9-1.33-6.11.31-6.14,5.38-11.11,11.52-11.31,6.93-.23,12.59,5.46,12.32,12.4-.23,6.13-5.22,11.16-11.35,11.44ZM20.19,9.6c-5.22,0-9.46,4.25-9.46,9.46,0,1.9.56,3.67,1.52,5.15l-1.02,3.81,3.82-1.02c.12.09.25.16.38.24,1.4.82,3.02,1.29,4.76,1.29,5.22,0,9.46-4.25,9.46-9.47s-4.24-9.46-9.46-9.46ZM25.8,23.23c-.16.25-.34.48-.61.75-.61.61-1.45.92-2.3.83-1.53-.16-3.71-1-5.58-2.87s-2.71-4.04-2.86-5.57c-.09-.86.21-1.7.82-2.3.28-.28.51-.45.76-.62.45-.31,1.08-.1,1.25.41l.63,1.89c.17.51.09.84-.13,1.06l-.5.5c-.25.25-.29.63-.1.93.28.43.8,1.12,1.75,2.08.96.96,1.65,1.48,2.09,1.75.29.19.68.15.93-.09l.5-.5c.22-.23.54-.31,1.06-.13l1.88.62c.52.18.73.8.41,1.26Z"/></g></svg>
+</file>
+
+<file path="IMG/icon-x.svg">
+<?xml version="1.0" encoding="UTF-8"?><svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.73 39.74"><defs><style>.cls-1{fill:#484b47;}</style></defs><g id="Texto"><path class="cls-1" d="M33.91,5.82C30.32,2.22,25.35,0,19.86,0S9.41,2.22,5.82,5.82C2.22,9.41,0,14.38,0,19.87s2.22,10.45,5.82,14.05,8.56,5.82,14.04,5.82c10.98,0,19.87-8.9,19.87-19.87,0-5.49-2.22-10.46-5.82-14.05ZM23.15,30.29l-5.15-7.19-6.72,7.19h-3.05l8.45-9.04-8.45-11.8h8.35l4.83,6.74,6.31-6.74h3.05l-8.04,8.59,8.77,12.25h-8.35ZM12.53,11.66l11.76,16.42h2.91L15.44,11.66h-2.91Z"/></g></svg>
+</file>
+
+<file path="IMG/icon-youtube.svg">
+<?xml version="1.0" encoding="UTF-8"?><svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.74 39.73"><defs><style>.cls-1{fill:#484b47;}</style></defs><g id="Texto"><path class="cls-1" d="M33.92,5.82C30.33,2.22,25.36,0,19.87,0S9.42,2.22,5.82,5.82,0,14.38,0,19.87s2.23,10.45,5.82,14.04,8.57,5.82,14.05,5.82c10.98,0,19.87-8.89,19.87-19.86,0-5.49-2.22-10.46-5.82-14.05ZM31.5,25.22c0,1.69-1.37,3.06-3.07,3.06H11.31c-1.69,0-3.06-1.37-3.06-3.06v-10.71c0-1.69,1.37-3.06,3.06-3.06h17.12c1.7,0,3.07,1.37,3.07,3.06v10.71ZM22.62,19.13l-4.76-2.38c-.55-.28-1.19.12-1.19.74v4.76c0,.61.64,1.01,1.19.73l4.76-2.38c.61-.3.61-1.17,0-1.47Z"/></g></svg>
+</file>
+
+<file path="IMG/logo-origenes-oscuro.svg">
+<?xml version="1.0" encoding="UTF-8"?><svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.42 22.86"><defs><style>.cls-1{fill:#484b47;}</style></defs><g id="Texto"><path class="cls-1" d="M7.01,19.3c-5.15,0-7.01-2.46-7.01-6.34,0-5.62,2.88-7.71,7.01-7.71s7.01,2.21,7.01,7.71c0,3.76-1.87,6.34-7.01,6.34ZM7.06,6.72c-1.22,0-1.92.82-1.92,5.7,0,3.85.62,5,1.92,5s1.82-.97,1.82-5c0-4.97-.67-5.7-1.82-5.7Z"/><path class="cls-1" d="M16.66,12.24c0-1.49-.03-2.86-.1-4-.05-1.02-.1-1.22-.47-1.22-.22,0-.35.02-.45.02-.57,0-.67-.4-.67-.77,0-.4.1-.77.67-.77.75,0,1.54.07,2.46.07.57,0,1.07-.07,1.67-.07s.72.4.72.9c0,1.14-.35,2.04-.35,3.23,0,.47.15.65.35.65.32,0,.32-.12.57-1.17.6-2.46,1.72-3.85,3.36-3.85,1.19,0,2.06.6,2.06,2.61,0,1.69-.42,3.13-1.89,3.13-.82,0-1.39-.17-1.67-1.09-.12-.37-.15-.6-.45-.6-.6,0-1.29,1.64-1.29,5.62,0,2.29.22,2.61,1.09,2.61.8,0,1.09-.1,1.24-.1.47,0,.8.22.8.8,0,.42-.32.85-.8.85-.77,0-3.33-.07-4.65-.07-1.14,0-2.21.02-3.16.05-.47,0-.67-.4-.67-.8s.2-.77.67-.77c.05,0,.32.05.37.05.37,0,.45-.8.47-1.47.07-1.32.1-2.61.1-3.83Z"/><path class="cls-1" d="M30.31,5.65c.9,0,1.72-.15,2.59-.15.42,0,.55.22.55.7,0,.5-.17,4.2-.17,6.29,0,.65,0,2.36.02,3.46.03,1.24.1,1.59.45,1.59.25,0,.45-.05.65-.05.52,0,.72.37.72.77,0,.45-.2.8-.72.8-.67,0-2.61-.1-3.96-.1-1.02,0-1.89.1-2.81.1-.42,0-.67-.22-.67-.8,0-.52.25-.77.67-.77.12,0,.3.05.5.05.27,0,.3-.45.32-1,.07-1.77.15-3.73.15-5.67,0-.9-.03-1.87-.08-2.66-.05-.94-.22-1.14-.67-1.14-.2,0-.35.02-.42.02-.47,0-.6-.42-.6-.82s.12-.77.6-.77c.92,0,1.79.15,2.88.15ZM34.77,1.57c0,1.94-1.77,2.41-5.32,2.41-1.72,0-2.19-.32-2.19-.97,0-.5.25-.77.75-.77.3,0,.6.32,1.24.32,1.44,0,2.16-2.56,3.83-2.56,1.07,0,1.69.65,1.69,1.57Z"/><path class="cls-1" d="M44.17,21.76c0-.35.25-.62.67-.62.67,0,1.34.52,2.06.52.5,0,.7-.27.7-.52,0-.52-.7-.92-1.94-.92-2.14,0-4.45,1.54-6.99,1.54-2.26,0-3.28-1.07-3.28-3.51,0-2.26,1.22-3.53,3.13-3.53h.55c.35,0,.52-.22.52-.45,0-.25-.2-.5-.55-.55-1.62-.25-2.74-1.44-2.74-3.83,0-3.26,2.31-4.63,6.07-4.63,1.27,0,2.51.2,3.18.2.45,0,.55-.17.55-.42,0-.22-.17-.35-.65-.45-1.09-.2-1.87-.67-1.87-1.82,0-.97.9-1.64,2.71-1.64s3.16,1.19,3.16,2.89c0,1.17-.6,2.06-1.64,2.06-.3,0-.67-.07-.75-.07-.37,0-.47.15-.47.37s.17.4.57.55c.82.3,1.99,1.12,1.99,3.38,0,3.31-1.69,4.85-6.32,4.85-3.21,0-4.1.57-4.1,1.54,0,.45.25.85.97.85,1.64,0,4.68-1.37,6.79-1.37,2.34,0,3.51,1.19,3.51,3.08,0,2.39-.92,3.58-3.43,3.58-1.72,0-2.41-.45-2.41-1.09ZM40.88,9.4c0,2.16.12,4.2,1.99,4.2,1.39,0,1.84-.6,1.84-3.48,0-2.64-.6-3.43-1.92-3.43-1.14,0-1.92.25-1.92,2.71Z"/><path class="cls-1" d="M57.79,19.42c-3.58,0-6.79-1.52-6.79-6.84s2.93-7.46,6.94-7.46c4.3,0,5.6,2.06,5.6,4.35s-.99,3.58-6.04,3.58c-.92,0-1.59.17-1.59.92,0,1.19,1.02,1.96,3.21,1.96,1.94,0,3.33-.55,3.33-2.04,0-.5.32-.7.6-.7.32,0,.6.2.6.7,0,3.95-1.54,5.52-5.84,5.52ZM55.63,10.15c0,.4.05.75.1.95.12.5.52.65,1,.65.87,0,2.86-.4,2.86-2.98,0-1.07-.37-2.01-1.67-2.01-1.67,0-2.29,1.04-2.29,3.41Z"/><path class="cls-1" d="M71.74,17.53c.07,0,.45-.02.55-.02.45,0,.7.37.7.77,0,.37-.25.77-.7.77-.9-.02-2.26-.05-3.58-.05-1.22,0-2.36.05-3.28.05-.42,0-.62-.4-.62-.77,0-.4.2-.77.62-.77.07,0,.45.02.52.02.32,0,.37-.52.4-.97.03-2.04.05-3.66.05-5.15,0-1.14,0-2.24-.05-3.38-.05-.82-.12-.97-.55-.97-.12,0-.27.02-.42.02-.42,0-.65-.32-.65-.75s.25-.85.77-.85c.37,0,1.24.07,1.96.07.65,0,1.24-.07,1.92-.07.75,0,.92.25.92,1.04,0,.7-.17,1.42-.17,2.29,0,.3.17.42.42.42.2,0,.32-.15.37-.42.42-2.36,1.94-3.58,4.45-3.58,3.28,0,4.13,1.74,4.13,4.95,0,1.69-.3,4.63-.3,5.99,0,.9.3,1.39.94,1.39.08,0,.3-.02.37-.02.4,0,.6.37.6.8,0,.32-.2.7-.6.7-.72-.02-1.84-.1-2.76-.1-.65,0-1.32.07-2.04.1-.9,0-1.17-.65-1.17-1.72,0-2.24.17-5.42.17-7.21,0-.87-.35-1.72-1.32-1.72-1.22,0-1.92.82-2.11,3.18-.12,1.42-.15,2.64-.15,3.88v1.12c0,.67.27.95.6.95Z"/><path class="cls-1" d="M88.75,19.42c-3.58,0-6.79-1.52-6.79-6.84s2.93-7.46,6.94-7.46c4.3,0,5.6,2.06,5.6,4.35s-.99,3.58-6.04,3.58c-.92,0-1.59.17-1.59.92,0,1.19,1.02,1.96,3.21,1.96,1.94,0,3.33-.55,3.33-2.04,0-.5.32-.7.6-.7.32,0,.6.2.6.7,0,3.95-1.54,5.52-5.84,5.52ZM86.59,10.15c0,.4.05.75.1.95.12.5.52.65,1,.65.87,0,2.86-.4,2.86-2.98,0-1.07-.37-2.01-1.67-2.01-1.67,0-2.29,1.04-2.29,3.41Z"/><path class="cls-1" d="M104.25,16.37c0-1.32-1.09-1.72-4-2.64-2.34-.75-3.96-1.72-3.96-4.3,0-2.34,1.57-4.3,5.84-4.3,3.86,0,5.84,1.22,5.84,3.08,0,1.14-.77,1.82-2.24,1.82s-2.51-.42-2.51-1.39c0-.45.22-.75.6-.94.22-.12.35-.25.35-.42,0-.42-.37-.7-1.77-.7-1.72,0-2.41.55-2.41,1.49,0,.87.57,1.69,4.08,2.56,3.53.87,4.35,2.51,4.35,4.53,0,2.79-2.14,4.28-6.24,4.28-4.95,0-6.34-1.52-6.34-3.28,0-1.19.84-1.89,2.46-1.89,1.42,0,2.41.6,2.41,1.44,0,.52-.15.82-.45,1-.3.17-.4.27-.4.45,0,.37.52.62,1.89.62,1.62,0,2.49-.4,2.49-1.39Z"/></g></svg>
+</file>
+
+<file path="JS/navbar.js">
+document.addEventListener("DOMContentLoaded", () => {
+  const loginLink = document.getElementById("loginLink");
+  const greeting = document.getElementById("userGreeting");
+  const greetingName = document.getElementById("userGreetingName");
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  // Si la página no expone los placeholders del navbar dinámico,
+  // salimos en silencio en vez de lanzar errores.
+  if (!loginLink || !greeting || !greetingName || !logoutBtn) {
+    return;
+  }
+
+  function pintarEstadoSesion() {
+    const usuario = getUsuarioActivo();
+
+    if (usuario && usuario.nombre) {
+      greetingName.textContent = capitalizarNombre(usuario.nombre);
+      loginLink.hidden = true;
+      greeting.hidden = false;
+      logoutBtn.hidden = false;
+    } else {
+      loginLink.hidden = false;
+      greeting.hidden = true;
+      logoutBtn.hidden = true;
+    }
+  }
+
+  logoutBtn.addEventListener("click", () => {
+    cerrarSesion();
+    // Recargamos para que cualquier estado dependiente de sesión
+    // (futuras vistas protegidas, saludos, etc.) se reinicie.
+    window.location.reload();
+  });
+
+  pintarEstadoSesion();
+});
+</file>
+
+<file path="CSS/login.css">
+/* Login */
+.login-main {
+  padding: 70px 0;
+  min-height: 70vh;
+}
+
+.login-card {
+  background: #FFFFFF;
+  border: 1px solid var(--bordercolor);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--shadowsoft);
+}
+
+.login-title {
+  background: var(--gradientdark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-text {
+  text-align: center;
+  color: var(--colortextos);
+  margin-bottom: 26px;
+}
+
+.login-card .form-label {
+  font-weight: 600;
+  color: var(--colortextos);
+}
+
+.login-card .form-control {
+  border: 1px solid #D9D2C7;
+  border-radius: 14px;
+  min-height: 52px;
+  padding: 12px 14px;
+  box-shadow: none;
+}
+
+.login-card .form-control:focus {
+  border-color: #6B5B4D;
+  box-shadow: 0 0 0 0.16rem rgba(107, 91, 77, 0.18);
+}
+
+.login-btn {
+  background-color: #FFFFFF;
+  color: var(--navbackground);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: var(--navbackground);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.login-message {
+  text-align: center;
+  margin-top: 16px;
+  font-weight: 600;
+  min-height: 1.2em;
+}
+
+.login-message.is-error {
+  color: var(--dangercolor);
+}
+
+.login-message.is-success {
+  color: var(--navbackground);
+}
+
+.login-footer-link {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  color: var(--colortextos);
+  font-size: 0.95rem;
+}
+
+.login-footer-link a {
+  color: var(--colorhover);
+  font-weight: 700;
+}
+
+.login-footer-link a:hover {
+  text-decoration: underline;
+}
+
+.login-field-error {
+  display: block;
+  margin-top: 6px;
+  min-height: 1.1em;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--dangercolor);
+}
+</file>
+
+<file path="HTML/login.html">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Inicio de sesión de Orígenes Colombia" />
+  <title>Iniciar sesión | Orígenes Colombia</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="../CSS/variables.css" rel="stylesheet" />
+  <link href="../CSS/base.css" rel="stylesheet" />
+  <link href="../CSS/header.css" rel="stylesheet" />
+  <link href="../CSS/footer.css" rel="stylesheet" />
+  <link href="../CSS/login.css" rel="stylesheet" />
+  <link href="../CSS/carrito-global.css" rel="stylesheet" />
+</head>
+
+<body id="top">
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
+    <div class="container nav-wrapper">
+      <a class="navbar-brand" href="../index.html">
+        <img alt="Orígenes Colombia" class="logo-navbar" src="../IMG/logo-origenes-oscuro.svg" />
+      </a>
+
+      <button aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#navbarMain" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarMain">
+        <ul class="navbar-nav mx-auto nav-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="./catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contactenos.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./sobreorigenes.html">Sobre Orígenes</a></li>
+          <li class="nav-item"><a class="nav-link" href="./admin.html">Administrador</a></li>
+        </ul>
+
+        <div class="icons">
+          <a id="loginLink" class="nav-session-link" href="./login.html">Iniciar Sesión</a>
+          <span id="userGreeting" class="nav-user-greeting" hidden>
+            Hola, <span id="userGreetingName"></span>
+          </span>
+          <button id="logoutBtn" class="nav-logout-btn" type="button" hidden>Cerrar Sesión</button>
+
+          <a aria-label="Perfil" id="profileLink" href="./registro.html">
+            <img alt="Usuario" class="nav-icon" src="../IMG/icon-usuario.svg" />
+          </a>
+          <button aria-label="Carrito" class="cart-icon-btn" id="cartBtn" type="button">
+            <img alt="Carrito" class="nav-icon" src="../IMG/icon-bolsa.svg" />
+            <span class="cart-badge" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="login-main">
+    <section class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="login-card">
+            <h1 class="login-title">Iniciar Sesión</h1>
+            <p class="login-text">Ingresa tus datos para continuar con Orígenes Colombia.</p>
+
+            <form id="loginForm" novalidate>
+              <div class="mb-3">
+                <label class="form-label" for="loginEmail">Correo electrónico</label>
+                <input class="form-control" id="loginEmail" placeholder="Ingresa tu correo" type="email" />
+                <span class="login-field-error" id="errorLoginEmail"></span>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label" for="loginPassword">Contraseña</label>
+                <input class="form-control" id="loginPassword" placeholder="Ingresa tu contraseña" type="password" />
+                <span class="login-field-error" id="errorLoginPassword"></span>
+              </div>
+
+              <button class="btn login-btn w-100" type="submit">Iniciar sesión</button>
+            </form>
+
+            <p class="login-message" id="loginMessage"></p>
+
+            <p class="login-footer-link">
+              ¿No tienes cuenta? <a href="./registro.html">Regístrate</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button class="cart-close-btn" id="closeCart" type="button">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <p class="cart-total">Total: <span id="total">$0</span></p>
+      <div class="cart-footer-actions">
+        <button class="btn-cart-secondary" id="clearCartBtn" type="button">Vaciar</button>
+        <button class="btn-cart-primary" id="buyBtn" type="button">Comprar</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row footer-content">
+        <div class="col-md-4">
+          <h6 class="footer-title">Contacto</h6>
+          <ul class="footer-list">
+            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
+            <li>contactoorigenescolombia@gmail.com</li>
+            <li>+57 312 3456 7890</li>
+          </ul>
+          <div class="icons">
+            <a aria-label="Facebook" href="#"><img alt="Facebook" src="../IMG/icon-facebook.svg" /></a>
+            <a aria-label="Instagram" href="#"><img alt="Instagram" src="../IMG/icon-instagram.svg" /></a>
+            <a aria-label="YouTube" href="#"><img alt="YouTube" src="../IMG/icon-youtube.svg" /></a>
+            <a aria-label="X" href="#"><img alt="X" src="../IMG/icon-x.svg" /></a>
+            <a aria-label="WhatsApp" href="#"><img alt="WhatsApp" src="../IMG/icon-whatsapp.svg" /></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Navegación</h6>
+          <ul class="footer-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./catalogo.html">Catálogo</a></li>
+            <li><a href="./contactenos.html">Contacto</a></li>
+            <li><a href="./sobreorigenes.html">Sobre Orígenes</a></li>
+            <li><a href="./admin.html">Administrador</a></li>
+            <li><a href="./registro.html">Registro</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Newsletter</h6>
+          <p class="footer-text">Suscríbete y recibe novedades, lanzamientos y productos exclusivos.</p>
+          <form class="newsletter" id="newsletterForm">
+            <input id="newsletterEmail" placeholder="E-mail" type="email" />
+            <button aria-label="Suscribirse" type="submit">→</button>
+          </form>
+          <small class="newsletter-message" id="newsletterMessage"></small>
+        </div>
+      </div>
+
+      <div class="footer-logo-wrapper">
+        <img alt="Orígenes Colombia" class="footer-logo" src="../IMG/logo-origenes-oscuro.svg" />
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
+        <p>Política de privacidad · Términos y condiciones</p>
+        <p>Conectando el mundo con el alma de Colombia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../JS/storage.js"></script>
+  <script src="../JS/login.js"></script>
+  <script src="../JS/navbar.js"></script>
+  <script src="../JS/carrito.js"></script>
+  <script src="../JS/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</file>
+
+<file path="JS/login.js">
+const loginForm = document.getElementById("loginForm");
+const loginEmailInput = document.getElementById("loginEmail");
+const loginPasswordInput = document.getElementById("loginPassword");
+const loginMessage = document.getElementById("loginMessage");
+const errorLoginEmail = document.getElementById("errorLoginEmail");
+const errorLoginPassword = document.getElementById("errorLoginPassword");
+
+const REDIRECT_DELAY_MS = 800;
+const MENSAJE_CAMPO_VACIO = "El campo no puede estar vacío";
+const MENSAJE_CREDENCIALES_INVALIDAS = "Usuario o contraseña inválidos";
+
+function mostrarMensajeLogin(texto, tipo) {
+  if (!loginMessage) return;
+  loginMessage.textContent = texto;
+  loginMessage.classList.remove("is-error", "is-success");
+  if (texto) {
+    loginMessage.classList.add(tipo === "ok" ? "is-success" : "is-error");
+  }
+}
+
+function mostrarErrorCampo(span, texto) {
+  if (!span) return;
+  span.textContent = texto;
+}
+
+function limpiarErrorCampo(span) {
+  if (!span) return;
+  span.textContent = "";
+}
+
+function manejarLogin(event) {
+  event.preventDefault();
+
+  const correo = loginEmailInput.value.trim().toLowerCase();
+  const contrasena = loginPasswordInput.value;
+
+  let hayCamposVacios = false;
+  if (!correo) {
+    mostrarErrorCampo(errorLoginEmail, MENSAJE_CAMPO_VACIO);
+    hayCamposVacios = true;
+  } else {
+    limpiarErrorCampo(errorLoginEmail);
+  }
+
+  if (!contrasena) {
+    mostrarErrorCampo(errorLoginPassword, MENSAJE_CAMPO_VACIO);
+    hayCamposVacios = true;
+  } else {
+    limpiarErrorCampo(errorLoginPassword);
+  }
+
+  if (hayCamposVacios) {
+    // Limpia el mensaje global para que el foco quede en los errores por campo
+    // mientras el usuario corrige.
+    mostrarMensajeLogin("", "err");
+    return;
+  }
+
+  const usuarios = getUsuarios();
+  const usuario = usuarios.find(
+    (registro) => registro.correo.toLowerCase() === correo
+  );
+
+  if (!usuario || usuario.contrasena !== contrasena) {
+    mostrarMensajeLogin(MENSAJE_CREDENCIALES_INVALIDAS, "err");
+    return;
+  }
+
+  setUsuarioActivo(usuario);
+  mostrarMensajeLogin(
+    `Bienvenido/a, ${capitalizarNombre(usuario.nombre)}.`,
+    "ok"
+  );
+
+  setTimeout(() => {
+    window.location.href = "../index.html";
+  }, REDIRECT_DELAY_MS);
+}
+
+if (loginForm) {
+  loginForm.addEventListener("submit", manejarLogin);
+}
+
+if (loginEmailInput) {
+  loginEmailInput.addEventListener("input", () =>
+    limpiarErrorCampo(errorLoginEmail)
+  );
+}
+
+if (loginPasswordInput) {
+  loginPasswordInput.addEventListener("input", () =>
+    limpiarErrorCampo(errorLoginPassword)
+  );
+}
+</file>
+
+<file path="CSS/carrito.css">
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(72, 75, 71, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9998;
+}
+
+.cart-overlay.show,
+.cart-overlay.cart-overlay-show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -430px;
+  width: 390px;
+  max-width: 100%;
+  height: 100vh;
+  background: var(--backgroundcolor);
+  box-shadow: -12px 0 32px rgba(0, 0, 0, 0.14);
+  z-index: 9999;
+  transition: right 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  border-radius: 28px 0 0 28px;
+  overflow: hidden;
+}
+
+.cart-drawer.open,
+.cart-drawer.cart-drawer-open {
+  right: 0;
+}
+
+.cart-header {
+  padding: 22px;
+  background: var(--cardbg);
+  border-bottom: 1px solid var(--bordercolor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-header h3 {
+  margin: 0;
+  color: var(--navbackground);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.cart-close-btn {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(110, 155, 119, 0.12);
+  color: var(--colortextos);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cart-close-btn:hover {
+  background: var(--colorhover);
+  color: var(--textoblanco);
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px;
+}
+
+.empty-cart {
+  margin-top: 20px;
+  padding: 28px 18px;
+  text-align: center;
+  background: var(--cardbg);
+  border: 1px solid var(--bordercolor);
+  border-radius: 22px;
+  color: var(--navbackground);
+  font-weight: 700;
+  box-shadow: var(--shadowsoft);
+}
+
+.cart-item {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  margin-bottom: 16px;
+  background: var(--cardbg);
+  border: 1px solid var(--bordercolor);
+  border-radius: 22px;
+  box-shadow: var(--shadowsoft);
+  position: relative;
+}
+
+.cart-item-image {
+  width: 82px;
+  height: 82px;
+  border-radius: 18px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cart-item-info {
+  flex: 1;
+  padding-right: 32px;
+  min-width: 0;
+}
+
+.cart-item-info h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: var(--colortextos);
+  line-height: 1.25;
+}
+
+.cart-item-info p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: #6f6f6f;
+}
+
+.cart-item-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  background: rgba(110, 155, 119, 0.1);
+  border-radius: 999px;
+}
+
+.cart-item-actions button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: var(--cardbg);
+  color: var(--navbackground);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cart-item-actions button:hover {
+  background: var(--navbackground);
+  color: var(--textoblanco);
+}
+
+.cart-item-actions span {
+  min-width: 18px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--colortextos);
+}
+
+.remove-cart-item {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(180, 97, 65, 0.12);
+  color: var(--colorhover);
+  font-size: 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.remove-cart-item:hover {
+  background: var(--colorhover);
+  color: var(--textoblanco);
+}
+
+.cart-footer {
+  background: var(--cardbg);
+  border-top: 1px solid var(--bordercolor);
+  padding: 18px 20px 22px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--navbackground);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.cart-footer-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btn-cart-primary,
+.btn-cart-secondary {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-cart-primary {
+  background: var(--navbackground);
+  color: var(--textoblanco);
+  box-shadow: 0 8px 18px rgba(110, 155, 119, 0.28);
+}
+
+.btn-cart-primary:hover {
+  background: var(--colorhover);
+  transform: translateY(-2px);
+}
+
+.btn-cart-secondary {
+  background: rgba(110, 155, 119, 0.12);
+  color: var(--navbackground);
+}
+
+.btn-cart-secondary:hover {
+  background: rgba(110, 155, 119, 0.22);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
+  .cart-drawer {
+    width: 100%;
+    right: -100%;
+    border-radius: 0;
+  }
+
+  .cart-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .cart-item {
+    gap: 12px;
+  }
+
+  .cart-item-image {
+    width: 76px;
+    height: 76px;
+  }
+}
+</file>
+
+<file path="CSS/variables.css">
+:root {
+  --backgroundcolor: #FAFBF6;
+  --navbackground: #6E9B77;
+  --textoblanco: #FFFFFF;
+  --colortextos: #484B47;
+  --colorhover: #B46141;
+  --cardbg: #FFFFFF;
+  --bordercolor: #E7E1D7;
+  --dangercolor: #B03A2E;
+
+  --shadowsoft: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  --gradientdark: linear-gradient(135deg, #2C2A28 0%, #5A4C42 45%, #8A735F 100%);
+  --gradientbadge: linear-gradient(135deg, #2C2A28 0%, #4B4138 45%, #6B5B4D 100%);
+}
+</file>
+
+<file path="JS/app.js">
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll("img");
+  const newsletterForm = document.getElementById("newsletterForm");
+  const newsletterEmail = document.getElementById("newsletterEmail");
+  const newsletterMessage = document.getElementById("newsletterMessage");
+
+  images.forEach((image) => {
+    if (!image.hasAttribute("loading")) {
+      image.setAttribute("loading", "lazy");
+    }
+
+    if (!image.hasAttribute("decoding")) {
+      image.setAttribute("decoding", "async");
+    }
+  });
+
+  if (newsletterForm && newsletterEmail && newsletterMessage) {
+    newsletterForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const emailValue = newsletterEmail.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(emailValue)) {
+        newsletterMessage.textContent = "Ingresa un correo válido.";
+        return;
+      }
+
+      newsletterMessage.textContent = "Gracias por suscribirte.";
+      newsletterForm.reset();
+    });
+  }
+});
+</file>
+
+<file path="JS/carrito.js">
+const cartBtn = document.getElementById("cartBtn");
+const cartDrawer = document.getElementById("cartDrawer");
+const closeCart = document.getElementById("closeCart");
+const cartOverlay = document.getElementById("cartOverlay");
+const cartItems = document.getElementById("cartItems");
+const totalElement = document.getElementById("total");
+const cartCount = document.getElementById("cartCount");
+const clearCartBtn = document.getElementById("clearCartBtn");
+const buyBtn = document.getElementById("buyBtn");
+
+function openCart() {
+  if (cartDrawer) {
+    cartDrawer.classList.add("open");
+  }
+
+  if (cartOverlay) {
+    cartOverlay.classList.add("show");
+  }
+}
+
+function closeCartDrawer() {
+  if (cartDrawer) {
+    cartDrawer.classList.remove("open");
+  }
+
+  if (cartOverlay) {
+    cartOverlay.classList.remove("show");
+  }
+}
+
+function updateCartCount() {
+  const cart = getCart();
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+
+  if (cartCount) {
+    cartCount.textContent = totalItems;
+  }
+}
+
+function addToCart(productId) {
+  const products = getProducts();
+  const product = products.find((item) => item.id === productId);
+
+  if (!product) {
+    return;
+  }
+
+  if (product.stock <= 0) {
+    alert("Este producto no tiene stock disponible.");
+    return;
+  }
+
+  const cart = getCart();
+  const existingItem = cart.find((item) => item.productId === productId);
+
+  if (existingItem) {
+    if (existingItem.quantity >= product.stock) {
+      alert("No puedes agregar más unidades que el stock disponible.");
+      return;
+    }
+
+    existingItem.quantity += 1;
+  } else {
+    cart.push({
+      productId: product.id,
+      quantity: 1
+    });
+  }
+
+  saveCart(cart);
+  renderCart();
+  updateCartCount();
+  openCart();
+}
+
+function decreaseQuantity(productId) {
+  let cart = getCart();
+  const item = cart.find((cartItem) => cartItem.productId === productId);
+
+  if (!item) {
+    return;
+  }
+
+  item.quantity -= 1;
+
+  if (item.quantity <= 0) {
+    cart = cart.filter((cartItem) => cartItem.productId !== productId);
+  }
+
+  saveCart(cart);
+  renderCart();
+  updateCartCount();
+}
+
+function increaseQuantity(productId) {
+  const products = getProducts();
+  const product = products.find((item) => item.id === productId);
+
+  if (!product) {
+    return;
+  }
+
+  const cart = getCart();
+  const item = cart.find((cartItem) => cartItem.productId === productId);
+
+  if (!item) {
+    return;
+  }
+
+  if (item.quantity >= product.stock) {
+    alert("No puedes agregar más unidades que el stock disponible.");
+    return;
+  }
+
+  item.quantity += 1;
+
+  saveCart(cart);
+  renderCart();
+  updateCartCount();
+}
+
+function removeFromCart(productId) {
+  const cart = getCart().filter((item) => item.productId !== productId);
+  saveCart(cart);
+  renderCart();
+  updateCartCount();
+}
+
+function clearCart() {
+  saveCart([]);
+  renderCart();
+  updateCartCount();
+}
+
+function renderCart() {
+  if (!cartItems || !totalElement) {
+    return;
+  }
+
+  const cart = getCart();
+  const products = getProducts();
+
+  if (cart.length === 0) {
+    cartItems.innerHTML = `
+      <p class="empty-state p-3 text-center">Tu carrito está vacío.</p>
+    `;
+    totalElement.textContent = "$0";
+    return;
+  }
+
+  let total = 0;
+
+  cartItems.innerHTML = cart
+    .map((item) => {
+      const product = products.find((productItem) => productItem.id === item.productId);
+
+      if (!product) {
+        return "";
+      }
+
+      const subtotal = Number(product.price) * Number(item.quantity);
+      total += subtotal;
+
+      return `
+        <div class="cart-item">
+          <img src="${product.image}" alt="${product.name}" class="cart-item-image" />
+          <div class="cart-item-info">
+            <div class="cart-item-title">${product.name}</div>
+            <div class="cart-item-meta">Cantidad: ${item.quantity}</div>
+            <div class="cart-item-meta">Precio: $${Number(product.price).toLocaleString("es-CO")}</div>
+            <div class="cart-item-subtotal">Subtotal: $${subtotal.toLocaleString("es-CO")}</div>
+            <div class="cart-item-actions">
+              <button class="btn-qty" onclick="decreaseQuantity(${product.id})">-</button>
+              <button class="btn-qty" onclick="increaseQuantity(${product.id})">+</button>
+              <button class="btn-remove" onclick="removeFromCart(${product.id})">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+
+  totalElement.textContent = `$${total.toLocaleString("es-CO")}`;
+}
+
+if (cartBtn) {
+  cartBtn.addEventListener("click", openCart);
+}
+
+if (closeCart) {
+  closeCart.addEventListener("click", closeCartDrawer);
+}
+
+if (cartOverlay) {
+  cartOverlay.addEventListener("click", closeCartDrawer);
+}
+
+if (clearCartBtn) {
+  clearCartBtn.addEventListener("click", clearCart);
+}
+
+if (buyBtn) {
+  buyBtn.addEventListener("click", () => {
+    const cart = getCart();
+
+    if (cart.length === 0) {
+      alert("Tu carrito está vacío.");
+      return;
+    }
+
+    alert("Compra realizada con éxito.");
+    clearCart();
+    closeCartDrawer();
+  });
+}
+
+window.addEventListener("storage", (event) => {
+  if (event.key === "origenes_cart") {
+    renderCart();
+    updateCartCount();
+  }
+});
+
+renderCart();
+updateCartCount();
+</file>
+
+<file path="CSS/base.css">
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 78px;
+  background-color: var(--backgroundcolor);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--colortextos);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-title {
+  background: var(--gradientdark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.intro-block {
+  max-width: 920px;
+  margin: 0 auto 30px;
+}
+
+.btn-main {
+  background-color: #FFFFFF;
+  color: var(--navbackground);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-main:hover {
+  background-color: var(--navbackground);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.badge-dark {
+  background: var(--gradientbadge);
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-weight: 800;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-top: 82px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 76px;
+  }
+}
+</file>
+
+<file path="JS/admin.js">
+const form = document.getElementById("productForm");
+const productList = document.getElementById("productList");
+const cancelEditBtn = document.getElementById("cancelEditBtn");
+const submitBtn = document.getElementById("submitBtn");
+
+function resetForm() {
+  document.getElementById("productId").value = "";
+  form.reset();
+  submitBtn.textContent = "Guardar producto";
+  if (cancelEditBtn) {
+    cancelEditBtn.style.display = "none";
+  }
+}
+
+function editProduct(id) {
+  const products = getProducts();
+  const product = products.find((item) => item.id === id);
+
+  if (!product) return;
+
+  document.getElementById("productId").value = product.id;
+  document.getElementById("name").value = product.name;
+  document.getElementById("description").value = product.description;
+  document.getElementById("price").value = product.price;
+  document.getElementById("stock").value = product.stock;
+  document.getElementById("category").value = product.category;
+  document.getElementById("image").value = product.image;
+
+  submitBtn.textContent = "Actualizar producto";
+  if (cancelEditBtn) {
+    cancelEditBtn.style.display = "inline-block";
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function deleteProduct(id) {
+  const products = getProducts().filter((item) => item.id !== id);
+  saveProducts(products);
+
+  const cart = getCart().filter((item) => item.productId !== id);
+  saveCart(cart);
+
+  renderProducts();
+}
+
+function renderProducts() {
+  const products = getProducts();
+
+  if (!productList) return;
+
+  if (products.length === 0) {
+    productList.innerHTML = `
+      <div class="col-12">
+        <div class="empty-state p-4 text-center">
+          No hay productos aún
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  productList.innerHTML = products
+    .map(
+      (product) => `
+        <div class="col-md-6 col-xl-4">
+          <div class="product-card">
+            <img src="${product.image}" alt="${product.name}" class="product-image" />
+            <div class="card-body">
+              <span class="badge-category">${product.category}</span>
+              <h5 class="card-title">${product.name}</h5>
+              <p class="card-text">${product.description}</p>
+              <p class="price-text">$${Number(product.price).toLocaleString("es-CO")}</p>
+              <p class="stock-text">Stock: ${product.stock}</p>
+
+              <div class="product-actions-inline">
+                <button class="btn-card-edit" onclick="editProduct(${product.id})">
+                  Editar
+                </button>
+                <button class="btn-card-delete" onclick="deleteProduct(${product.id})">
+                  Eliminar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+    )
+    .join("");
+}
+
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const productId = document.getElementById("productId").value;
+    const productData = {
+      id: productId ? Number(productId) : Date.now(),
+      name: document.getElementById("name").value.trim(),
+      description: document.getElementById("description").value.trim(),
+      price: Number(document.getElementById("price").value),
+      stock: Number(document.getElementById("stock").value),
+      category: document.getElementById("category").value,
+      image: document.getElementById("image").value.trim()
+    };
+
+    const products = getProducts();
+
+    if (productId) {
+      const updatedProducts = products.map((item) =>
+        item.id === Number(productId) ? productData : item
+      );
+      saveProducts(updatedProducts);
+    } else {
+      products.push(productData);
+      saveProducts(products);
+    }
+
+    resetForm();
+    renderProducts();
+  });
+}
+
+if (cancelEditBtn) {
+  cancelEditBtn.addEventListener("click", resetForm);
+}
+
+resetForm();
+renderProducts();
+</file>
+
+<file path="JS/contactenos.js">
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("celular");
+  const countryCodeSelect = document.getElementById("indicativo");
+
+  const emailError = document.getElementById("errorCorreo");
+  const phoneError = document.getElementById("errorCelular");
+  const successMessage = document.getElementById("mensajeExito");
+
+  if (
+    !form ||
+    !emailInput ||
+    !phoneInput ||
+    !countryCodeSelect ||
+    !emailError ||
+    !phoneError ||
+    !successMessage
+  ) {
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^\d{1,11}$/;
+
+  const setError = (element, message) => {
+    element.textContent = message;
+  };
+
+  const clearError = (element) => {
+    element.textContent = "";
+  };
+
+  const validateEmail = () => {
+    const email = emailInput.value.trim();
+
+    if (!email) {
+      setError(emailError, "El correo es obligatorio.");
+      return false;
+    }
+
+    if (!emailRegex.test(email)) {
+      setError(emailError, "Ingresa un correo válido.");
+      return false;
+    }
+
+    clearError(emailError);
+    return true;
+  };
+
+  const validatePhone = () => {
+    const phone = phoneInput.value.trim();
+    const countryCode = countryCodeSelect.value;
+
+    if (!countryCode) {
+      setError(phoneError, "Selecciona un indicativo.");
+      return false;
+    }
+
+    if (!phone) {
+      setError(phoneError, "El celular es obligatorio.");
+      return false;
+    }
+
+    if (!phoneRegex.test(phone)) {
+      setError(phoneError, "Solo se permiten números y máximo 11 dígitos.");
+      return false;
+    }
+
+    clearError(phoneError);
+    return true;
+  };
+
+  const sanitizePhoneInput = (event) => {
+    const numericValue = event.target.value.replace(/\D/g, "").slice(0, 11);
+    event.target.value = numericValue;
+    validatePhone();
+  };
+
+  emailInput.addEventListener("input", validateEmail);
+  phoneInput.addEventListener("input", sanitizePhoneInput);
+  countryCodeSelect.addEventListener("change", validatePhone);
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const isEmailValid = validateEmail();
+    const isPhoneValid = validatePhone();
+
+    if (!isEmailValid || !isPhoneValid) {
+      return;
+    }
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        alert("Hubo un error al enviar el formulario. Inténtalo de nuevo.");
+        return;
+      }
+
+      form.reset();
+      form.style.display = "none";
+      successMessage.style.display = "block";
+    } catch (error) {
+      alert("No hay conexión con el servidor.");
+    }
+  });
+});
+</file>
+
+<file path="CSS/carrito-global.css">
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9998;
+}
+
+.cart-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 390px;
+  max-width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: -10px 0 25px rgba(0, 0, 0, 0.18);
+  z-index: 9999;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cart-drawer.open {
+  right: 0;
+}
+
+.cart-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--bordercolor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.cart-header h3 {
+  margin: 0;
+  color: #2C2A28;
+  font-weight: 800;
+}
+
+.cart-close-btn {
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--colortextos);
+  cursor: pointer;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px 20px;
+  background: #ffffff;
+}
+
+.cart-item {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--bordercolor);
+}
+
+.cart-item-image {
+  width: 78px;
+  height: 78px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-title {
+  font-size: 0.98rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  color: #202020;
+}
+
+.cart-item-meta,
+.cart-item-subtotal {
+  font-size: 0.88rem;
+  margin-bottom: 4px;
+  color: #666666;
+}
+
+.cart-item-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-qty,
+.btn-remove {
+  border: none;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn-qty {
+  background: rgba(110, 155, 119, 0.12);
+  color: #2C2A28;
+}
+
+.btn-remove {
+  background: rgba(176, 58, 46, 0.12);
+  color: #2C2A28;
+}
+
+.cart-footer {
+  border-top: 1px solid var(--bordercolor);
+  padding: 18px 20px;
+  background: #ffffff;
+  flex-shrink: 0;
+}
+
+.cart-total {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #2C2A28;
+  margin-bottom: 12px;
+}
+
+.cart-footer-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.btn-cart-primary,
+.btn-cart-secondary {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn-cart-primary {
+  background: var(--navbackground);
+  color: #ffffff;
+}
+
+.btn-cart-secondary {
+  background: rgba(110, 155, 119, 0.12);
+  color: var(--navbackground);
+}
+
+@media (max-width: 767px) {
+  .cart-drawer {
+    width: 100%;
+    right: -100%;
+  }
+
+  .cart-drawer.open {
+    right: 0;
+  }
+}
+</file>
+
+<file path="CSS/header.css">
+/* Header / Navbar */
+.custom-navbar {
+  background-color: #FAFBF6;
+  padding: 14px 0;
+  min-height: 78px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo-navbar {
+  width: 220px;
+  height: auto;
+}
+
+.custom-navbar .navbar-collapse {
+  flex-grow: 1;
+}
+
+.custom-navbar .nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.custom-navbar .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.custom-navbar .nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0 12px;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--colortextos) !important;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--colorhover) !important;
+}
+
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #D9CFAB;
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active-link::after {
+  transform: scaleX(1);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  flex-shrink: 0;
+  min-width: 100px;
+}
+
+.nav-session-link {
+  background: #FFFFFF;
+  color: var(--colortextos);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.nav-session-link:hover {
+  color: var(--colorhover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.nav-user-greeting {
+  color: var(--colortextos);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+/* Neumorfismo en línea con .site-footer .icons a (footer.css) */
+.nav-logout-btn {
+  background: #F7F5EF;
+  color: var(--colortextos);
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow:
+    6px 6px 14px rgba(0, 0, 0, 0.12),
+    -6px -6px 14px rgb(255, 255, 255);
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-logout-btn:hover {
+  color: var(--colorhover);
+  transform: translateY(-2px);
+  box-shadow:
+    10px 10px 20px rgba(0, 0, 0, 0.12),
+    -6px -6px 14px rgb(255, 255, 255);
+}
+
+.nav-logout-btn:focus {
+  outline: none;
+}
+
+.nav-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-icon:hover {
+  transform: translateY(-2px);
+  opacity: 0.7;
+}
+
+.cart-icon-btn {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.cart-icon-btn .nav-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.cart-badge {
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  color: var(--colortextos);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  min-width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.cart-icon-btn:focus,
+.cart-icon-btn:active,
+.navbar-toggler:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.navbar-toggler-icon {
+  width: 3rem;
+  height: 2rem;
+  filter: brightness(0);
+}
+
+@media (max-width: 1200px) {
+  .logo-navbar {
+    width: 185px;
+  }
+
+  .custom-navbar .nav-center {
+    gap: 24px;
+  }
+
+  .custom-navbar .nav-link {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    padding-top: 16px;
+  }
+
+  .custom-navbar .nav-center {
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .custom-navbar .nav-link {
+    padding: 10px 0 12px;
+    font-size: 1.15rem;
+  }
+
+  .icons {
+    justify-content: center;
+    min-width: unset;
+    margin-top: 16px;
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+}
+</file>
+
+<file path="JS/registro.js">
+const registerForm = document.getElementById("registerForm");
+const fullNameInput = document.getElementById("fullName");
+const registerEmailInput = document.getElementById("registerEmail");
+const registerPasswordInput = document.getElementById("registerPassword");
+const confirmPasswordInput = document.getElementById("confirmPassword");
+const registerMessage = document.getElementById("registerMessage");
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MIN_PASSWORD_LENGTH = 6;
+
+function mostrarMensajeRegistro(texto, tipo) {
+  if (!registerMessage) return;
+  registerMessage.textContent = texto;
+  registerMessage.classList.remove("is-error", "is-success");
+  registerMessage.classList.add(tipo === "ok" ? "is-success" : "is-error");
+}
+
+function validarFormularioRegistro(nombre, correo, contrasena, confirmacion) {
+  if (!nombre) {
+    mostrarMensajeRegistro("El nombre es obligatorio.", "err");
+    return false;
+  }
+  if (!emailRegex.test(correo)) {
+    mostrarMensajeRegistro("Ingresa un correo válido.", "err");
+    return false;
+  }
+  if (contrasena.length < MIN_PASSWORD_LENGTH) {
+    mostrarMensajeRegistro(
+      `La contraseña debe tener al menos ${MIN_PASSWORD_LENGTH} caracteres.`,
+      "err"
+    );
+    return false;
+  }
+  if (contrasena !== confirmacion) {
+    mostrarMensajeRegistro("Las contraseñas no coinciden.", "err");
+    return false;
+  }
+  return true;
+}
+
+function manejarRegistro(event) {
+  event.preventDefault();
+
+  const nombre = fullNameInput.value.trim();
+  // Normalizamos el correo a minúsculas para que el login pueda buscar
+  // sin importar cómo lo escriba el usuario al iniciar sesión.
+  const correo = registerEmailInput.value.trim().toLowerCase();
+  const contrasena = registerPasswordInput.value;
+  const confirmacion = confirmPasswordInput.value;
+
+  if (!validarFormularioRegistro(nombre, correo, contrasena, confirmacion)) {
+    return;
+  }
+
+  const usuarios = getUsuarios();
+  const correoExiste = usuarios.some((usuario) => usuario.correo === correo);
+  if (correoExiste) {
+    mostrarMensajeRegistro("Correo ya registrado.", "err");
+    return;
+  }
+
+  const nuevoUsuario = { nombre, correo, contrasena };
+  saveUsuarios([...usuarios, nuevoUsuario]);
+
+  mostrarMensajeRegistro("Cuenta creada correctamente. Redirigiendo…", "ok");
+  registerForm.reset();
+  setTimeout(() => {
+    window.location.href = "login.html";
+  }, 800);
+}
+
+if (registerForm) {
+  registerForm.addEventListener("submit", manejarRegistro);
+}
+</file>
+
+<file path="CSS/footer.css">
+/* Footer general */
+.site-footer {
+  background-color: #F0EFE9;
+  color: var(--colortextos);
+  padding-top: 60px;
+  margin-top: 40px;
+}
+
+.site-footer p,
+.site-footer b,
+.site-footer strong,
+.site-footer li,
+.site-footer a {
+  color: var(--colortextos);
+}
+
+.site-footer a {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.site-footer a:hover {
+  opacity: 0.6;
+}
+
+.site-footer h6 {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: var(--colortextos);
+}
+
+.site-footer .footer-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.site-footer .icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.site-footer .icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 30px;
+  background: #F7F5EF;
+  box-shadow:
+    6px 6px 14px rgba(0, 0, 0, 0.12),
+    -6px -6px 14px rgb(255, 255, 255);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.site-footer .icons a:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow:
+    10px 10px 20px rgba(0, 0, 0, 0.12),
+    -6px -6px 14px rgb(255, 255, 255);
+}
+
+.site-footer .icons img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.site-footer .footer-content .col-md-4:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-footer .footer-content .col-md-4:nth-child(2) .footer-title,
+.site-footer .footer-content .col-md-4:nth-child(2) .footer-list {
+  text-align: left;
+  width: 100%;
+  max-width: 140px;
+}
+
+.site-footer .newsletter {
+  display: flex;
+  align-items: center;
+  border-bottom: 1.5px solid var(--colortextos);
+  padding-bottom: 6px;
+}
+
+.site-footer .newsletter input {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--colortextos);
+  font-size: 0.95rem;
+  padding: 4px 0;
+  box-shadow: none;
+  outline: none;
+}
+
+.site-footer .newsletter input::placeholder {
+  color: var(--colortextos);
+  opacity: 0.6;
+}
+
+.site-footer .newsletter button {
+  margin-left: 10px;
+  cursor: pointer;
+  color: var(--colortextos);
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.site-footer .newsletter button:hover {
+  transform: translateY(-4px);
+  opacity: 0.6;
+}
+
+.site-footer .footer-logo-wrapper {
+  padding: 40px 0 0;
+}
+
+.site-footer .footer-logo-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 32px 0 24px;
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.site-footer li,
+.site-footer p,
+.site-footer a {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 991px) {
+  .site-footer .footer-content > div {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .site-footer .row > div {
+    text-align: center;
+  }
+
+  .site-footer .icons {
+    justify-content: center;
+    margin-top: 24px;
+    padding-bottom: 8px;
+  }
+
+  .site-footer .newsletter {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .site-footer .footer-content .col-md-4:nth-child(2),
+  .site-footer .footer-content .col-md-4:nth-child(2) .footer-title,
+  .site-footer .footer-content .col-md-4:nth-child(2) .footer-list {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+</file>
+
+<file path="HTML/registro.html">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Registro de usuarios de Orígenes Colombia" />
+  <title>Registro | Orígenes Colombia</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="../CSS/base.css" rel="stylesheet" />
+  <link href="../CSS/navbar.css" rel="stylesheet" />
+  <link href="../CSS/carrito.css" rel="stylesheet" />
+
+<link href="../CSS/header.css" rel="stylesheet"/>
+<link href="../CSS/footer.css" rel="stylesheet"/>
+<link href="../CSS/registro.css" rel="stylesheet"/>
+<link href="../CSS/carrito-global.css" rel="stylesheet"/>
+<link href="../CSS/estilo-final.css" rel="stylesheet"/>
+</head>
+
+<body id="top">
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
+    <div class="container nav-wrapper">
+      <a class="navbar-brand" href="../index.html">
+        <img alt="Orígenes Colombia" class="logo-navbar" src="../IMG/logo-origenes-oscuro.svg" />
+      </a>
+
+      <button aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#navbarMain" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarMain">
+        <ul class="navbar-nav mx-auto nav-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="./catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contactenos.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./sobreorigenes.html">Sobre Orígenes</a></li>
+          <li class="nav-item"><a class="nav-link" href="./admin.html">Administrador</a></li>
+        </ul>
+
+        <div class="icons">
+          <a id="loginLink" class="nav-session-link" href="./login.html">Iniciar Sesión</a>
+          <span id="userGreeting" class="nav-user-greeting" hidden>
+            Hola, <span id="userGreetingName"></span>
+          </span>
+          <button id="logoutBtn" class="nav-logout-btn" type="button" hidden>Cerrar Sesión</button>
+
+          <a aria-label="Perfil" id="profileLink" href="./registro.html">
+            <img alt="Usuario" class="nav-icon" src="../IMG/icon-usuario.svg" />
+          </a>
+          <button aria-label="Carrito" class="cart-icon-btn" id="cartBtn" type="button">
+            <img alt="Carrito" class="nav-icon" src="../IMG/icon-bolsa.svg" />
+            <span class="cart-badge" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="registro-main">
+    <section class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="registro-card">
+            <h1 class="registro-title">Registro</h1>
+            <p class="registro-text">Crea tu cuenta para continuar con Orígenes Colombia.</p>
+
+            <form id="registerForm">
+              <div class="mb-3">
+                <label class="form-label" for="fullName">Nombre completo</label>
+                <input class="form-control" id="fullName" placeholder="Ingresa tu nombre" required type="text" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="registerEmail">Correo electrónico</label>
+                <input class="form-control" id="registerEmail" placeholder="Ingresa tu correo" required type="email" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="registerPassword">Contraseña</label>
+                <input class="form-control" id="registerPassword" placeholder="Ingresa tu contraseña" required type="password" />
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label" for="confirmPassword">Confirmar contraseña</label>
+                <input class="form-control" id="confirmPassword" placeholder="Confirma tu contraseña" required type="password" />
+              </div>
+
+              <button class="btn registro-btn w-100" type="submit">Crear cuenta</button>
+            </form>
+
+            <p class="registro-message" id="registerMessage"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button class="cart-close-btn" id="closeCart" type="button">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <p class="cart-total">Total: <span id="total">$0</span></p>
+      <div class="cart-footer-actions">
+        <button class="btn-cart-secondary" id="clearCartBtn" type="button">Vaciar</button>
+        <button class="btn-cart-primary" id="buyBtn" type="button">Comprar</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row footer-content">
+        <div class="col-md-4">
+          <h6 class="footer-title">Contacto</h6>
+          <ul class="footer-list">
+            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
+            <li>contactoorigenescolombia@gmail.com</li>
+            <li>+57 312 3456 7890</li>
+          </ul>
+          <div class="icons">
+            <a aria-label="Facebook" href="#"><img alt="Facebook" src="../IMG/icon-facebook.svg" /></a>
+            <a aria-label="Instagram" href="#"><img alt="Instagram" src="../IMG/icon-instagram.svg" /></a>
+            <a aria-label="YouTube" href="#"><img alt="YouTube" src="../IMG/icon-youtube.svg" /></a>
+            <a aria-label="X" href="#"><img alt="X" src="../IMG/icon-x.svg" /></a>
+            <a aria-label="WhatsApp" href="#"><img alt="WhatsApp" src="../IMG/icon-whatsapp.svg" /></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Navegación</h6>
+          <ul class="footer-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./catalogo.html">Catálogo</a></li>
+            <li><a href="./contactenos.html">Contacto</a></li>
+            <li><a href="./sobreorigenes.html">Sobre Orígenes</a></li>
+            <li><a href="./admin.html">Administrador</a></li>
+            <li><a href="./registro.html">Registro</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Newsletter</h6>
+          <p class="footer-text">Suscríbete y recibe novedades, lanzamientos y productos exclusivos.</p>
+          <form class="newsletter" id="newsletterForm">
+            <input id="newsletterEmail" placeholder="E-mail" type="email" />
+            <button aria-label="Suscribirse" type="submit">→</button>
+          </form>
+          <small class="newsletter-message" id="newsletterMessage"></small>
+        </div>
+      </div>
+
+      <div class="footer-logo-wrapper">
+        <img alt="Orígenes Colombia" class="footer-logo" src="../IMG/logo-origenes-oscuro.svg" />
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
+        <p>Política de privacidad · Términos y condiciones</p>
+        <p>Conectando el mundo con el alma de Colombia.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../JS/storage.js"></script>
+  <script src="../JS/registro.js"></script>
+  <script src="../JS/navbar.js"></script>
+  <script src="../JS/carrito.js"></script>
+  <script src="../JS/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</file>
+
+<file path="CSS/catalogo.css">
+/* Catálogo */
+.catalog-hero {
+  height: 300px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)),
+    url("../IMG/hero-artesanal-colombia.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.catalog-hero-overlay {
+  width: 100%;
+}
+
+.hero-content {
+  padding-top: 24px;
+}
+
+.catalog-hero-title {
+  color: var(--textoblanco);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.catalog-hero-text {
+  color: var(--textoblanco);
+  font-size: 1.08rem;
+  margin: 0;
+}
+
+.catalog-section {
+  padding: 38px 0 60px;
+}
+
+.catalog-intro {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--colortextos);
+}
+
+#catalogContainer {
+  align-items: stretch;
+}
+
+#catalogContainer > [class*="col-"] {
+  display: flex;
+}
+
+.product-card {
+  background: #FFFFFF;
+  border: 1px solid var(--bordercolor);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadowsoft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+}
+
+.product-card .card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.badge-category {
+  width: fit-content;
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--gradientbadge);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.product-card .card-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #202020;
+  margin-bottom: 8px;
+}
+
+.product-card .card-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #666666;
+  margin-bottom: 14px;
+}
+
+.price-text {
+  color: var(--navbackground);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.stock-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--colorhover);
+  margin-bottom: 12px;
+}
+
+.btn-buy {
+  background-color: #FFFFFF;
+  color: var(--navbackground);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  font-weight: 800;
+  width: 100%;
+  margin-top: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-buy:hover {
+  background-color: var(--navbackground);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.empty-state {
+  background: rgba(110, 155, 119, 0.08);
+  border: 1px dashed rgba(110, 155, 119, 0.28);
+  border-radius: 18px;
+  color: var(--colortextos);
+  font-weight: 500;
+  padding: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .catalog-hero {
+    height: 260px;
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog-hero {
+    height: 220px;
+  }
+
+  .catalog-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .catalog-hero-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .product-image {
+    height: 220px;
+  }
+}
+</file>
+
+<file path="CSS/registro.css">
+/* Registro */
+.registro-main {
+  padding: 70px 0;
+  min-height: 70vh;
+}
+
+.registro-card {
+  background: #FFFFFF;
+  border: 1px solid var(--bordercolor);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--shadowsoft);
+}
+
+.registro-title {
+  background: var(--gradientdark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.registro-text {
+  text-align: center;
+  color: var(--colortextos);
+  margin-bottom: 26px;
+}
+
+.registro-card .form-label {
+  font-weight: 600;
+  color: var(--colortextos);
+}
+
+.registro-card .form-control {
+  border: 1px solid #D9D2C7;
+  border-radius: 14px;
+  min-height: 52px;
+  padding: 12px 14px;
+  box-shadow: none;
+}
+
+.registro-card .form-control:focus {
+  border-color: #6B5B4D;
+  box-shadow: 0 0 0 0.16rem rgba(107, 91, 77, 0.18);
+}
+
+.registro-btn {
+  background-color: #FFFFFF;
+  color: var(--navbackground);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registro-btn:hover {
+  background-color: var(--navbackground);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.registro-message {
+  text-align: center;
+  margin-top: 16px;
+  font-weight: 600;
+  min-height: 1.2em;
+}
+
+.registro-message.is-error {
+  color: var(--dangercolor);
+}
+
+.registro-message.is-success {
+  color: var(--navbackground);
+}
+</file>
+
+<file path="CSS/sobreorigenes.css">
+/* =========================
+   SOBRE ORÍGENES
+   ========================= */
+
+.about-hero {
+  height: 470px;
+  min-height: 470px;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
+    url("../IMG/hero-artesanal-colombia.jpg");
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.about-hero-overlay {
+  width: 100%;
+}
+
+.about-hero .hero-content {
+  padding-top: 0;
+}
+
+.about-hero-title {
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #FFFFFF;
+
+  color: #FFFFFF;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.about-hero-text {
+  color: #FFFFFF;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Main */
+.about-section {
+  padding: 38px 0 60px;
+}
+
+.intro-block {
+  max-width: 950px;
+  margin: 0 auto 26px;
+}
+
+.section-title {
+  background: linear-gradient(135deg, #2C2A28 0%, #5A4C42 45%, #8A735F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.about-intro,
+.team-subtitle {
+  max-width: 980px;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--colortextos);
+}
+
+/* Mission / Vision / Values cards */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  margin-top: 30px;
+  margin-bottom: 36px;
+}
+
+.about-box {
+  background: #FFFFFF;
+  border: 1px solid var(--bordercolor);
+  border-radius: 22px;
+  padding: 26px 24px 24px;
+  box-shadow: var(--shadowsoft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.12);
+}
+
+.about-box-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.about-icon {
+  width: 74px;
+  min-width: 74px;
+  height: 74px;
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #2C2A28 0%, #4B4138 45%, #6B5B4D 100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.18),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+}
+
+.about-icon i {
+  color: #FFFFFF;
+  font-size: 1.9rem;
+}
+
+.about-box-title {
+  margin: 0;
+
+  background: linear-gradient(135deg, #2C2A28 0%, #5A4C42 45%, #8A735F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.about-box-text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--colortextos);
+}
+
+.values-list {
+  margin: 0;
+  padding-left: 24px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--colortextos);
+}
+
+.values-list li + li {
+  margin-top: 8px;
+}
+
+.values-list strong {
+  color: #2C2A28;
+}
+
+/* Team */
+.team-heading {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(170px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.team-card {
+  background: #FFFFFF;
+  border: 1px solid var(--bordercolor);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadowsoft);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.12);
+}
+
+.img1 {
+  height: 78px;
+  overflow: hidden;
+}
+
+.img1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img2 {
+  display: flex;
+  justify-content: center;
+  margin-top: -32px;
+  margin-bottom: 6px;
+}
+
+.img2 img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #FFFFFF;
+  background: #FFFFFF;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.team-card-body {
+  padding: 10px 12px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #202020;
+  margin-bottom: 6px;
+}
+
+.card-role {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--colorhover);
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 0.82rem;
+  line-height: 1.35;
+  margin-bottom: 10px;
+  color: var(--colortextos);
+  min-height: 58px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(107, 91, 77, 0.10);
+  color: #4B4138;
+
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.social a:hover {
+  background: linear-gradient(135deg, #2C2A28 0%, #4B4138 45%, #6B5B4D 100%);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Buttons if any CTA is added later */
+.about-hero .btn,
+.about-section .btn {
+  background-color: #FFFFFF;
+  color: var(--navbackground);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.about-hero .btn:hover,
+.about-section .btn:hover {
+  background-color: var(--navbackground);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .about-hero {
+    height: 360px;
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-hero {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .about-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .about-hero-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-box-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-box {
+    padding: 24px 18px;
+  }
+}
+</file>
+
+<file path="JS/catalogo.js">
+const HARDCODED_PRODUCTS = [
+  { id: 101, name: "Ruana De Orígen", price: 285000, stock: 7, image: "https://i.postimg.cc/ZqQ7Bz4x/imagen-19.webp", category: "Moda", description: "Prenda artesanal tejida en lana premium." },
+  { id: 102, name: "Poncho Ancestral", price: 230000, stock: 6, image: "https://i.postimg.cc/W3J90Y1Y/imagen-18.jpg", category: "Moda", description: "Tejido artesanal en telar de pedal." },
+  { id: 103, name: "Brazalete Ondas de Mimbre", price: 240000, stock: 17, image: "https://i.postimg.cc/L8H0GVxL/imagen-07.jpg", category: "Artesanías", description: "Tejido a mano con fibras de mimbre." },
+  { id: 104, name: "Vasijas de Arcilla Esmaltada", price: 350000, stock: 7, image: "https://i.postimg.cc/cLs5PcFY/imagen-08.jpg", category: "Artesanías", description: "Cerámica artesanal elaborada a mano." },
+  { id: 105, name: "Tejido", price: 20000, stock: 8, image: "https://vitrina-emprendimiento-rural.aureliolllano.org.co/wp-content/uploads/2023/03/Producto-tejidos-de-macrame-Vivero-paraiso-del-cartama.jpg", category: "Artesanías", description: "Tejido para matera." },
+  { id: 106, name: "Café Amazonas", price: 50000, stock: 58, image: "https://plus.unsplash.com/premium_photo-1675435644687-562e8042b9db?q=80&w=749&auto=format&fit=crop", category: "Café", description: "Café de origen natural." },
+  { id: 107, name: "Sombrero Vueltiao", price: 70000, stock: 10, image: "https://colombia.co/sites/default/files/marca-pais/media/images/sombrero-vueltiao-colombiano_0.webp", category: "Moda", description: "Sombrero tradicional colombiano tejido a mano." },
+  { id: 108, name: "Set de Joyería Hojas de Otoño", price: 55000, stock: 8, image: "https://i.ebayimg.com/images/g/8okAAeSwYZ9px-3m/s-l1200.webp", category: "Joyería", description: "Accesorio artesanal con diseño colombiano." },
+  { id: 109, name: "Vela Guava Jelly", price: 120000, stock: 10, image: "https://i.postimg.cc/Bvs3tDZH/imagen-30.webp", category: "Accesorios", description: "Vela aromática de 12 oz con fragancia tropical." },
+  { id: 110, name: "Pañuelo Tropical", price: 95000, stock: 10, image: "https://www.khamaliShop.com/cdn/shop/products/Pa_uelo-tropical-cabeza-KHAMALI-258183265_1946x.jpg?v=1741892266", category: "Accesorios", description: "Estampado floral en seda satinada." },
+  { id: 111, name: "Brazalete Geometría Ancestral", price: 78000, stock: 5, image: "https://i.etsystatic.com/34393182/r/il/6a5a86/4100564960/il_570xN.4100564960_8r9r.jpg", category: "Accesorios", description: "Tejido a mano con técnica peyote." },
+  { id: 112, name: "Mochila Patrimonio Solar", price: 450000, stock: 3, image: "https://hilosagrado.org/cdn/shop/collections/Mochila-Wayuu-Tejida-Azul-Oscuro-Pompon_grande.png?v=1695335152", category: "Moda", description: "Tejido Wayúu de lujo con paleta minimalista." }
+];
+
+function registerHardcodedProducts() {
+  if (typeof getProducts !== "function" || typeof saveProducts !== "function") {
+    return;
+  }
+
+  const existingProducts = getProducts();
+  const existingIds = existingProducts.map((product) => product.id);
+  const newProducts = HARDCODED_PRODUCTS.filter((product) => !existingIds.includes(product.id));
+
+  if (newProducts.length > 0) {
+    saveProducts([...existingProducts, ...newProducts]);
+  }
+}
+
+function renderCatalog() {
+  const catalogContainer = document.getElementById("catalogContainer");
+
+  if (!catalogContainer || typeof getProducts !== "function") {
+    return;
+  }
+
+  const products = getProducts();
+
+  if (products.length === 0) {
+    catalogContainer.innerHTML = `
+      <div class="col-12">
+        <div class="empty-state">
+          No hay productos disponibles en el catálogo todavía.
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  catalogContainer.innerHTML = products
+    .map((product) => `
+      <div class="col-md-6 col-lg-4">
+        <article class="product-card">
+          <img src="${product.image}" alt="${product.name}" class="product-image" />
+          <div class="card-body">
+            <span class="badge-category">${product.category}</span>
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">${product.description}</p>
+            <p class="price-text">$${Number(product.price).toLocaleString("es-CO")}</p>
+            <p class="stock-text">Disponibles: ${product.stock}</p>
+            <button class="btn-buy" type="button" onclick="addToCart(${product.id})">
+              Agregar al carrito
+            </button>
+          </div>
+        </article>
+      </div>
+    `)
+    .join("");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  registerHardcodedProducts();
+  renderCatalog();
+});
+
+window.addEventListener("storage", (event) => {
+  if (event.key === "origenes_products") {
+    renderCatalog();
+  }
+});
+</file>
+
+<file path="JS/storage.js">
+const PRODUCTS_KEY = "origenes_products";
+const CART_KEY = "origenes_cart";
+const USERS_KEY = "origenes_usuarios";
+const ACTIVE_USER_KEY = "usuarioActivo";
+
+function getProducts() {
+  return JSON.parse(localStorage.getItem(PRODUCTS_KEY)) || [];
+}
+
+function saveProducts(products) {
+  localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
+}
+
+function getCart() {
+  return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+}
+
+function saveCart(cart) {
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
+
+function getUsuarios() {
+  return JSON.parse(localStorage.getItem(USERS_KEY)) || [];
+}
+
+function saveUsuarios(usuarios) {
+  localStorage.setItem(USERS_KEY, JSON.stringify(usuarios));
+}
+
+function getUsuarioActivo() {
+  return JSON.parse(localStorage.getItem(ACTIVE_USER_KEY)) || null;
+}
+
+function setUsuarioActivo(usuario) {
+  localStorage.setItem(ACTIVE_USER_KEY, JSON.stringify(usuario));
+}
+
+function cerrarSesion() {
+  localStorage.removeItem(ACTIVE_USER_KEY);
+}
+
+// El formato "Mayúsculas Iniciales" forma parte del contrato del dato
+// que mostramos en el navbar; lo centralizamos aquí para que cualquier
+// consumidor (login, navbar) reciba el nombre ya normalizado.
+function capitalizarNombre(nombre) {
+  return (nombre || "")
+    .toLocaleLowerCase("es-CO")
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((parte) => parte.charAt(0).toLocaleUpperCase("es-CO") + parte.slice(1))
+    .join(" ");
+}
+
+const ADMIN_HARDCODED = {
+  nombre: "Administrador",
+  correo: "admin@mail.com",
+  contrasena: "123456",
+};
+
+// Sembramos el admin al cargar storage.js en cualquier página. Es idempotente:
+// si el correo ya existe no duplica. Esto cumple la rúbrica de "usuario admin
+// hardcodeado pre-almacenado en LocalStorage" sin meter lógica especial en login.
+(function garantizarAdminPorDefecto() {
+  const usuarios = getUsuarios();
+  const existe = usuarios.some(
+    (usuario) => usuario.correo.toLowerCase() === ADMIN_HARDCODED.correo
+  );
+  if (!existe) {
+    saveUsuarios([ADMIN_HARDCODED, ...usuarios]);
+  }
+})();
+</file>
+
+<file path="CSS/admin.css">
+/* =========================
+   ADMIN
+   ========================= */
+
+.admin-hero {
+  height: 340px;
+  min-height: 340px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
+    url("../IMG/hero-artesanal-colombia.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.admin-hero-overlay {
+  width: 100%;
+}
+
+.admin-hero .hero-content {
+  padding-top: 0;
+}
+
+.admin-hero-title {
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.admin-hero-text {
+  color: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.admin-section {
+  padding: 38px 0 60px;
+}
+
+.admin-intro {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--colortextos);
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.35fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.admin-form-card,
+.admin-products-card {
+  background: var(--cardbg);
+  border: 1px solid var(--bordercolor);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadowsoft);
+}
+
+.admin-card-header {
+  padding: 24px 24px 8px;
+}
+
+.mini-label {
+  display: inline-block;
+  background: linear-gradient(135deg, #2C2A28 0%, #4B4138 45%, #6B5B4D 100%);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.admin-card-title {
+  background: linear-gradient(135deg, #2C2A28 0%, #5A4C42 45%, #8A735F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.admin-card-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--colortextos);
+  margin-bottom: 0;
+}
+
+.admin-form-body,
+.admin-products-body {
+  padding: 20px 24px 24px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--colortextos);
+  margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+  border: 1px solid #D9D2C7;
+  border-radius: 14px;
+  background-color: #ffffff;
+  min-height: 52px;
+  padding: 12px 14px;
+  box-shadow: none;
+  color: var(--colortextos);
+}
+
+.form-control::placeholder,
+.form-select {
+  color: #7D7D7D;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #6B5B4D;
+  box-shadow: 0 0 0 0.16rem rgba(107, 91, 77, 0.18);
+}
+
+.admin-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.admin-actions-gap {
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-admin {
+  background-color: #ffffff;
+  color: var(--navbackground);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  min-width: 220px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-admin:hover {
+  background-color: var(--navbackground);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.btn-admin-outline {
+  background-color: transparent;
+  color: var(--navbackground);
+  border: 1px solid var(--navbackground);
+  border-radius: 999px;
+  padding: 14px 32px;
+  min-width: 220px;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+
+.btn-admin-outline:hover {
+  background-color: rgba(110, 155, 119, 0.08);
+}
+
+/* =========================
+   PRODUCTOS ADMIN
+   ========================= */
+
+#productList {
+  align-items: stretch;
+}
+
+#productList > div {
+  display: flex;
+  width: 50%;
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+
+#productList .product-card {
+  width: 100%;
+}
+
+.product-card {
+  background: #ffffff;
+  border: 1px solid var(--bordercolor);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadowsoft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  width: 100%;
+  height: 100%;
+  min-height: 610px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+}
+
+.product-card .card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.badge-category {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2C2A28 0%, #4B4138 45%, #6B5B4D 100%);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.product-card .card-title {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #202020;
+  line-height: 1.3;
+  min-height: 58px;
+  margin-bottom: 10px;
+  overflow: visible;
+}
+
+.product-card .card-text {
+  font-size: 0.94rem;
+  line-height: 1.5;
+  color: #666666;
+  min-height: 82px;
+  margin-bottom: 14px;
+  overflow: visible;
+}
+
+.price-text {
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  font-weight: 800;
+  margin-bottom: 10px;
+  overflow: visible;
+  white-space: normal;
+}
+
+.stock-text {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 16px;
+  overflow: visible;
+  white-space: normal;
+}
+
+.product-actions-inline {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.btn-card-edit,
+.btn-card-delete {
+  border: none;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 78px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-card-edit {
+  background: rgba(110, 155, 119, 0.12);
+  color: #000000;
+}
+
+.btn-card-edit:hover {
+  background: rgba(110, 155, 119, 0.22);
+}
+
+.btn-card-delete {
+  background: rgba(176, 58, 46, 0.12);
+  color: #000000;
+}
+
+.btn-card-delete:hover {
+  background: rgba(176, 58, 46, 0.22);
+}
+
+.empty-state {
+  background: rgba(110, 155, 119, 0.08);
+  border: 1px dashed rgba(110, 155, 119, 0.28);
+  border-radius: 18px;
+  color: var(--colortextos);
+  font-weight: 500;
+  padding: 24px;
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1399px) {
+  .product-card {
+    min-height: 590px;
+  }
+
+  .product-image {
+    height: 245px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #productList > div {
+    width: 50%;
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  .product-card {
+    min-height: 570px;
+  }
+}
+
+@media (max-width: 991px) {
+  .admin-hero {
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .btn-admin,
+  .btn-admin-outline {
+    width: 100%;
+    min-width: unset;
+  }
+
+  #productList > div {
+    width: 50%;
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  .product-card {
+    min-height: 560px;
+  }
+
+  .product-image {
+    height: 240px;
+  }
+}
+
+@media (max-width: 767px) {
+  .admin-hero {
+    height: 250px;
+    min-height: 250px;
+  }
+
+  .admin-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .admin-hero-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .admin-card-header,
+  .admin-form-body,
+  .admin-products-body {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  #productList > div {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .product-card {
+    min-height: auto;
+  }
+
+  .product-image {
+    height: 240px;
+  }
+
+  .product-card .card-title,
+  .product-card .card-text {
+    min-height: unset;
+  }
+
+  .product-actions-inline {
+    flex-wrap: nowrap;
+  }
+}
+</file>
+
+<file path="CSS/index.css">
+/* =========================
+   INDEX / HOME
+   ========================= */
+
+.carousel-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-img {
+  display: block;
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.44),
+    rgba(0, 0, 0, 0.30)
+  );
+  z-index: 1;
+}
+
+.carousel-caption.hero-content {
+  z-index: 2;
+  bottom: 24%;
+}
+
+.hero-content h1 {
+  color: #ffffff;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.hero-content p {
+  color: #ffffff;
+  font-size: 1.15rem;
+  max-width: 760px;
+  margin: 0 auto 22px;
+}
+
+/* =========================
+   BOTONES HERO
+   ========================= */
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary {
+  background-color: #ffffff;
+  color: #6E9B77 !important;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  min-width: 210px;
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-btn-primary:hover {
+  background-color: #6E9B77;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+}
+
+.hero-btn-secondary {
+  background-color: rgba(255, 255, 255, 0.14);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  padding: 14px 32px;
+  min-width: 170px;
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.hero-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.75);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CARRUSEL
+   ========================= */
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 3;
+}
+
+.carousel-indicators {
+  z-index: 3;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 34px;
+  height: 3px;
+  border-radius: 999px;
+}
+
+/* =========================
+   CATEGORÍAS
+   ========================= */
+
+.categories-section {
+  padding: 44px 0 60px;
+  background-color: var(--backgroundcolor);
+}
+
+.section-heading {
+  margin-bottom: 26px;
+}
+
+.section-title {
+  background: linear-gradient(
+    135deg,
+    #2C2A28 0%,
+    #5A4C42 45%,
+    #8A735F 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--colortextos);
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.category-card {
+  background: var(--cardbg);
+  border: 1px solid var(--bordercolor);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadowsoft);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.12);
+}
+
+.category-image-wrapper {
+  height: 220px;
+  overflow: hidden;
+}
+
+.category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.category-content {
+  padding: 18px 18px 20px;
+  text-align: center;
+}
+
+.category-content h3 {
+  color: var(--navbackground);
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.category-content p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 0;
+  color: var(--colortextos);
+}
+
+/* =========================
+   CTA
+   ========================= */
+
+.cta-section {
+  padding: 0 0 60px;
+  background-color: var(--backgroundcolor);
+}
+
+.cta-box {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.32),
+      rgba(0, 0, 0, 0.32)
+    ),
+    url("../IMG/hero-artesanal-colombia.jpg");
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border: 1px solid var(--bordercolor);
+  border-radius: 28px;
+  padding: 44px 36px;
+  box-shadow: var(--shadowsoft);
+
+  min-height: 310px;
+
+  display: flex;
+  align-items: center;
+}
+
+.cta-text-overlay {
+  max-width: 760px;
+}
+
+.cta-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 14px;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    #2C2A28 0%,
+    #4B4138 45%,
+    #6B5B4D 100%
+  );
+
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.cta-text-overlay h2,
+.cta-text h2 {
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.cta-text-overlay p,
+.cta-text p {
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.65;
+  max-width: 720px;
+}
+
+.cta-action {
+  margin-top: 24px;
+}
+
+.cta-btn {
+  background-color: #ffffff;
+  color: #6E9B77 !important;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  min-width: 180px;
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #6E9B77;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 991px) {
+  .banner-img {
+    height: 540px;
+  }
+
+  .carousel-caption.hero-content {
+    bottom: 18%;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cta-box {
+    min-height: 280px;
+    padding: 36px 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-img {
+    height: 430px;
+  }
+
+  .carousel-caption.hero-content {
+    bottom: 12%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary,
+  .cta-btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-box {
+    min-height: 260px;
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .cta-text-overlay {
+    margin: 0 auto;
+  }
+}
+</file>
+
+<file path="HTML/admin.html">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Panel administrador de Orígenes Colombia" />
+  <title>Administrador | Orígenes Colombia</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="../CSS/base.css" rel="stylesheet" />
+  <link href="../CSS/navbar.css" rel="stylesheet" />
+  <link href="../CSS/carrito.css" rel="stylesheet" />
+
+<link href="../CSS/header.css" rel="stylesheet"/>
+<link href="../CSS/footer.css" rel="stylesheet"/>
+<link href="../CSS/admin.css" rel="stylesheet"/>
+<link href="../CSS/carrito-global.css" rel="stylesheet"/>
+<link href="../CSS/estilo-final.css" rel="stylesheet"/>
+</head>
+
+<body id="top">
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
+    <div class="container nav-wrapper">
+      <a class="navbar-brand" href="../index.html">
+        <img alt="Orígenes Colombia" class="logo-navbar" src="../IMG/logo-origenes-oscuro.svg" />
+      </a>
+
+      <button aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#navbarMain" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarMain">
+        <ul class="navbar-nav mx-auto nav-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="./catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contactenos.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./sobreorigenes.html">Sobre Orígenes</a></li>
+          <li class="nav-item"><a class="nav-link active-link" href="./admin.html">Administrador</a></li>
+        </ul>
+
+        <div class="icons">
+          <a id="loginLink" class="nav-session-link" href="./login.html">Iniciar Sesión</a>
+          <span id="userGreeting" class="nav-user-greeting" hidden>
+            Hola, <span id="userGreetingName"></span>
+          </span>
+          <button id="logoutBtn" class="nav-logout-btn" type="button" hidden>Cerrar Sesión</button>
+
+          <a aria-label="Perfil" id="profileLink" href="./registro.html">
+            <img alt="Usuario" class="nav-icon" src="../IMG/icon-usuario.svg" />
+          </a>
+          <button aria-label="Carrito" class="cart-icon-btn" id="cartBtn" type="button">
+            <img alt="Carrito" class="nav-icon" src="../IMG/icon-bolsa.svg" />
+            <span class="cart-badge" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+    <section class="admin-hero">
+      <div class="admin-hero-overlay">
+        <div class="container text-center hero-content">
+          <h1 class="admin-hero-title">Panel Administrador</h1>
+          <p class="admin-hero-text">Gestiona productos del catálogo de forma rápida, clara y organizada.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="admin-section">
+      <div class="container">
+        <div class="text-center intro-block">
+          <h2 class="section-title">Gestión de productos</h2>
+          <p class="admin-intro">Desde este panel puedes registrar nuevos productos con su nombre, descripción, precio, categoría, stock e imagen.</p>
+        </div>
+
+        <div class="admin-layout">
+          <div class="admin-form-card">
+            <div class="admin-card-header">
+              <span class="mini-label">Nuevo producto</span>
+              <h3 class="admin-card-title">Crear producto</h3>
+              <p class="admin-card-description">Completa la información del producto para agregarlo al catálogo.</p>
+            </div>
+
+            <div class="admin-form-body">
+              <form id="productForm">
+                <input id="productId" type="hidden" />
+
+                <div class="mb-3">
+                  <label class="form-label" for="name">Nombre del producto</label>
+                  <input class="form-control" id="name" placeholder="Ej: Café Premium de Nariño" required type="text" />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label" for="description">Descripción</label>
+                  <textarea class="form-control" id="description" placeholder="Describe el producto" required rows="4"></textarea>
+                </div>
+
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="price">Precio</label>
+                    <input class="form-control" id="price" min="1" placeholder="Ej: 45000" required step="1" type="number" />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="stock">Cantidad disponible</label>
+                    <input class="form-control" id="stock" min="0" placeholder="Ej: 12" required step="1" type="number" />
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label" for="category">Categoría</label>
+                  <select class="form-select" id="category" required>
+                    <option value="">Selecciona una categoría</option>
+                    <option value="Café">Café</option>
+                    <option value="Artesanías">Artesanías</option>
+                    <option value="Moda">Moda</option>
+                    <option value="Decoración">Decoración</option>
+                    <option value="Alimentos">Alimentos</option>
+                  </select>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label" for="image">URL o ruta de la imagen</label>
+                  <input class="form-control" id="image" placeholder="Ej: ../IMG/producto.jpg" required type="text" />
+                </div>
+
+                <div class="admin-actions admin-actions-gap">
+                  <button class="btn btn-admin" id="submitBtn" type="submit">Guardar producto</button>
+                  <button class="btn btn-admin-outline" id="cancelEditBtn" type="button">Cancelar edición</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="admin-products-card">
+            <div class="admin-card-header">
+              <span class="mini-label">Catálogo actual</span>
+              <h3 class="admin-card-title">Lista de productos</h3>
+              <p class="admin-card-description">Aquí verás los productos agregados en tiempo real.</p>
+            </div>
+            <div class="admin-products-body">
+              <div class="row g-4 justify-content-center" id="productList"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button class="cart-close-btn" id="closeCart" type="button">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <p class="cart-total">Total: <span id="total">$0</span></p>
+      <div class="cart-footer-actions">
+        <button class="btn-cart-secondary" id="clearCartBtn" type="button">Vaciar</button>
+        <button class="btn-cart-primary" id="buyBtn" type="button">Comprar</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row footer-content">
+        <div class="col-md-4">
+          <h6 class="footer-title">Contacto</h6>
+          <ul class="footer-list">
+            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
+            <li>contactoorigenescolombia@gmail.com</li>
+            <li>+57 312 3456 7890</li>
+          </ul>
+          <div class="icons">
+            <a aria-label="Facebook" href="#"><img alt="Facebook" src="../IMG/icon-facebook.svg" /></a>
+            <a aria-label="Instagram" href="#"><img alt="Instagram" src="../IMG/icon-instagram.svg" /></a>
+            <a aria-label="YouTube" href="#"><img alt="YouTube" src="../IMG/icon-youtube.svg" /></a>
+            <a aria-label="X" href="#"><img alt="X" src="../IMG/icon-x.svg" /></a>
+            <a aria-label="WhatsApp" href="#"><img alt="WhatsApp" src="../IMG/icon-whatsapp.svg" /></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Navegación</h6>
+          <ul class="footer-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./catalogo.html">Catálogo</a></li>
+            <li><a href="./contactenos.html">Contacto</a></li>
+            <li><a href="./sobreorigenes.html">Sobre Orígenes</a></li>
+            <li><a href="./admin.html">Administrador</a></li>
+            <li><a href="./registro.html">Registro</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Newsletter</h6>
+          <p class="footer-text">Suscríbete y recibe novedades, lanzamientos y productos exclusivos.</p>
+          <form class="newsletter" id="newsletterForm">
+            <input id="newsletterEmail" placeholder="E-mail" type="email" />
+            <button aria-label="Suscribirse" type="submit">→</button>
+          </form>
+          <small class="newsletter-message" id="newsletterMessage"></small>
+        </div>
+      </div>
+
+      <div class="footer-logo-wrapper">
+        <img alt="Orígenes Colombia" class="footer-logo" src="../IMG/logo-origenes-oscuro.svg" />
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
+        <p>Política de privacidad · Términos y condiciones</p>
+        <p>Conectando el mundo con el alma de Colombia.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../JS/storage.js"></script>
+  <script src="../JS/admin.js"></script>
+  <script src="../JS/navbar.js"></script>
+  <script src="../JS/carrito.js"></script>
+  <script src="../JS/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</file>
+
+<file path="HTML/catalogo.html">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo de productos de Orígenes Colombia" />
+  <title>Catálogo | Orígenes Colombia</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="../CSS/variables.css" rel="stylesheet" />
+  <link href="../CSS/base.css" rel="stylesheet" />
+  <link href="../CSS/header.css" rel="stylesheet" />
+  <link href="../CSS/footer.css" rel="stylesheet" />
+  <link href="../CSS/catalogo.css" rel="stylesheet" />
+  <link href="../CSS/carrito-global.css" rel="stylesheet" />
+</head>
+
+<body id="top">
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
+    <div class="container nav-wrapper">
+      <a class="navbar-brand" href="../index.html">
+        <img alt="Orígenes Colombia" class="logo-navbar" src="../IMG/logo-origenes-oscuro.svg" />
+      </a>
+
+      <button aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#navbarMain" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarMain">
+        <ul class="navbar-nav mx-auto nav-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active-link" href="./catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contactenos.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./sobreorigenes.html">Sobre Orígenes</a></li>
+          <li class="nav-item"><a class="nav-link" href="./admin.html">Administrador</a></li>
+        </ul>
+
+        <div class="icons">
+          <a id="loginLink" class="nav-session-link" href="./login.html">Iniciar Sesión</a>
+          <span id="userGreeting" class="nav-user-greeting" hidden>
+            Hola, <span id="userGreetingName"></span>
+          </span>
+          <button id="logoutBtn" class="nav-logout-btn" type="button" hidden>Cerrar Sesión</button>
+
+          <a aria-label="Perfil" id="profileLink" href="./registro.html">
+            <img alt="Usuario" class="nav-icon" src="../IMG/icon-usuario.svg" />
+          </a>
+          <button aria-label="Carrito" class="cart-icon-btn" id="cartBtn" type="button">
+            <img alt="Carrito" class="nav-icon" src="../IMG/icon-bolsa.svg" />
+            <span class="cart-badge" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="catalog-hero">
+      <div class="catalog-hero-overlay">
+        <div class="container text-center hero-content">
+          <h1 class="catalog-hero-title">Catálogo</h1>
+          <p class="catalog-hero-text">Explora productos auténticos, artesanales y llenos de identidad.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section">
+      <div class="container">
+        <div class="text-center intro-block">
+          <h2 class="section-title">Nuestros productos</h2>
+          <p class="catalog-intro">Cada pieza refleja tradición, cultura y trabajo hecho con pasión.</p>
+        </div>
+
+        <div id="catalogContainer" class="row g-4 justify-content-center"></div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button class="cart-close-btn" id="closeCart" type="button">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <p class="cart-total">Total: <span id="total">$0</span></p>
+      <div class="cart-footer-actions">
+        <button class="btn-cart-secondary" id="clearCartBtn" type="button">Vaciar</button>
+        <button class="btn-cart-primary" id="buyBtn" type="button">Comprar</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row footer-content">
+        <div class="col-md-4">
+          <h6 class="footer-title">Contacto</h6>
+          <ul class="footer-list">
+            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
+            <li>contactoorigenescolombia@gmail.com</li>
+            <li>+57 312 3456 7890</li>
+          </ul>
+          <div class="icons">
+            <a aria-label="Facebook" href="#"><img alt="Facebook" src="../IMG/icon-facebook.svg" /></a>
+            <a aria-label="Instagram" href="#"><img alt="Instagram" src="../IMG/icon-instagram.svg" /></a>
+            <a aria-label="YouTube" href="#"><img alt="YouTube" src="../IMG/icon-youtube.svg" /></a>
+            <a aria-label="X" href="#"><img alt="X" src="../IMG/icon-x.svg" /></a>
+            <a aria-label="WhatsApp" href="#"><img alt="WhatsApp" src="../IMG/icon-whatsapp.svg" /></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Navegación</h6>
+          <ul class="footer-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./catalogo.html">Catálogo</a></li>
+            <li><a href="./contactenos.html">Contacto</a></li>
+            <li><a href="./sobreorigenes.html">Sobre Orígenes</a></li>
+            <li><a href="./admin.html">Administrador</a></li>
+            <li><a href="./registro.html">Registro</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Newsletter</h6>
+          <p class="footer-text">Suscríbete y recibe novedades, lanzamientos y productos exclusivos.</p>
+          <form class="newsletter" id="newsletterForm">
+            <input id="newsletterEmail" placeholder="E-mail" type="email" />
+            <button aria-label="Suscribirse" type="submit">→</button>
+          </form>
+          <small class="newsletter-message" id="newsletterMessage"></small>
+        </div>
+      </div>
+
+      <div class="footer-logo-wrapper">
+        <img alt="Orígenes Colombia" class="footer-logo" src="../IMG/logo-origenes-oscuro.svg" />
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
+        <p>Política de privacidad · Términos y condiciones</p>
+        <p>Conectando el mundo con el alma de Colombia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../JS/storage.js"></script>
+  <script src="../JS/catalogo.js"></script>
+  <script src="../JS/navbar.js"></script>
+  <script src="../JS/carrito.js"></script>
+  <script src="../JS/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</file>
+
+<file path="index.html">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Página principal de Orígenes Colombia" name="description"/>
+<title>Orígenes Colombia</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+
+<link href="./CSS/header.css" rel="stylesheet"/>
+<link href="./CSS/footer.css" rel="stylesheet"/>
+<link href="./CSS/index.css" rel="stylesheet"/>
+<link href="./CSS/carrito-global.css" rel="stylesheet"/>
+<link href="./CSS/estilo-final.css" rel="stylesheet"/>
+</head>
+<body id="top">
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
+<div class="container nav-wrapper">
+<a class="navbar-brand" href="./index.html">
+<img alt="Orígenes Colombia" class="logo-navbar" src="./IMG/logo-origenes-oscuro.svg"/>
+</a>
+<button aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#navbarMain" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-between" id="navbarMain">
+<ul class="navbar-nav mx-auto nav-center">
+<li class="nav-item">
+<a class="nav-link active-link" href="./index.html">Inicio</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./HTML/catalogo.html">Catálogo</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./HTML/contactenos.html">Contacto</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./HTML/sobreorigenes.html">Sobre Orígenes</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="./HTML/admin.html">Administrador</a>
+</li>
+</ul>
+<div class="icons">
+<a id="loginLink" class="nav-session-link" href="./HTML/login.html">Iniciar Sesión</a>
+<span id="userGreeting" class="nav-user-greeting" hidden>
+Hola, <span id="userGreetingName"></span>
+</span>
+<button id="logoutBtn" class="nav-logout-btn" type="button" hidden>Cerrar Sesión</button>
+<a aria-label="Perfil" id="profileLink" href="./HTML/registro.html">
+<img alt="Usuario" class="nav-icon" src="./IMG/icon-usuario.svg"/>
+</a>
+<button aria-label="Carrito" class="cart-icon-btn" id="cartBtn" type="button">
+<img alt="Carrito" class="nav-icon" src="./IMG/icon-bolsa.svg"/>
+<span class="cart-badge" id="cartCount">0</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main id="home">
+<section class="carousel slide" data-bs-interval="5000" data-bs-ride="carousel" id="bannerOrigenes">
+<div class="carousel-indicators">
+<button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#bannerOrigenes" type="button"></button>
+<button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#bannerOrigenes" type="button"></button>
+<button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#bannerOrigenes" type="button"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="hero-overlay"></div>
+<img alt="Artesanías colombianas" class="d-block w-100 banner-img" decoding="async" fetchpriority="high" loading="eager" src="./IMG/1-banner.webp"/>
+<div class="carousel-caption hero-content">
+<h1>Orígenes Colombia</h1>
+<p>Conectamos el mundo con la esencia auténtica de Colombia.</p>
+<div class="hero-actions">
+<a class="btn hero-btn-primary" href="./HTML/catalogo.html">Explorar catálogo</a>
+<a class="btn hero-btn-secondary" href="./HTML/sobreorigenes.html">Conócenos</a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="hero-overlay"></div>
+<img alt="Productos artesanales" class="d-block w-100 banner-img" decoding="async" loading="lazy" src="./IMG/2-banner.webp"/>
+<div class="carousel-caption hero-content">
+<h1>Artesanía con identidad</h1>
+<p>Descubre productos únicos creados por manos colombianas.</p>
+<div class="hero-actions">
+<a class="btn hero-btn-primary" href="./HTML/catalogo.html">Ver productos</a>
+<a class="btn hero-btn-secondary" href="./HTML/contactenos.html">Contáctanos</a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="hero-overlay"></div>
+<img alt="Cultura colombiana" class="d-block w-100 banner-img" decoding="async" loading="lazy" src="./IMG/3-banner.webp"/>
+<div class="carousel-caption hero-content">
+<h1>Historias que inspiran</h1>
+<p>Moda, decoración, café y tradición en una experiencia digital cálida.</p>
+<div class="hero-actions">
+<a class="btn hero-btn-primary" href="./HTML/catalogo.html">Comprar ahora</a>
+<a class="btn hero-btn-secondary" href="./HTML/contactenos.html">Escríbenos</a>
+</div>
+</div>
+</div>
+</div>
+<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#bannerOrigenes" type="button">
+<span aria-hidden="true" class="carousel-control-prev-icon"></span>
+<span class="visually-hidden">Anterior</span>
+</button>
+<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#bannerOrigenes" type="button">
+<span aria-hidden="true" class="carousel-control-next-icon"></span>
+<span class="visually-hidden">Siguiente</span>
+</button>
+</section>
+<section class="categories-section">
+<div class="container">
+<div class="section-heading text-center">
+<h2 class="section-title">Categorías destacadas</h2>
+<p class="section-subtitle">
+            Explora una selección inspirada en tradición, diseño y sabor colombiano.
+          </p>
+</div>
+<div class="categories-grid">
+<article class="category-card">
+<div class="category-image-wrapper">
+<img alt="Categoría café" class="category-image" decoding="async" loading="lazy" src="./IMG/categoria-cafe.jpg"/>
+</div>
+<div class="category-content">
+<h3>Café</h3>
+<p>Sabores auténticos con aroma, origen y tradición.</p>
+</div>
+</article>
+<article class="category-card">
+<div class="category-image-wrapper">
+<img alt="Categoría artesanías" class="category-image" decoding="async" loading="lazy" src="./IMG/categoria-artesanias.jpg"/>
+</div>
+<div class="category-content">
+<h3>Artesanías</h3>
+<p>Piezas únicas elaboradas con identidad y trabajo local.</p>
+</div>
+</article>
+<article class="category-card">
+<div class="category-image-wrapper">
+<img alt="Categoría decoración" class="category-image" decoding="async" loading="lazy" src="./IMG/categoria-decoracion.jpg"/>
+</div>
+<div class="category-content">
+<h3>Decoración</h3>
+<p>Detalles que transforman espacios con alma colombiana.</p>
+</div>
+</article>
+<article class="category-card">
+<div class="category-image-wrapper">
+<img alt="Categoría moda" class="category-image" decoding="async" loading="lazy" src="./IMG/categoria-moda.jpg"/>
+</div>
+<div class="category-content">
+<h3>Moda</h3>
+<p>Diseños con carácter, color y esencia artesanal.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="cta-section">
+<div class="container">
+<div class="cta-box cta-background">
+<div class="cta-text-overlay">
+<span class="cta-label">Orígenes Colombia</span>
+<h2>Descubre productos que cuentan historias</h2>
+<p>
+              Cada pieza refleja el talento, la tradición y la riqueza cultural de Colombia.
+              Explora nuestro catálogo y encuentra algo auténtico para ti.
+            </p>
+<div class="cta-action mt-4">
+<a class="btn cta-btn" href="./HTML/catalogo.html">Ir al catálogo</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<aside class="cart-drawer" id="cartDrawer">
+<div class="cart-header">
+<h3>Tu carrito</h3>
+<button class="cart-close-btn" id="closeCart" type="button">×</button>
+</div>
+<div class="cart-items" id="cartItems"></div>
+<div class="cart-footer">
+<p class="cart-total">
+        Total: <span id="total">$0</span>
+</p>
+<div class="cart-footer-actions">
+<button class="btn-cart-secondary" id="clearCartBtn" type="button">Vaciar</button>
+<button class="btn-cart-primary" id="buyBtn" type="button">Comprar</button>
+</div>
+</div>
+</aside>
+<div class="cart-overlay" id="cartOverlay"></div>
+<footer class="site-footer">
+<div class="container">
+<div class="row footer-content">
+<div class="col-md-4">
+<h6 class="footer-title">Contacto</h6>
+<ul class="footer-list">
+<li>Calle Ficticia #123, Cali, Colombia</li>
+<li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
+<li>contactoorigenescolombia@gmail.com</li>
+<li>+57 312 3456 7890</li>
+</ul>
+<div class="icons">
+<a aria-label="Facebook" href="#">
+<img alt="Facebook" src="./IMG/icon-facebook.svg"/>
+</a>
+<a aria-label="Instagram" href="#">
+<img alt="Instagram" src="./IMG/icon-instagram.svg"/>
+</a>
+<a aria-label="YouTube" href="#">
+<img alt="YouTube" src="./IMG/icon-youtube.svg"/>
+</a>
+<a aria-label="X" href="#">
+<img alt="X" src="./IMG/icon-x.svg"/>
+</a>
+<a aria-label="WhatsApp" href="#">
+<img alt="WhatsApp" src="./IMG/icon-whatsapp.svg"/>
+</a>
+</div>
+</div>
+<div class="col-md-4">
+<h6 class="footer-title">Navegación</h6>
+<ul class="footer-list">
+<li><a href="./index.html">Inicio</a></li>
+<li><a href="./HTML/catalogo.html">Catálogo</a></li>
+<li><a href="./HTML/contactenos.html">Contacto</a></li>
+<li><a href="./HTML/sobreorigenes.html">Sobre Orígenes</a></li>
+<li><a href="./HTML/admin.html">Administrador</a></li>
+</ul>
+</div>
+<div class="col-md-4">
+<h6 class="footer-title">Newsletter</h6>
+<p class="footer-text">
+          Suscríbete y recibe novedades, lanzamientos y productos exclusivos.
+        </p>
+<form class="newsletter" id="newsletterForm">
+<input id="newsletterEmail" placeholder="E-mail" type="email"/>
+<button aria-label="Suscribirse" type="submit">→</button>
+</form>
+<small class="newsletter-message" id="newsletterMessage"></small>
+</div>
+</div>
+<div class="footer-logo-wrapper">
+<img alt="Orígenes Colombia" class="footer-logo" src="./IMG/logo-origenes-oscuro.svg"/>
+</div>
+<div class="footer-bottom">
+<p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
+<p>Política de privacidad · Términos y condiciones</p>
+<p>Conectando el mundo con el alma de Colombia.</p>
+</div>
+</div>
+</footer>
+  <script src="./JS/storage.js"></script>
+  <script src="./JS/navbar.js"></script>
+  <script src="./JS/carrito.js"></script>
+  <script src="./JS/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</file>
+
+<file path="README.md">
+Proyecto Final Generation Colombia
+
+### Proyecto: Orígenes Colombia
+
+
+# Grupo 1
+
+- Jessica Acevedo
+- Angie Gamboa
+- Manuel Gómez
+- Luis Salgado
+- Lukas Muñoz
+</file>
+
+<file path="HTML/sobreorigenes.html">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página Sobre Orígenes Colombia" />
+  <title>Sobre Orígenes | Orígenes Colombia</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="../CSS/variables.css" rel="stylesheet" />
+  <link href="../CSS/base.css" rel="stylesheet" />
+  <link href="../CSS/header.css" rel="stylesheet" />
+  <link href="../CSS/footer.css" rel="stylesheet" />
+  <link href="../CSS/sobreorigenes.css" rel="stylesheet" />
+  <link href="../CSS/carrito-global.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body id="top">
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
+    <div class="container nav-wrapper">
+      <a class="navbar-brand" href="../index.html">
+        <img alt="Orígenes Colombia" class="logo-navbar" src="../IMG/logo-origenes-oscuro.svg" />
+      </a>
+
+      <button aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#navbarMain" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarMain">
+        <ul class="navbar-nav mx-auto nav-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="./catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contactenos.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link active-link" href="./sobreorigenes.html">Sobre Orígenes</a></li>
+          <li class="nav-item"><a class="nav-link" href="./admin.html">Administrador</a></li>
+        </ul>
+
+        <div class="icons">
+          <a id="loginLink" class="nav-session-link" href="./login.html">Iniciar Sesión</a>
+          <span id="userGreeting" class="nav-user-greeting" hidden>
+            Hola, <span id="userGreetingName"></span>
+          </span>
+          <button id="logoutBtn" class="nav-logout-btn" type="button" hidden>Cerrar Sesión</button>
+
+          <a aria-label="Perfil" id="profileLink" href="./registro.html">
+            <img alt="Usuario" class="nav-icon" src="../IMG/icon-usuario.svg" />
+          </a>
+          <button aria-label="Carrito" class="cart-icon-btn" id="cartBtn" type="button">
+            <img alt="Carrito" class="nav-icon" src="../IMG/icon-bolsa.svg" />
+            <span class="cart-badge" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+    <section class="about-hero">
+      <div class="about-hero-overlay">
+        <div class="container text-center hero-content">
+          <h1 class="about-hero-title">Sobre Orígenes Colombia</h1>
+          <p class="about-hero-text">
+            Conectamos el mundo con la esencia auténtica de Colombia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="container">
+        <div class="text-center intro-block">
+          <h2 class="section-title">Quiénes Somos</h2>
+          <p class="about-intro">
+            Somos un equipo apasionado por la tecnología, el diseño y la innovación.
+            Creamos Orígenes Colombia, una plataforma ecommerce enfocada en impulsar productos
+            auténticos, artesanales y naturales de nuestro país en una experiencia digital moderna.
+          </p>
+        </div>
+
+        <div class="about-cards">
+          <article class="about-box">
+            <div class="about-box-header">
+              <div class="about-icon">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <h3 class="about-box-title">Misión</h3>
+            </div>
+            <p class="about-box-text">
+              Conectar viajeros y consumidores con productos auténticos de Colombia,
+              impulsando a los emprendedores y facilitando su presencia en el entorno
+              digital a través de una experiencia confiable, segura y cercana.
+            </p>
+          </article>
+
+          <article class="about-box">
+            <div class="about-box-header">
+              <div class="about-icon">
+                <i class="fa-regular fa-eye"></i>
+              </div>
+              <h3 class="about-box-title">Visión</h3>
+            </div>
+            <p class="about-box-text">
+              Ser la vitrina digital más reconocida de productos colombianos,
+              destacándonos por la confianza, la calidad y la capacidad de conectar
+              lo mejor del país con mercados nacionales e internacionales.
+            </p>
+          </article>
+
+          <article class="about-box">
+            <div class="about-box-header">
+              <div class="about-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <h3 class="about-box-title">Valores</h3>
+            </div>
+            <ul class="values-list">
+              <li><strong>Responsabilidad social:</strong> apoyamos y visibilizamos a los emprendedores.</li>
+              <li><strong>Calidad:</strong> seleccionamos productos auténticos y cuidadosamente elegidos.</li>
+              <li><strong>Pasión:</strong> mejoramos constantemente lo que hacemos.</li>
+              <li><strong>Reconocimiento:</strong> valoramos la mano de obra y el talento colombiano.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="text-center team-heading">
+          <h2 class="section-title">Nuestro Equipo</h2>
+          <p class="team-subtitle">
+            Conoce a las personas que hacen posible Orígenes Colombia.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="img1">
+              <img
+                src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop"
+                alt="Fondo Jessica Acevedo"
+              />
+            </div>
+            <div class="img2">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4E03AQGUZqe1O7glmg/profile-displayphoto-scale_400_400/B4EZ0CmKtuHYAg-/0/1773865056173?e=1777507200&v=beta&t=wOKcEmMDzZe4Sr-O72LVrD5B6dz45uAhp-MDwSozCag"
+                alt="Jessica Acevedo"
+              />
+            </div>
+            <div class="team-card-body">
+              <h5 class="card-title">Jessica Acevedo</h5>
+              <p class="card-role">Full Stack Developer</p>
+              <p class="card-text">Spring Boot, MySQL, Python, Java, HTML y CSS.</p>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/jessica-acevedo-desarollo-full-stack-java/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Jessica Acevedo">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/jvacevedov" target="_blank" rel="noopener noreferrer" aria-label="GitHub Jessica Acevedo">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="img1">
+              <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop"
+                alt="Fondo Lukas Muñoz"
+              />
+            </div>
+            <div class="img2">
+              <img
+                src="https://i.ibb.co/RppsHpg0/lukas-Profile.png"
+                alt="Lukas Muñoz"
+              />
+            </div>
+            <div class="team-card-body">
+              <h5 class="card-title">Lukas Muñoz</h5>
+              <p class="card-role">Full Stack Java Developer Jr.</p>
+              <p class="card-text">JavaScript, CSS, SQL y formación en mecatrónica.</p>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/lukas-enrique-munoz-ospina-full-stack-java-developer/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Lukas Muñoz">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/lks5k" target="_blank" rel="noopener noreferrer" aria-label="GitHub Lukas Muñoz">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="img1">
+              <img
+                src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop"
+                alt="Fondo Vanessa Gamboa"
+              />
+            </div>
+            <div class="img2">
+              <img
+                src="https://i.ibb.co/xKPggHWx/b25bc2dc-59b8-4df0-90b2-3d1ff30a7a7a.jpg"
+                alt="Vanessa Gamboa"
+              />
+            </div>
+            <div class="team-card-body">
+              <h5 class="card-title">Vanessa Gamboa</h5>
+              <p class="card-role">Full Stack Java Developer Jr.</p>
+              <p class="card-text">Lógica de software y análisis estructurado de soluciones.</p>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/angie-vanessa-gamboa-rivas-51b7543b8/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Vanessa Gamboa">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/vanessgamb-del" target="_blank" rel="noopener noreferrer" aria-label="GitHub Vanessa Gamboa">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="img1">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+                alt="Fondo Manuel Gómez"
+              />
+            </div>
+            <div class="img2">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4E03AQE74_K2AchjOA/profile-displayphoto-crop_800_800/B4EZ1LNapIIQAI-/0/1775083304137?e=1777507200&v=beta&t=dKsUaqiXLDwd9_l6TZh8e1C_QvzE47c_RBUhsobxpAc"
+                alt="Manuel Gómez"
+              />
+            </div>
+            <div class="team-card-body">
+              <h5 class="card-title">Manuel Gómez</h5>
+              <p class="card-role">Graphic & Brand Designer</p>
+              <p class="card-text">Especialista en identidad visual, branding y comunicación gráfica.</p>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/manuel-alejandro-gomez-piedrahita/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Manuel Gómez">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/manuelalejandrogp" target="_blank" rel="noopener noreferrer" aria-label="GitHub Manuel Gómez">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="img1">
+              <img
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
+                alt="Fondo Luis Salgado"
+              />
+            </div>
+            <div class="img2">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4E03AQFbYpKocWWd0g/profile-displayphoto-crop_800_800/B4EZ0my57IJUAI-/0/1774472375445?e=1777507200&v=beta&t=BuGKsMQojHtOsyh1f8FjYSdiLPNwHZmIuMLnlprj-Ow"
+                alt="Luis Salgado"
+              />
+            </div>
+            <div class="team-card-body">
+              <h5 class="card-title">Luis Salgado</h5>
+              <p class="card-role">Junior Full Stack Developer</p>
+              <p class="card-text">Java, JavaScript, Python y MySQL orientados al desarrollo web.</p>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/luis-salgado-guzman-desarrollo-full-stack-java/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Luis Salgado">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/luisjaviersalgado" target="_blank" rel="noopener noreferrer" aria-label="GitHub Luis Salgado">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button class="cart-close-btn" id="closeCart" type="button">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <p class="cart-total">Total: <span id="total">$0</span></p>
+      <div class="cart-footer-actions">
+        <button class="btn-cart-secondary" id="clearCartBtn" type="button">Vaciar</button>
+        <button class="btn-cart-primary" id="buyBtn" type="button">Comprar</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row footer-content">
+        <div class="col-md-4">
+          <h6 class="footer-title">Contacto</h6>
+          <ul class="footer-list">
+            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
+            <li>contactoorigenescolombia@gmail.com</li>
+            <li>+57 312 3456 7890</li>
+          </ul>
+          <div class="icons">
+            <a aria-label="Facebook" href="#"><img alt="Facebook" src="../IMG/icon-facebook.svg" /></a>
+            <a aria-label="Instagram" href="#"><img alt="Instagram" src="../IMG/icon-instagram.svg" /></a>
+            <a aria-label="YouTube" href="#"><img alt="YouTube" src="../IMG/icon-youtube.svg" /></a>
+            <a aria-label="X" href="#"><img alt="X" src="../IMG/icon-x.svg" /></a>
+            <a aria-label="WhatsApp" href="#"><img alt="WhatsApp" src="../IMG/icon-whatsapp.svg" /></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Navegación</h6>
+          <ul class="footer-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./catalogo.html">Catálogo</a></li>
+            <li><a href="./contactenos.html">Contacto</a></li>
+            <li><a href="./sobreorigenes.html">Sobre Orígenes</a></li>
+            <li><a href="./admin.html">Administrador</a></li>
+            <li><a href="./registro.html">Registro</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Newsletter</h6>
+          <p class="footer-text">Suscríbete y recibe novedades, lanzamientos y productos exclusivos.</p>
+          <form class="newsletter" id="newsletterForm">
+            <input id="newsletterEmail" placeholder="E-mail" type="email" />
+            <button aria-label="Suscribirse" type="submit">→</button>
+          </form>
+          <small class="newsletter-message" id="newsletterMessage"></small>
+        </div>
+      </div>
+
+      <div class="footer-logo-wrapper">
+        <img alt="Orígenes Colombia" class="footer-logo" src="../IMG/logo-origenes-oscuro.svg" />
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
+        <p>Política de privacidad · Términos y condiciones</p>
+        <p>Conectando el mundo con el alma de Colombia.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="../JS/storage.js"></script>
+  <script src="../JS/sobreorigenes.js"></script>
+  <script src="../JS/navbar.js"></script>
+  <script src="../JS/carrito.js"></script>
+  <script src="../JS/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</file>
+
+<file path="CSS/contactenos.css">
+/* Contacto */
+.contact-hero {
+  height: 390px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)),
+    url("../IMG/contacto-artesanal-opcion-2.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.contact-hero-overlay {
+  width: 100%;
+}
+
+.hero-content {
+  padding-top: 24px;
+}
+
+.contact-hero-title {
+  color: var(--textoblanco);
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.contact-hero-text {
+  color: var(--textoblanco);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.contact-section {
+  padding: 38px 0 60px;
+}
+
+.contact-intro {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--colortextos);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.contact-info-card,
+.contact-form-card {
+  background: var(--cardbg);
+  border: 1px solid var(--bordercolor);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadowsoft);
+}
+
+.contact-image-wrapper {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.contact-side-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-image-badge {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  background: var(--gradientbadge);
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-info-content {
+  padding: 24px;
+}
+
+.contact-info-content h3,
+.form-title {
+  background: var(--gradientdark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.contact-info-content p {
+  font-size: 0.97rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.contact-form {
+  padding: 28px 28px 24px;
+}
+
+.mini-label {
+  display: inline-block;
+  background: var(--gradientbadge);
+  color: #FFFFFF;
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.form-description {
+  margin-bottom: 24px;
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--colortextos);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--colortextos);
+  margin-bottom: 8px;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  border: 1px solid #D9D2C7;
+  border-radius: 14px;
+  background-color: #FFFFFF;
+  min-height: 52px;
+  padding: 12px 14px;
+  box-shadow: none;
+  color: var(--colortextos);
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: #6B5B4D;
+  box-shadow: 0 0 0 0.16rem rgba(107, 91, 77, 0.18);
+}
+
+textarea.form-control {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.text-danger {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.84rem;
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.submit-btn {
+  background-color: #FFFFFF;
+  color: var(--navbackground);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 32px;
+  min-width: 200px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--navbackground);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.16);
+}
+
+.success-box {
+  margin: 20px 24px 24px;
+  border-radius: 14px;
+  border: none;
+  box-shadow: var(--shadowsoft);
+}
+
+@media (max-width: 1199px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-image-wrapper {
+    height: 340px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-hero {
+    height: 270px;
+  }
+
+  .contact-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .contact-hero-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .contact-form,
+  .contact-info-content {
+    padding: 22px 18px 20px;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .contact-image-badge {
+    left: 12px;
+    right: 12px;
+    justify-content: center;
+    text-align: center;
+  }
+}
+</file>
+
+<file path="HTML/contactenos.html">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página de contacto de Orígenes Colombia" />
+  <title>Contáctenos | Orígenes Colombia</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link href="../CSS/variables.css" rel="stylesheet" />
+  <link href="../CSS/base.css" rel="stylesheet" />
+  <link href="../CSS/header.css" rel="stylesheet" />
+  <link href="../CSS/footer.css" rel="stylesheet" />
+  <link href="../CSS/contactenos.css" rel="stylesheet" />
+  <link href="../CSS/carrito-global.css" rel="stylesheet" />
+</head>
+
+<body id="top">
+  <nav class="navbar navbar-expand-lg custom-navbar fixed-top" id="inicio">
+    <div class="container nav-wrapper">
+      <a class="navbar-brand" href="../index.html">
+        <img alt="Orígenes Colombia" class="logo-navbar" src="../IMG/logo-origenes-oscuro.svg" />
+      </a>
+
+      <button aria-controls="navbarMain" aria-expanded="false" aria-label="Abrir menú" class="navbar-toggler" data-bs-target="#navbarMain" data-bs-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarMain">
+        <ul class="navbar-nav mx-auto nav-center">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="./catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link active-link" href="./contactenos.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="./sobreorigenes.html">Sobre Orígenes</a></li>
+          <li class="nav-item"><a class="nav-link" href="./admin.html">Administrador</a></li>
+        </ul>
+
+        <div class="icons">
+          <a id="loginLink" class="nav-session-link" href="./login.html">Iniciar Sesión</a>
+          <span id="userGreeting" class="nav-user-greeting" hidden>
+            Hola, <span id="userGreetingName"></span>
+          </span>
+          <button id="logoutBtn" class="nav-logout-btn" type="button" hidden>Cerrar Sesión</button>
+
+          <a aria-label="Perfil" id="profileLink" href="./registro.html">
+            <img alt="Usuario" class="nav-icon" src="../IMG/icon-usuario.svg" />
+          </a>
+
+          <button aria-label="Carrito" class="cart-icon-btn" id="cartBtn" type="button">
+            <img alt="Carrito" class="nav-icon" src="../IMG/icon-bolsa.svg" />
+            <span class="cart-badge" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="contact-hero">
+      <div class="contact-hero-overlay">
+        <div class="container text-center hero-content">
+          <h1 class="contact-hero-title">Contáctanos</h1>
+          <p class="contact-hero-text">Queremos escucharte y acompañarte en tu experiencia con Orígenes Colombia.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="text-center intro-block">
+          <h2 class="section-title">Hablemos</h2>
+          <p class="contact-intro">Si tienes preguntas sobre nuestros productos, envíos o pedidos, escríbenos.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-info-card">
+            <div class="contact-image-wrapper">
+              <img alt="Espacio artesanal y cálido para contacto" class="contact-side-image" src="../IMG/contacto-artesanal-opcion-2.png" />
+              <div class="contact-image-badge">
+                <span>Atención cercana</span>
+              </div>
+            </div>
+
+            <div class="contact-info-content">
+              <h3>Estamos para ayudarte</h3>
+              <p>En Orígenes Colombia creemos en una comunicación cercana, clara y humana.</p>
+
+              <div class="contact-info-list">
+                <div class="info-item"><span>Calle Ficticia #123, Cali, Colombia</span></div>
+                <div class="info-item"><span>contactoorigenescolombia@gmail.com</span></div>
+                <div class="info-item"><span>+57 312 3456 7890</span></div>
+                <div class="info-item"><span>Lunes a Viernes 8:00 AM - 6:00 PM</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <form action="https://formspree.io/f/mgoranal" class="contact-form" id="contactForm" method="POST">
+              <div class="form-top">
+                <span class="mini-label">Formulario de contacto</span>
+                <h3 class="form-title">Envíanos un mensaje</h3>
+                <p class="form-description">Completa tus datos y te responderemos en menos de 24 horas.</p>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label" for="nombre">Nombre completo</label>
+                <input class="form-control" id="nombre" name="nombre" placeholder="Ingresa nombre y apellido" type="text" />
+                <span class="text-danger" id="errorNombreCompleto"></span>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label" for="email">Correo electrónico</label>
+                <input class="form-control" id="email" name="email" placeholder="Ingresa tu correo" type="email" />
+                <span class="text-danger" id="errorCorreo"></span>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label" for="celular">Celular</label>
+                <div class="row g-2">
+                  <div class="col-md-4">
+                    <select class="form-select" id="indicativo" name="indicativo">
+                      <option value="">Indicativo</option>
+                      <option value="+57">+57 Colombia</option>
+                      <option value="+1">+1 USA / Canadá</option>
+                      <option value="+52">+52 México</option>
+                      <option value="+54">+54 Argentina</option>
+                      <option value="+34">+34 España</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-8">
+                    <input class="form-control" id="celular" maxlength="11" name="celular" placeholder="Ingresa tu celular" type="text" />
+                  </div>
+                </div>
+                <span class="text-danger" id="errorCelular"></span>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label" for="mensaje">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Cuéntanos cómo podemos ayudarte" rows="5"></textarea>
+                <span class="text-danger" id="errorMensaje"></span>
+              </div>
+
+              <div class="contact-actions">
+                <button class="btn submit-btn" type="submit">Enviar mensaje</button>
+              </div>
+            </form>
+
+            <div class="alert alert-success mt-3 success-box" id="mensajeExito" style="display: none;">
+              Gracias. Tu mensaje fue recibido correctamente.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button class="cart-close-btn" id="closeCart" type="button">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <p class="cart-total">Total: <span id="total">$0</span></p>
+
+      <div class="cart-footer-actions">
+        <button class="btn-cart-secondary" id="clearCartBtn" type="button">Vaciar</button>
+        <button class="btn-cart-primary" id="buyBtn" type="button">Comprar</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row footer-content">
+        <div class="col-md-4">
+          <h6 class="footer-title">Contacto</h6>
+
+          <ul class="footer-list">
+            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
+            <li>contactoorigenescolombia@gmail.com</li>
+            <li>+57 312 3456 7890</li>
+          </ul>
+
+          <div class="icons">
+            <a aria-label="Facebook" href="#"><img alt="Facebook" src="../IMG/icon-facebook.svg" /></a>
+            <a aria-label="Instagram" href="#"><img alt="Instagram" src="../IMG/icon-instagram.svg" /></a>
+            <a aria-label="YouTube" href="#"><img alt="YouTube" src="../IMG/icon-youtube.svg" /></a>
+            <a aria-label="X" href="#"><img alt="X" src="../IMG/icon-x.svg" /></a>
+            <a aria-label="WhatsApp" href="#"><img alt="WhatsApp" src="../IMG/icon-whatsapp.svg" /></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Navegación</h6>
+
+          <ul class="footer-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./catalogo.html">Catálogo</a></li>
+            <li><a href="./contactenos.html">Contacto</a></li>
+            <li><a href="./sobreorigenes.html">Sobre Orígenes</a></li>
+            <li><a href="./admin.html">Administrador</a></li>
+            <li><a href="./registro.html">Registro</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="footer-title">Newsletter</h6>
+          <p class="footer-text">Suscríbete y recibe novedades, lanzamientos y productos exclusivos.</p>
+
+          <form class="newsletter" id="newsletterForm">
+            <input id="newsletterEmail" placeholder="E-mail" type="email" />
+            <button aria-label="Suscribirse" type="submit">→</button>
+          </form>
+
+          <small class="newsletter-message" id="newsletterMessage"></small>
+        </div>
+      </div>
+
+      <div class="footer-logo-wrapper">
+        <img alt="Orígenes Colombia" class="footer-logo" src="../IMG/logo-origenes-oscuro.svg" />
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Orígenes Colombia · Todos los derechos reservados</p>
+        <p>Política de privacidad · Términos y condiciones</p>
+        <p>Conectando el mundo con el alma de Colombia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../JS/storage.js"></script>
+  <script src="../JS/contactenos.js"></script>
+  <script src="../JS/navbar.js"></script>
+  <script src="../JS/carrito.js"></script>
+  <script src="../JS/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+</file>
+
+</files>

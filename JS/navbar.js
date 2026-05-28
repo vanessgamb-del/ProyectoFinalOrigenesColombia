@@ -4,14 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const greetingName = document.getElementById("userGreetingName");
   const logoutBtn = document.getElementById("logoutBtn");
 
-  // Si la página no expone los placeholders del navbar dinámico,
-  // salimos en silencio en vez de lanzar errores.
   if (!loginLink || !greeting || !greetingName || !logoutBtn) {
     return;
   }
 
+  /**
+   * Actualiza el navbar según el estado de sesión y rol del usuario.
+   */
   function pintarEstadoSesion() {
     const usuario = getUsuarioActivo();
+    const esAdmin = esUsuarioAdmin(usuario);
+
+    document.querySelectorAll(".nav-admin-only").forEach((elemento) => {
+      elemento.hidden = !esAdmin;
+    });
 
     if (usuario && usuario.nombre) {
       greetingName.textContent = capitalizarNombre(usuario.nombre);
@@ -27,8 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   logoutBtn.addEventListener("click", () => {
     cerrarSesion();
-    // Recargamos para que cualquier estado dependiente de sesión
-    // (futuras vistas protegidas, saludos, etc.) se reinicie.
     window.location.reload();
   });
 

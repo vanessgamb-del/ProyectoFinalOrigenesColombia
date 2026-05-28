@@ -92,6 +92,17 @@
   color: #202020;
 }
 
+.cart-item-desc {
+  font-size: 0.82rem;
+  margin-bottom: 6px;
+  color: #777777;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .cart-item-meta,
 .cart-item-subtotal {
   font-size: 0.88rem;

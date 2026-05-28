@@ -1,3 +1,6 @@
+/**
+ * Inicializa mejoras globales: lazy loading de imágenes y newsletter del footer.
+ */
 document.addEventListener("DOMContentLoaded", () => {
   const images = document.querySelectorAll("img");
   const newsletterForm = document.getElementById("newsletterForm");

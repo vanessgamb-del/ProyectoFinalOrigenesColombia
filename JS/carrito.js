@@ -8,6 +8,7 @@ const cartCount = document.getElementById("cartCount");
 const clearCartBtn = document.getElementById("clearCartBtn");
 const buyBtn = document.getElementById("buyBtn");
 
+/** Abre el panel lateral del carrito. */
 function openCart() {
   if (cartDrawer) {
     cartDrawer.classList.add("open");
@@ -18,6 +19,7 @@ function openCart() {
   }
 }
 
+/** Cierra el panel lateral del carrito. */
 function closeCartDrawer() {
   if (cartDrawer) {
     cartDrawer.classList.remove("open");
@@ -28,6 +30,7 @@ function closeCartDrawer() {
   }
 }
 
+/** Actualiza el contador de ítems en el icono del carrito. */
 function updateCartCount() {
   const cart = getCart();
   const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
@@ -37,6 +40,10 @@ function updateCartCount() {
   }
 }
 
+/**
+ * Agrega un producto al carrito respetando el stock disponible.
+ * @param {number} productId
+ */
 function addToCart(productId) {
   const products = getProducts();
   const product = products.find((item) => item.id === productId);
@@ -63,7 +70,7 @@ function addToCart(productId) {
   } else {
     cart.push({
       productId: product.id,
-      quantity: 1
+      quantity: 1,
     });
   }
 
@@ -73,6 +80,10 @@ function addToCart(productId) {
   openCart();
 }
 
+/**
+ * Disminuye en una unidad la cantidad de un producto en el carrito.
+ * @param {number} productId
+ */
 function decreaseQuantity(productId) {
   let cart = getCart();
   const item = cart.find((cartItem) => cartItem.productId === productId);
@@ -92,6 +103,10 @@ function decreaseQuantity(productId) {
   updateCartCount();
 }
 
+/**
+ * Aumenta en una unidad la cantidad de un producto en el carrito.
+ * @param {number} productId
+ */
 function increaseQuantity(productId) {
   const products = getProducts();
   const product = products.find((item) => item.id === productId);
@@ -119,6 +134,10 @@ function increaseQuantity(productId) {
   updateCartCount();
 }
 
+/**
+ * Elimina por completo un producto del carrito.
+ * @param {number} productId
+ */
 function removeFromCart(productId) {
   const cart = getCart().filter((item) => item.productId !== productId);
   saveCart(cart);
@@ -126,12 +145,14 @@ function removeFromCart(productId) {
   updateCartCount();
 }
 
+/** Vacía todos los ítems del carrito. */
 function clearCart() {
   saveCart([]);
   renderCart();
   updateCartCount();
 }
 
+/** Renderiza los ítems del carrito y recalcula el total. */
 function renderCart() {
   if (!cartItems || !totalElement) {
     return;
@@ -160,12 +181,14 @@ function renderCart() {
 
       const subtotal = Number(product.price) * Number(item.quantity);
       total += subtotal;
+      const descripcion = product.description || "Sin descripción";
 
       return `
         <div class="cart-item">
           <img src="${product.image}" alt="${product.name}" class="cart-item-image" />
           <div class="cart-item-info">
             <div class="cart-item-title">${product.name}</div>
+            <div class="cart-item-desc">${descripcion}</div>
             <div class="cart-item-meta">Cantidad: ${item.quantity}</div>
             <div class="cart-item-meta">Precio: $${Number(product.price).toLocaleString("es-CO")}</div>
             <div class="cart-item-subtotal">Subtotal: $${subtotal.toLocaleString("es-CO")}</div>

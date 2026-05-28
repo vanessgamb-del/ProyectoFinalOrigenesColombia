@@ -9,6 +9,11 @@ const REDIRECT_DELAY_MS = 800;
 const MENSAJE_CAMPO_VACIO = "El campo no puede estar vacío";
 const MENSAJE_CREDENCIALES_INVALIDAS = "Usuario o contraseña inválidos";
 
+/**
+ * Muestra un mensaje global en el formulario de login.
+ * @param {string} texto
+ * @param {"ok"|"err"} tipo
+ */
 function mostrarMensajeLogin(texto, tipo) {
   if (!loginMessage) return;
   loginMessage.textContent = texto;
@@ -18,16 +23,29 @@ function mostrarMensajeLogin(texto, tipo) {
   }
 }
 
+/**
+ * Muestra un error debajo de un campo del formulario.
+ * @param {HTMLElement|null} span
+ * @param {string} texto
+ */
 function mostrarErrorCampo(span, texto) {
   if (!span) return;
   span.textContent = texto;
 }
 
+/**
+ * Limpia el mensaje de error de un campo.
+ * @param {HTMLElement|null} span
+ */
 function limpiarErrorCampo(span) {
   if (!span) return;
   span.textContent = "";
 }
 
+/**
+ * Valida credenciales y activa la sesión del usuario.
+ * @param {SubmitEvent} event
+ */
 function manejarLogin(event) {
   event.preventDefault();
 
@@ -50,8 +68,6 @@ function manejarLogin(event) {
   }
 
   if (hayCamposVacios) {
-    // Limpia el mensaje global para que el foco quede en los errores por campo
-    // mientras el usuario corrige.
     mostrarMensajeLogin("", "err");
     return;
   }
@@ -68,7 +84,7 @@ function manejarLogin(event) {
 
   setUsuarioActivo(usuario);
   mostrarMensajeLogin(
-    `Bienvenido/a, ${capitalizarNombre(usuario.nombre)}.`,
+    `Inicio de sesión exitoso. Bienvenido/a, ${capitalizarNombre(usuario.nombre)}.`,
     "ok"
   );
 
