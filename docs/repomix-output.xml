@@ -796,7 +796,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="col-md-4">
           <h6 class="footer-title">Contacto</h6>
           <ul class="footer-list">
-            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Carrera 112 22A-31 Cali, Colombia</li>
             <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
             <li>contactoorigenescolombia@gmail.com</li>
             <li>+57 312 3456 7890</li>
@@ -2652,7 +2652,7 @@ if (registerForm) {
         <div class="col-md-4">
           <h6 class="footer-title">Contacto</h6>
           <ul class="footer-list">
-            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Carrera 112 22A-31 Cali, Colombia</li>
             <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
             <li>contactoorigenescolombia@gmail.com</li>
             <li>+57 312 3456 7890</li>
@@ -4519,7 +4519,7 @@ textarea.form-control {
         <div class="col-md-4">
           <h6 class="footer-title">Contacto</h6>
           <ul class="footer-list">
-            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Carrera 112 22A-31 Cali, Colombia</li>
             <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
             <li>contactoorigenescolombia@gmail.com</li>
             <li>+57 312 3456 7890</li>
@@ -4681,7 +4681,7 @@ textarea.form-control {
         <div class="col-md-4">
           <h6 class="footer-title">Contacto</h6>
           <ul class="footer-list">
-            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Carrera 112 22A-31 Cali, Colombia</li>
             <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
             <li>contactoorigenescolombia@gmail.com</li>
             <li>+57 312 3456 7890</li>
@@ -4944,7 +4944,7 @@ Hola, <span id="userGreetingName"></span>
 <div class="col-md-4">
 <h6 class="footer-title">Contacto</h6>
 <ul class="footer-list">
-<li>Calle Ficticia #123, Cali, Colombia</li>
+<li>Carrera 112 22A-31 Cali, Colombia</li>
 <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
 <li>contactoorigenescolombia@gmail.com</li>
 <li>+57 312 3456 7890</li>
@@ -5327,7 +5327,7 @@ Proyecto Final Generation Colombia
         <div class="col-md-4">
           <h6 class="footer-title">Contacto</h6>
           <ul class="footer-list">
-            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Carrera 112 22A-31 Cali, Colombia</li>
             <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
             <li>contactoorigenescolombia@gmail.com</li>
             <li>+57 312 3456 7890</li>
@@ -5741,7 +5741,7 @@ textarea.form-control {
               <p>En Orígenes Colombia creemos en una comunicación cercana, clara y humana.</p>
 
               <div class="contact-info-list">
-                <div class="info-item"><span>Calle Ficticia #123, Cali, Colombia</span></div>
+                <div class="info-item"><span>Carrera 112 22A-31 Cali, Colombia</span></div>
                 <div class="info-item"><span>contactoorigenescolombia@gmail.com</span></div>
                 <div class="info-item"><span>+57 312 3456 7890</span></div>
                 <div class="info-item"><span>Lunes a Viernes 8:00 AM - 6:00 PM</span></div>
@@ -5837,7 +5837,7 @@ textarea.form-control {
           <h6 class="footer-title">Contacto</h6>
 
           <ul class="footer-list">
-            <li>Calle Ficticia #123, Cali, Colombia</li>
+            <li>Carrera 112 22A-31 Cali, Colombia</li>
             <li>Lunes a Viernes 8:00 AM - 6:00 PM</li>
             <li>contactoorigenescolombia@gmail.com</li>
             <li>+57 312 3456 7890</li>
