@@ -6,6 +6,8 @@ const registerPasswordInput = document.getElementById("registerPassword");
 const confirmPasswordInput = document.getElementById("confirmPassword");
 const registerMessage = document.getElementById("registerMessage");
 
+const API_BASE_URL = "https://origenesdeployback.onrender.com";
+
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^\d{7,11}$/;
 const MIN_PASSWORD_LENGTH = 6;
@@ -59,10 +61,10 @@ function validarFormularioRegistro(nombre, correo, telefono, contrasena, confirm
 }
 
 /**
- * Procesa el envío del formulario de registro y guarda el usuario en localStorage.
+ * Procesa el envío del formulario de registro contra la API.
  * @param {SubmitEvent} event
  */
-function manejarRegistro(event) {
+async function manejarRegistro(event) {
   event.preventDefault();
 
   const nombre = fullNameInput.value.trim();
@@ -75,21 +77,44 @@ function manejarRegistro(event) {
     return;
   }
 
-  const usuarios = getUsuarios();
-  const correoExiste = usuarios.some((usuario) => usuario.correo === correo);
-  if (correoExiste) {
-    mostrarMensajeRegistro("Correo ya registrado.", "err");
-    return;
+  try {
+    const respuesta = await fetch(`${API_BASE_URL}/registro`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: correo,
+        password: contrasena,
+        nombre,
+        telefono,
+      }),
+    });
+
+    if (!respuesta.ok) {
+      let mensaje = "No se pudo crear la cuenta. Intenta de nuevo.";
+      try {
+        const error = await respuesta.json();
+        if (error.message) mensaje = error.message;
+      } catch (_) {
+        /* respuesta no JSON */
+      }
+      if (respuesta.status === 409) {
+        mensaje = "Correo ya registrado.";
+      }
+      mostrarMensajeRegistro(mensaje, "err");
+      return;
+    }
+
+    mostrarMensajeRegistro("Cuenta creada correctamente. Redirigiendo…", "ok");
+    registerForm.reset();
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 800);
+  } catch (_) {
+    mostrarMensajeRegistro(
+      "Error de conexión con el servidor. Verifica tu red e intenta de nuevo.",
+      "err"
+    );
   }
-
-  const nuevoUsuario = { nombre, correo, telefono, contrasena };
-  saveUsuarios([...usuarios, nuevoUsuario]);
-
-  mostrarMensajeRegistro("Cuenta creada correctamente. Redirigiendo…", "ok");
-  registerForm.reset();
-  setTimeout(() => {
-    window.location.href = "login.html";
-  }, 800);
 }
 
 if (registerForm) {

@@ -5,6 +5,7 @@ const loginMessage = document.getElementById("loginMessage");
 const errorLoginEmail = document.getElementById("errorLoginEmail");
 const errorLoginPassword = document.getElementById("errorLoginPassword");
 
+const API_BASE_URL = "https://origenesdeployback.onrender.com";
 const REDIRECT_DELAY_MS = 800;
 const MENSAJE_CAMPO_VACIO = "El campo no puede estar vacío";
 const MENSAJE_CREDENCIALES_INVALIDAS = "Usuario o contraseña inválidos";
@@ -43,10 +44,24 @@ function limpiarErrorCampo(span) {
 }
 
 /**
+ * Adapta la respuesta de la API al formato que usa el navbar en localStorage.
+ * @param {{ token: string, email: string, nombre: string, rol: string }} data
+ * @returns {{ nombre: string, correo: string, token: string, rol: string }}
+ */
+function mapearUsuarioSesion(data) {
+  return {
+    nombre: data.nombre,
+    correo: data.email,
+    token: data.token,
+    rol: data.rol,
+  };
+}
+
+/**
  * Valida credenciales y activa la sesión del usuario.
  * @param {SubmitEvent} event
  */
-function manejarLogin(event) {
+async function manejarLogin(event) {
   event.preventDefault();
 
   const correo = loginEmailInput.value.trim().toLowerCase();
@@ -72,25 +87,39 @@ function manejarLogin(event) {
     return;
   }
 
-  const usuarios = getUsuarios();
-  const usuario = usuarios.find(
-    (registro) => registro.correo.toLowerCase() === correo
-  );
+  try {
+    const respuesta = await fetch(`${API_BASE_URL}/login`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: correo,
+        password: contrasena,
+      }),
+    });
 
-  if (!usuario || usuario.contrasena !== contrasena) {
-    mostrarMensajeLogin(MENSAJE_CREDENCIALES_INVALIDAS, "err");
-    return;
+    if (!respuesta.ok) {
+      mostrarMensajeLogin(MENSAJE_CREDENCIALES_INVALIDAS, "err");
+      return;
+    }
+
+    const data = await respuesta.json();
+    const usuario = mapearUsuarioSesion(data);
+
+    setUsuarioActivo(usuario);
+    mostrarMensajeLogin(
+      `Inicio de sesión exitoso. Bienvenido/a, ${capitalizarNombre(usuario.nombre)}.`,
+      "ok"
+    );
+
+    setTimeout(() => {
+      window.location.href = "../index.html";
+    }, REDIRECT_DELAY_MS);
+  } catch (_) {
+    mostrarMensajeLogin(
+      "Error de conexión con el servidor. Verifica tu red e intenta de nuevo.",
+      "err"
+    );
   }
-
-  setUsuarioActivo(usuario);
-  mostrarMensajeLogin(
-    `Inicio de sesión exitoso. Bienvenido/a, ${capitalizarNombre(usuario.nombre)}.`,
-    "ok"
-  );
-
-  setTimeout(() => {
-    window.location.href = "../index.html";
-  }, REDIRECT_DELAY_MS);
 }
 
 if (loginForm) {
