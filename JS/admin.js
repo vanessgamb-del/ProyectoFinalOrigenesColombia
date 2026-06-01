@@ -33,28 +33,37 @@ function resetForm() {
  * Carga los datos de un producto en el formulario para editarlo.
  * @param {number} id - Identificador del producto.
  */
-function editProduct(id) {
-  const products = getProducts();
-  const product = products.find((item) => item.id === id);
-
-  if (!product) return;
-
-  document.getElementById("productId").value = product.id;
-  document.getElementById("name").value = product.name;
-  document.getElementById("description").value = product.description;
-  document.getElementById("price").value = product.price;
-  document.getElementById("stock").value = product.stock;
-  document.getElementById("category").value = product.category;
-  document.getElementById("image").value = product.image;
-
-  submitBtn.textContent = "Actualizar producto";
-  if (cancelEditBtn) {
-    cancelEditBtn.style.display = "inline-block";
+async function editProduct(id) {
+  try {
+    const response = await fetch(
+      `https://origenesdeployback.onrender.com/productos/${id}`
+    );
+ 
+    if (!response.ok) {
+      throw new Error("No se pudo obtener el producto");
+    }
+ 
+    const product = await response.json();
+ 
+    document.getElementById("productId").value = product.id;
+    document.getElementById("name").value = product.nombre;
+    document.getElementById("description").value = product.descripcion;
+    document.getElementById("price").value = product.precio;
+    document.getElementById("stock").value = product.cantidad;
+    document.getElementById("category").value = product.categoria;
+    document.getElementById("image").value = product.direccionurl;
+ 
+    submitBtn.textContent = "Actualizar producto";
+    if (cancelEditBtn) {
+      cancelEditBtn.style.display = "inline-block";
+    }
+ 
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } catch (error) {
+    console.error("Error al cargar el producto para editar:", error);
+    alert("No se pudo cargar el producto. Intenta de nuevo.");
   }
-
-  window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
 /**
  * Elimina un producto del catálogo y del carrito si existe.
  * @param {number} id - Identificador del producto.
@@ -212,11 +221,13 @@ async function renderProducts() {
 // }
 
 if (form && esUsuarioAdmin(getUsuarioActivo())) {
-
+ 
   form.addEventListener("submit", async (e) => {
-
+ 
     e.preventDefault();
-
+ 
+    const productId = document.getElementById("productId").value;
+ 
     const productData = {
       nombre: document.getElementById("name").value.trim(),
       descripcion: document.getElementById("description").value.trim(),
@@ -225,43 +236,44 @@ if (form && esUsuarioAdmin(getUsuarioActivo())) {
       categoria: document.getElementById("category").value,
       direccionurl: document.getElementById("image").value.trim(),
     };
-
-    console.log(productData);
-
+ 
+    const esEdicion = productId !== "";
+    const url = esEdicion
+      ? `https://origenesdeployback.onrender.com/productos/${productId}`
+      : "https://origenesdeployback.onrender.com/productos";
+    const method = esEdicion ? "PUT" : "POST";
+ 
     try {
-
-      const response = await fetch(
-        "https://origenesdeployback.onrender.com/productos",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(productData),
-        }
-      );
-
+ 
+      const response = await fetch(url, {
+        method,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(productData),
+      });
+ 
       if (!response.ok) {
-        throw new Error("Error al crear producto");
+        throw new Error(
+          esEdicion ? "Error al actualizar producto" : "Error al crear producto"
+        );
       }
-
-      const nuevoProducto = await response.json();
-
-      console.log("Producto creado:", nuevoProducto);
-
-      alert("Producto creado correctamente");
-
+ 
+      const resultado = await response.json();
+      console.log(esEdicion ? "Producto actualizado:" : "Producto creado:", resultado);
+      alert(esEdicion ? "Producto actualizado correctamente" : "Producto creado correctamente");
+ 
       resetForm();
-
+      renderProducts();
+ 
     } catch (error) {
-
+ 
       console.error(error);
-
-      alert("No se pudo crear el producto");
+      alert(esEdicion ? "No se pudo actualizar el producto" : "No se pudo crear el producto");
     }
-
+ 
   });
-
+ 
 }
 
 // if (form && esUsuarioAdmin(getUsuarioActivo())) {
