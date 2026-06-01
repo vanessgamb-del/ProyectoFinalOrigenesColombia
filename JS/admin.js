@@ -59,15 +59,47 @@ function editProduct(id) {
  * Elimina un producto del catálogo y del carrito si existe.
  * @param {number} id - Identificador del producto.
  */
-function deleteProduct(id) {
-  const products = getProducts().filter((item) => item.id !== id);
-  saveProducts(products);
+async function deleteProduct(id) {
 
-  const cart = getCart().filter((item) => item.productId !== id);
-  saveCart(cart);
+  const confirmDelete = confirm(
+    "¿Seguro que deseas eliminar este producto?"
+  );
 
-  renderProducts();
+  if (!confirmDelete) return;
+
+  try {
+
+    const response = await fetch(
+      `https://origenesdeployback.onrender.com/productos/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("No se pudo eliminar el producto");
+    }
+
+    alert("Producto eliminado correctamente");
+
+    renderProducts();
+
+  } catch (error) {
+
+    console.error("Error eliminando producto:", error);
+
+    alert("Ocurrió un error al eliminar el producto");
+  }
 }
+// function deleteProduct(id) {
+//   const products = getProducts().filter((item) => item.id !== id);
+//   saveProducts(products);
+
+//   const cart = getCart().filter((item) => item.productId !== id);
+//   saveCart(cart);
+
+//   renderProducts();
+// }
 
 /**
  * Renderiza la lista de productos en el panel de administración.
