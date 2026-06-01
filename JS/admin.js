@@ -116,40 +116,92 @@ function renderProducts() {
     )
     .join("");
 }
-
 if (form && esUsuarioAdmin(getUsuarioActivo())) {
-  form.addEventListener("submit", (e) => {
+
+  form.addEventListener("submit", async (e) => {
+
     e.preventDefault();
 
-    const productId = document.getElementById("productId").value;
     const productData = {
-      id: productId ? Number(productId) : Date.now(),
-      name: document.getElementById("name").value.trim(),
-      description: document.getElementById("description").value.trim(),
-      price: Number(document.getElementById("price").value),
-      stock: Number(document.getElementById("stock").value),
-      category: document.getElementById("category").value,
-      image: document.getElementById("image").value.trim(),
+      nombre: document.getElementById("name").value.trim(),
+      descripcion: document.getElementById("description").value.trim(),
+      precio: Number(document.getElementById("price").value),
+      cantidad: Number(document.getElementById("stock").value),
+      categoria: document.getElementById("category").value,
+      direccionurl: document.getElementById("image").value.trim(),
     };
 
-    console.log("Producto guardado:", JSON.stringify(productData, null, 2));
+    console.log(productData);
 
-    const products = getProducts();
+    try {
 
-    if (productId) {
-      const updatedProducts = products.map((item) =>
-        item.id === Number(productId) ? productData : item
+      const response = await fetch(
+        "https://origenesdeployback.onrender.com/productos",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(productData),
+        }
       );
-      saveProducts(updatedProducts);
-    } else {
-      products.push(productData);
-      saveProducts(products);
+
+      if (!response.ok) {
+        throw new Error("Error al crear producto");
+      }
+
+      const nuevoProducto = await response.json();
+
+      console.log("Producto creado:", nuevoProducto);
+
+      alert("Producto creado correctamente");
+
+      resetForm();
+
+    } catch (error) {
+
+      console.error(error);
+
+      alert("No se pudo crear el producto");
     }
 
-    resetForm();
-    renderProducts();
   });
+
 }
+
+// if (form && esUsuarioAdmin(getUsuarioActivo())) {
+//   form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+
+//     const productId = document.getElementById("productId").value;
+//     const productData = {
+//       id: productId ? Number(productId) : Date.now(),
+//       name: document.getElementById("name").value.trim(),
+//       description: document.getElementById("description").value.trim(),
+//       price: Number(document.getElementById("price").value),
+//       stock: Number(document.getElementById("stock").value),
+//       category: document.getElementById("category").value,
+//       image: document.getElementById("image").value.trim(),
+//     };
+
+//     console.log("Producto guardado:", JSON.stringify(productData, null, 2));
+
+//     const products = getProducts();
+
+//     if (productId) {
+//       const updatedProducts = products.map((item) =>
+//         item.id === Number(productId) ? productData : item
+//       );
+//       saveProducts(updatedProducts);
+//     } else {
+//       products.push(productData);
+//       saveProducts(products);
+//     }
+
+//     resetForm();
+//     renderProducts();
+//   });
+// }
 
 if (cancelEditBtn) {
   cancelEditBtn.addEventListener("click", resetForm);
