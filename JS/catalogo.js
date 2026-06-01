@@ -89,8 +89,8 @@ async function renderCatalog() {
             <button 
               class="btn-buy"
               type="button"
-              onclick="addToCart(${product.id})"
-            >
+                onclick="addToCart(${product.id}, '${product.nombre.replace(/'/g, "\\'")}', ${product.precio}, ${product.cantidad}, '${product.direccionurl}', '${product.descripcion.replace(/'/g, "\\'")}')"
+              >
               Agregar al carrito
             </button>
           </div>

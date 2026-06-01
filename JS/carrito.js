@@ -13,7 +13,7 @@ const clearCartBtn = document.getElementById("clearCartBtn");
 const buyBtn = document.getElementById("buyBtn");
 
 /*  funciones de localStorage */
-const CART_KEY = "origenes_cart";
+
 function getCart() {
   return JSON.parse(localStorage.getItem(CART_KEY)) || [];
 }
@@ -105,7 +105,7 @@ function addToCart(id, nombre, precio, stock, imagen, descripcion) {
 
 function decreaseQuantity(productId) {
   let cart = getCart();
-  const item = cart.find((cartItem) => cartItem.productId === productId);
+  const item = cart.find((cartItem) => cartItem.id === productId);
 
   if (!item) {
     return;
@@ -114,7 +114,7 @@ function decreaseQuantity(productId) {
   item.quantity -= 1;
 
   if (item.quantity <= 0) {
-    cart = cart.filter((cartItem) => cartItem.productId !== productId);
+    cart = cart.filter((cartItem) => cartItem.id !== productId);
   }
 
   saveCart(cart);
@@ -128,27 +128,17 @@ function decreaseQuantity(productId) {
  */
 
 function increaseQuantity(productId) {
-  const products = getProducts();
-  const product = products.find((item) => item.id === productId);
-
-  if (!product) {
-    return;
-  }
-
   const cart = getCart();
-  const item = cart.find((cartItem) => cartItem.productId === productId);
+  const item = cart.find((cartItem) => cartItem.id === productId);
 
-  if (!item) {
-    return;
-  }
+  if (!item) return;
 
-  if (item.quantity >= product.stock) {
+  if (item.quantity >= item.stock) {
     alert("No puedes agregar más unidades que el stock disponible.");
     return;
   }
 
   item.quantity += 1;
-
   saveCart(cart);
   renderCart();
   updateCartCount();
@@ -159,7 +149,7 @@ function increaseQuantity(productId) {
  * @param {number} productId
  */
 function removeFromCart(productId) {
-  const cart = getCart().filter((item) => item.productId !== productId);
+  const cart = getCart().filter((item) => item.id !== productId);
   saveCart(cart);
   renderCart();
   updateCartCount();
