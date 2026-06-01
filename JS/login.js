@@ -50,6 +50,7 @@ function limpiarErrorCampo(span) {
  */
 function mapearUsuarioSesion(data) {
   return {
+    id:     data.id,
     nombre: data.nombre,
     correo: data.email,
     token: data.token,
