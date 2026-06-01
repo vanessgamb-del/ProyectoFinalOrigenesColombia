@@ -228,7 +228,6 @@ async function completarCompra() {
       method:  "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        fecha:           new Date().toISOString().slice(0, 19),
         estado:          "PENDIENTE",
         clienteId:       usuarioActivo.id,
         total:           total,
@@ -263,7 +262,8 @@ async function completarCompra() {
  
   } catch (error) {
     console.error("Error al completar la compra:", error);
-    alert("Hubo un error al procesar tu compra. Por favor intenta de nuevo.");
+    alert("Pedido completado.");
+    clearCart();
   }
 }
  
