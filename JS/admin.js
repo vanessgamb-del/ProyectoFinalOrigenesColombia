@@ -72,50 +72,113 @@ function deleteProduct(id) {
 /**
  * Renderiza la lista de productos en el panel de administración.
  */
-function renderProducts() {
-  const products = getProducts();
-
+async function renderProducts() {
   if (!productList) return;
 
-  if (products.length === 0) {
-    productList.innerHTML = `
-      <div class="col-12">
-        <div class="empty-state p-4 text-center">
-          No hay productos aún
+  try {
+    const response = await fetch("https://origenesdeployback.onrender.com/productos");
+
+    if (!response.ok) {
+      throw new Error(`Error al obtener productos: ${response.status}`);
+    }
+
+    const products = await response.json();
+
+    if (products.length === 0) {
+      productList.innerHTML = `
+        <div class="col-12">
+          <div class="empty-state p-4 text-center">
+            No hay productos aún
+          </div>
         </div>
-      </div>
-    `;
-    return;
-  }
+      `;
+      return;
+    }
 
-  productList.innerHTML = products
-    .map(
-      (product) => `
-        <div class="col-md-6 col-xl-4">
-          <div class="product-card">
-            <img src="${product.image}" alt="${product.name}" class="product-image" />
-            <div class="card-body">
-              <span class="badge-category">${product.category}</span>
-              <h5 class="card-title">${product.name}</h5>
-              <p class="card-text">${product.description}</p>
-              <p class="price-text">$${Number(product.price).toLocaleString("es-CO")}</p>
-              <p class="stock-text">Stock: ${product.stock}</p>
+    productList.innerHTML = products
+      .map(
+        (product) => `
+          <div class="col-md-6 col-xl-4">
+            <div class="product-card">
+              <img src="${product.direccionurl}" alt="${product.nombre}" class="product-image" />
+              <div class="card-body">
+                <span class="badge-category">${product.categoria}</span>
+                <h5 class="card-title">${product.nombre}</h5>
+                <p class="card-text">${product.descripcion}</p>
+                <p class="price-text">$${Number(product.precio).toLocaleString("es-CO")}</p>
+                <p class="stock-text">Stock: ${product.cantidad}</p>
 
-              <div class="product-actions-inline">
-                <button class="btn-card-edit" onclick="editProduct(${product.id})">
-                  Editar
-                </button>
-                <button class="btn-card-delete" onclick="deleteProduct(${product.id})">
-                  Eliminar
-                </button>
+                <div class="product-actions-inline">
+                  <button class="btn-card-edit" onclick="editProduct(${product.id})">
+                    Editar
+                  </button>
+                  <button class="btn-card-delete" onclick="deleteProduct(${product.id})">
+                    Eliminar
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+        `
+      )
+      .join("");
+
+  } catch (error) {
+    console.error("Error al cargar productos:", error);
+    productList.innerHTML = `
+      <div class="col-12">
+        <div class="empty-state p-4 text-center text-danger">
+          Error al cargar los productos. Intenta de nuevo.
         </div>
-      `
-    )
-    .join("");
+      </div>
+    `;
+  }
 }
+// function renderProducts() {
+//   const products = getProducts();
+
+//   if (!productList) return;
+
+//   if (products.length === 0) {
+//     productList.innerHTML = `
+//       <div class="col-12">
+//         <div class="empty-state p-4 text-center">
+//           No hay productos aún
+//         </div>
+//       </div>
+//     `;
+//     return;
+//   }
+
+//   productList.innerHTML = products
+//     .map(
+//       (product) => `
+//         <div class="col-md-6 col-xl-4">
+//           <div class="product-card">
+//             <img src="${product.image}" alt="${product.name}" class="product-image" />
+//             <div class="card-body">
+//               <span class="badge-category">${product.category}</span>
+//               <h5 class="card-title">${product.name}</h5>
+//               <p class="card-text">${product.description}</p>
+//               <p class="price-text">$${Number(product.price).toLocaleString("es-CO")}</p>
+//               <p class="stock-text">Stock: ${product.stock}</p>
+
+//               <div class="product-actions-inline">
+//                 <button class="btn-card-edit" onclick="editProduct(${product.id})">
+//                   Editar
+//                 </button>
+//                 <button class="btn-card-delete" onclick="deleteProduct(${product.id})">
+//                   Eliminar
+//                 </button>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       `
+//     )
+//     .join("");
+// }
+
 if (form && esUsuarioAdmin(getUsuarioActivo())) {
 
   form.addEventListener("submit", async (e) => {
