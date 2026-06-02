@@ -262,8 +262,7 @@ async function completarCompra() {
  
   } catch (error) {
     console.error("Error al completar la compra:", error);
-    alert("Pedido completado.");
-    clearCart();
+    alert("Hubo un error al procesar la compra, intenta de nuevo.");
   }
 }
  
